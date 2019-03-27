@@ -1,0 +1,5 @@
+**/*.grf
+**/*.nml
+**/*.tar
+.devzone
+.nmlcache

@@ -1,0 +1,3 @@
+spriteset(gr_stw_front,"gfx/passengers/dosto_stwg.png"){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoSto Steuerwagen DB vorne
+spriteset(gr_stw_rear,"gfx/passengers/dosto_stwg.png"){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoSto Steuerwagen DB hinten
+spriteset(gr_stw_purchase,"gfx/purchase.png"){tmpl_purchase(11)}								// Grafik DB Dostosteuerwagen PURCHASE

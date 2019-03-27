@@ -1,0 +1,3 @@
+spriteset(gr_stwic_front,"gfx/passengers/ic_stwg.png"){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik Steuerwagen IC vorne
+spriteset(gr_stwic_rear,"gfx/passengers/ic_stwg.png"){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik Steuerwagen IC hinten
+spriteset(gr_stwic_purchase,"gfx/purchase.png"){tmpl_purchase(9)}								// Grafik STW IC PURCHASE

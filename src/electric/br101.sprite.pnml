@@ -1,0 +1,3 @@
+spriteset(gr_br101,"gfx/electric/br101.png"){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 101 ziehend rot
+spriteset(gr_br101_rev,"gfx/electric/br101.png"){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 101 schiebend rot
+spriteset(gr_br101_purchase,"gfx/purchase.png"){tmpl_purchase(14)}								// Grafik BR 101 Kaufmenue

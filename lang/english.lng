@@ -1,0 +1,135 @@
+﻿##grflangid 0x01
+STR_GRF_NAME                                                    :Modern DB Train Set {VERSION}
+STR_GRF_DESCRIPTION                                             :{GOLD}Modern DB Train Set {BLACK}contains modern trains of the Deutsche Bahn (German Railway Company)
+STR_NAME_RS											          	:Stadler Regio Shuttle (Diesel)
+STR_NAME_BR611													:DB BR 611 (Diesel)
+STR_NAME_KISS							     					:Stadler KISS (Electric)
+STR_NAME_FLIRT							     					:Stadler FLIRT (Electric)
+STR_NAME_BR146													:DB BR 146.2 (Electric)
+STR_NAME_DOSTOWAGGON											:DB double-decker coach
+STR_NAME_STW												  	:DB double-decker control car
+STR_NAME_BR143													:DB BR 143 (Electric)
+STR_NAME_BR101													:DB BR 101 (Electric)
+STR_NAME_ICWAGGON												:DB Intercity coach
+STR_NAME_RJWAGGON												:ÖBB Railjet coach
+STR_NAME_STWIC													:DB Intercity control car
+STR_NAME_SILBERLINGE											:DB local transport coach
+STR_NAME_STWSIL													:DB local transport control car
+STR_NAME_STWRJ													:ÖBB Railjet control car
+STR_NAME_RE450													:SBB Re 450 (Electric)
+STR_NAME_RE450_WAGGON											:SBB Re 450 coach
+STR_NAME_BR641													:DB BR 641 (Diesel)
+STR_NAME_BR628													:DB BR 628 (Diesel)
+STR_NAME_SBBEW4													:SBB standard coach IV
+STR_NAME_RJ													  	:ÖBB 1116 “Railjet” (Electric)
+STR_NAME_BR218													:DB BR 218 (Diesel)
+STR_NAME_RE460													:SBB Re 460 “Lok 2000” (Electric)
+STR_NAME_SBBSTW													:SBB control car
+STR_NAME_GTWMTHB												:Stadler GTW 2/6 (Electric)
+STR_NAME_TRAXX													:Bombardier TRAXX (Electric)
+STR_NAME_POSTSBB												:SBB mail coach
+STR_NAME_EAOS													:SBB open wagon (EAOS)
+STR_NAME_KESSEL3												:tank car
+STR_NAME_SCHIEBEWAND											:SBB boxcar
+STR_NAME_AUTOTRANSPORT											:autorack
+STR_NAME_RUNGENWAGEN											:stake car
+STR_NAME_SBBICN													:SBB RABDe 500 “ICN” (Electric)
+STR_NAME_CISWAGGON												:“Cisalpino” coach
+STR_NAME_OBBICWAGGON											:ÖBB Intercity coach
+STR_NAME_OBB1144												:ÖBB 1144 (Electric)
+STR_NAME_DOSTOWAGGON_IC											:DB Intercity double-decker coach
+STR_NAME_STWDOSTOIC												:DB Intercity double-decker control car
+STR_NAME_OBB4024												:ÖBB 4024 “Talent” (Electric)
+STR_NAME_OBB1142												:ÖBB 1142 (Electric)
+STR_NAME_SBBIC2000												:SBB IC 2000
+STR_NAME_SBBIC2000STW											:SBB IC 2000 control car
+STR_NAME_BLS535													:BLS RABe 535 “Lötschberger” (Electric)
+STR_NAME_CITYSHUTTLEDOSTO										:ÖBB CityShuttle double-decker coach
+STR_NAME_STWCITYSHUTTLEDOSTO									:ÖBB CityShuttle double-decker control car
+STR_NAME_CITYSHUTTLE											:ÖBB CityShuttle
+STR_NAME_STWCITYSHUTTLE											:ÖBB CityShuttle control car
+STR_NAME_OBB5022												:ÖBB 5022 “Desiro” (Diesel)
+STR_NAME_OBB5047												:ÖBB 5047 (Diesel)
+STR_NAME_OBB5147												:ÖBB 5147 (Diesel)
+STR_NAME_OBB1116												:ÖBB 1116 “Taurus” (Electric)
+STR_BR146_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches, push-pull operation is possible.
+STR_BR143_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches and local transport coaches, push-pull operation is possible.
+STR_BR101_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With intercity coaches, push-pull operation is possible.
+STR_RE460_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With SBB standard coach IV, push-pull operation is possible.
+STR_BR218_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Universal{}{BLACK}Miscellaneous:  {GOLD}With double-decker coaches, local transport coaches, and intercity coaches, push-pull operation is possible.
+STR_FLIRT_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}FLIRT is available with 3, 4 or 5 parts.
+STR_KISS_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}KISS is available with 4, 5 or 6 parts.
+STR_RE450_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}suburban train with 1st/2nd class coach, 2nd class coach, and control car
+STR_RS_ADDITIONAL_TEXT											:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}6 units{}{BLACK}Liveries: {GOLD}HzL (beige/red), HzL (blue/yellow), DB Regio, BOB {GREEN}(refittable)
+STR_BR641_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
+STR_BR611_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {RED}tilting train
+STR_BR628_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
+STR_SILBERLINGE_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class
+STR_STWSIL_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With BR 143 and BR 218 push-pull operation is possible.
+STR_ICWAGGON_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class and on-board restaurant
+STR_STWIC_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport {}{BLACK}Miscellaneous:{GOLD} With BR 101 and BR 218 push-pull operation is possible.
+STR_DOSTOWAGGON_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class
+STR_STW_ADDITIONAL_TEXT											:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With BR 143, BR 218, and BR 146 push-pull operation is possible.
+STR_SBBEW4_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class
+STR_SBBSTW_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With Re460, push-pull operation is possible.
+STR_RJ_ADDITIONAL_TEXT											:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With ÖBB Railjet coaches, push-pull operation is possible.
+STR_STWRJ_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With ÖBB Railjet, push-pull operation is possible.
+STR_RJWAGGON_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class and on-board restaurant.
+STR_GTWMTHB_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
+STR_TRAXX_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Universal{}{BLACK}Versions: {GOLD}BLS Re 485, SBB Re 481, DB BR 185, DB BR 186, Cisalpino {GREEN}(refittable)
+STR_SBBICN_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Multiple-unit control: {GOLD}2 units{}{BLACK}Miscellaneous: {RED}tilting train
+STR_OBBICWAGGON_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Intercity transport
+STR_OBB1144_ADDITIONAL_TEXT 									:{BLACK}Usage: {GOLD}Universal
+STR_DOSTOWAGGON_IC_ADDITIONAL_TEXT								:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With 1st and 2nd class
+STR_STWDOSTOIC_ADDITIONAL_TEXT									:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With BR 218 and BR 146 push-pull operation is possible.
+STR_OBB1142_ADDITIONAL_TEXT 									:{BLACK}Usage: {GOLD}Local transport
+STR_OBB4024_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}2 units{}{BLACK}Miscellaneous: {GOLD}TALENT is available with 3 or 4 parts.
+STR_BLS535_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
+STR_OBB5022_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
+STR_KISS_ATTACH_WAGON											:Can't attach coaches to KISS.
+STR_FLIRT_ATTACH_WAGON											:Can't attach coaches to FLIRT.
+STR_OBB4024_ATTACH_WAGON										:Can't attach anything else than ÖBB 4024
+STR_BR611_ATTACH_WAGON											:Can't attach coaches to BR 611.
+STR_146_ATTACH_WAGON											:Can't attach more coaches behind a control car.
+STR_RS_ATTACH_WAGON												:Can't attach coaches to Regio Shuttles.
+STR_CANNOT_ATTACH_LOK											:Can't attach coaches to this engine.
+STR_STW_VORHANDEN												:There is already a control car.
+STR_BR641_CANNOT_START											:BR 641 can be built up to three times per train.
+STR_KISS_CANNOT_START											:KISS can be build up to four times per train.
+STR_BR628_CANNOT_START											:BR 628 can be build up to three times per train.
+STR_RS_CANNOT_START												:Regio-Shuttles can be build up to six times per train.
+STR_OBB4024_CANNOT_START										:Can be build up to two times per train.
+STR_CARGO_SUBTYPE_ERSTE_KLASSE									: (First class coach)
+STR_CARGO_SUBTYPE_FAHRRADWAGEN									: (bycicle coach)
+STR_CARGO_SUBTYPE_ZWEITE_KLASSE									: (Second class coach)
+STR_CARGO_SUBTYPE_STW											: (control car)
+STR_CARGO_SUBTYPE_RESTAURANT									: (on-board restaurant)
+STR_RJ_PREMIUM													: (Premium/First Class)
+STR_RJ_FIRST													: (First Class)
+STR_RJ_ECONOMY													: (Economy Class)
+STR_RJ_KINDERKINO												: (Kids cinema)
+STR_RS_LIVERY_DEFAULT											: (Hohenzollerische Landesbahn AG beige-red)
+STR_RS_LIVERY1													: (Hohenzollerische Landesbahn AG blue-yellow)
+STR_RS_LIVERY2													: (Bodensee-Oberschwaben-Bahn)
+STR_RS_LIVERY3													: (DB Regio AG)
+STR_TRAXX_LIVERY_DEFAULT										: (BLS Re 485)
+STR_TRAXX_LIVERY1												: (SBB Re 481)
+STR_TRAXX_LIVERY2												: (DB BR 185)
+STR_TRAXX_LIVERY3												: (SBB Re 484 “Cisalpino”)
+STR_BR146_LIVERY_DEFAULT										: (red)
+STR_BR146_LIVERY1												: (Intercity)
+STR_OBB1116_LIVERY_DEFAULT										: (ÖBB livery)
+STR_OBB1116_LIVERY1												: (DB livery)
+STR_KISS_6T														: (6 parts)
+STR_KISS_5T														: (5 parts)
+STR_KISS_4T														: (4 parts)
+STR_KISS_3T														: (3 parts)
+STR_RE460_LIVERY_DEFAULT										: (SBB Re 460 red)
+STR_RE460_LIVERY1												: (SBB Re 460 blue)
+STR_PARAM_BUILDTRAIN											: Train Purchase Costs
+STR_PARAM_BUILDTRAIN_DESC										: Adjust the purchase price of trains
+STR_PARAM_BUILDTRAIN_QUARTER									: 1/4x
+STR_PARAM_BUILDTRAIN_HALF										: 1/2x
+STR_PARAM_BUILDTRAIN_NORMAL										: Normal
+STR_PARAM_BUILDTRAIN_DOUBLE										: 2x
+STR_PARAM_BUILDTRAIN_QUADRUPLE									: 4x

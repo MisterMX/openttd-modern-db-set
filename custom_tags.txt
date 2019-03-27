@@ -1,0 +1,6 @@
+VERSION        :noRev
+VERSION_STRING :noRev
+TITLE          :openttd-modern-db-set noRev
+FILENAME       :mdb.grf
+REPO_HASH      :
+NEWGRF_VERSION :0

@@ -1,0 +1,3 @@
+spriteset(gr_icwaggon,"gfx/passengers/ic.png"){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}				// Grafik IC Wagen
+spriteset(gr_icwaggon_bordbistro,"gfx/passengers/ic.png"){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}	// Grafik IC Wagen Bordbistro
+spriteset(gr_icwaggon_purchase,"gfx/purchase.png"){tmpl_purchase(8)}									// Grafik DB Fernverkehrswaggon PURCHASE

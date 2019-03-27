@@ -1,0 +1,16 @@
+#define SILBERLINGE_SPRITE "gfx/passengers/silberlinge_stwg.png"
+
+spriteset(gr_stwsil_front, SILBERLINGE_SPRITE){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafiken Steuerwagen Silberling geschl. vorne
+spriteset(gr_stwsil_front_l, SILBERLINGE_SPRITE){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafiken Steuerwagen Silberling offen vorne
+spriteset(gr_stwsil_rear, SILBERLINGE_SPRITE){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafiken Steuerwagen Silberling geschl. hinten
+spriteset(gr_stwsil_rear_l, SILBERLINGE_SPRITE){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafiken Steuerwagen Silberling offen hinten
+
+spritegroup stwsil_front_spg{														// Spritegroup STW Silberlinge vorne
+    loading: gr_stwsil_front_l;
+    loaded: gr_stwsil_front;
+}
+spritegroup stwsil_rear_spg{														// Spritegroup STW Silberlinge hinten
+    loading: gr_stwsil_rear_l;
+    loaded: gr_stwsil_rear;
+}
+spriteset(gr_stwsil_purchase,"gfx/purchase.png"){tmpl_purchase(7)}					// Grafik STW Silberling PURCHASE

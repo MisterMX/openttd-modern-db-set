@@ -1,0 +1,5 @@
+#define BR_143_SPRITE "gfx/electric/br143.png"
+
+spriteset(gr_br143, BR_143_SPRITE){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 143 ziehend rot
+spriteset(gr_br143_rev, BR_143_SPRITE){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 143 schiebend rot
+spriteset(gr_br143_purchase, "gfx/purchase.png"){tmpl_purchase(12)}

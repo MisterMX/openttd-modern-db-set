@@ -1,0 +1,75 @@
+/* - Check ob der Zug im Wendezugbetrieb mit Silberlingen unterwegs ist und dabei gewendet wurde - */
+switch(FEAT_TRAINS, SELF, sw_br143_gr_wendezug_silberlinge, vehicle_is_reversed) {
+    1: stwsil_front_spg; // Wenn ja, wird die Lok zum Nahverkehrssteuerwagen
+    gr_br143;							// Wenn nicht, dann passiert nichts
+}
+
+/* - Check ob der Zug im Wendezugbetrieb  mit Doppelstockwagen unterwegs ist und ob er gewendet wurde - */
+switch(FEAT_TRAINS, SELF, sw_br143_gr_wendezug, vehicle_is_reversed) {
+    1: gr_stw_front; // Wenn ja, dann wird die Lok zum Doppelstocksteuerwagen
+    gr_br143;					// Wenn nicht, dann passiert nichts
+}
+
+/* - Check ob sich ein DB Nahverkehrssteuerwagen befindet - */
+switch(FEAT_TRAINS, SELF, sw_gr_br143_keinedostos, count_veh_id(stwsil) > 0 && count_veh_id(br143) == 1) {
+    1: sw_br143_gr_wendezug_silberlinge; // Wenn ja, dann Wendezugbetrieb mit Silberlingen.
+    gr_br143;															// Wenn nicht, dann kein Wendezugbetrieb
+}
+
+/* - Check ob sich ein Doppelstocksteuerwagen und NUR 1 BR 143 im Zug befindet - */
+switch(FEAT_TRAINS, SELF, sw_br143_graphics, count_veh_id(dosto_stwg) > 0 && count_veh_id(br143) == 1) {
+    1: sw_br143_gr_wendezug; // Wenn ja, dann Wendezugbetrieb mit Doppelstockwagen
+    sw_gr_br143_keinedostos; // Wenn nicht, dann wird gecheckt ob ein Silberling Steuerwagen angekoppelt ist
+}
+
+/* - Im Wendezugbetrieb wird der visuelle Effekt bei umgekehrter Fahrtrichtung angepasst - */
+switch(FEAT_TRAINS, SELF, sw_br143_ve, (count_veh_id(dosto_stwg) > 0 || count_veh_id(stwsil) > 0) && vehicle_is_reversed == 1) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC,-2,ENABLE_WAGON_POWER);  // Bei normaler Fahrtrichtung normaler visueller Effekt
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);				// Bei umgekehrter Fahrtrichtung abschalten der visuellen Effekte fuer die Lok
+}
+
+/* - Check ob Wagentyp angekoppelt werden darf - */
+switch(FEAT_TRAINS, SELF, sw_br143_wagon_attach_kein_stw, vehicle_type_id) {
+    dosto_stwg: CB_RESULT_ATTACH_ALLOW; 			// DB Doppelstock Steuerwagen
+    stwsil: CB_RESULT_ATTACH_ALLOW;					// DB Nahverkehrs Steuerwagen
+    dostowaggon:CB_RESULT_ATTACH_ALLOW;			// DB Doppelstockwagen
+    silberlinge: CB_RESULT_ATTACH_ALLOW;		// DB Nahverkehrswagen
+    br143: CB_RESULT_ATTACH_ALLOW;					// Eine weitere BR 143
+    string(STR_CANNOT_ATTACH_LOK);					// Alle anderen nicht
+}
+
+/* - Wenn bereits ein Steuerwagen angekoppelt ist, darf kein weiterer Wagen angekoppelt werden - */
+switch(FEAT_TRAINS, PARENT, sw_br143_wagon_attach, bitmask_consist_info & bitmask(2)) {
+    0: sw_br143_wagon_attach_kein_stw;			// Wenn nicht, dann pruefen ob der Wagentyp angekoppelt werden darf
+     string(STR_STW_VORHANDEN);
+}
+
+/* - Definition der Eigenschaften und Callbacks - */
+item(FEAT_TRAINS, br143, 40) {
+    property {
+        sprite_id:			SPRITE_ID_NEW_TRAIN;
+        name:               string(STR_NAME_BR143);
+        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        introduction_date:  date(1984,1,1);
+        model_life:			VEHICLE_NEVER_EXPIRES;
+        speed:              121 km/h;
+        vehicle_life:		42;
+        cost_factor:		120;
+        running_cost_factor:150;
+        running_cost_base:	RUNNING_COST_ELECTRIC;
+        track_type:			RAIL;
+        power:				3720 kW;
+        engine_class:		ENGINE_CLASS_ELECTRIC;
+        weight:				83 tons;
+        cargo_capacity:		0;
+        tractive_effort_coefficient: 0.2891;
+        air_drag_coefficient: 0.07;
+    }
+    graphics {
+        default: sw_br143_graphics;
+        purchase: gr_br143_purchase;
+        visual_effect_and_powered: sw_br143_ve;
+        can_attach_wagon: sw_br143_wagon_attach;
+        additional_text: string(STR_BR143_ADDITIONAL_TEXT);
+    }
+}

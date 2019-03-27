@@ -1,0 +1,69 @@
+switch(FEAT_TRAINS,PARENT,sw_stwsil_146ic,cargo_subtype){
+ 1: gr_br146_ic_rev;
+ gr_br146_rev;
+ }
+
+switch(FEAT_TRAINS,PARENT,sw_stwsil_graphics_wendezug_br146,vehicle_is_reversed && count_veh_id(br146) == 1){
+	1: sw_stwsil_146ic;
+	stwsil_rear_spg;
+	}
+
+switch(FEAT_TRAINS,PARENT,sw_stwsil_graphics_wendezug_br143,vehicle_is_reversed && count_veh_id(br143) == 1){
+	1: gr_br143_rev;
+	stwsil_rear_spg;
+	}
+switch(FEAT_TRAINS,PARENT,sw_stwsil_graphics_wendezug_br218,vehicle_is_reversed && count_veh_id(br218) == 1){
+	1: gr_br218_rev;
+	stwsil_rear_spg;
+	}
+
+
+switch(FEAT_TRAINS,PARENT,sw_stwsil_graphics,vehicle_type_id){
+	br143: sw_stwsil_graphics_wendezug_br143;
+	br218: sw_stwsil_graphics_wendezug_br218;
+	br146: sw_stwsil_graphics_wendezug_br146;
+	stwsil_rear_spg;
+	}
+
+switch(FEAT_TRAINS,PARENT,sw_stwsil_ve_diesel,vehicle_type_id == br218 && vehicle_is_reversed == 1){
+	1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL,-1,ENABLE_WAGON_POWER);
+	visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);
+	}
+
+switch(FEAT_TRAINS,PARENT,sw_stwsil_ve,(vehicle_type_id == br143 || vehicle_type_id == br146)  && vehicle_is_reversed == 1){
+	1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC,2,ENABLE_WAGON_POWER);
+	sw_stwsil_ve_diesel;
+	}
+
+
+
+item (FEAT_TRAINS,stwsil,131) {
+	property {
+		sprite_id:			SPRITE_ID_NEW_TRAIN;
+		name:               string(STR_NAME_STWSIL);
+		climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+		introduction_date:  date(1993,1,1);
+		model_life:			VEHICLE_NEVER_EXPIRES;
+		loading_speed:		23;
+		speed:              141 km/h;
+		cost_factor:		120;
+		running_cost_factor:220;
+		running_cost_base:	RUNNING_COST_ELECTRIC;
+		track_type:			RAIL;
+		bitmask_vehicle_info: bitmask(2);
+		power:				0 kW;
+		cargo_capacity:		78;
+		weight:				34 tons;
+		refittable_cargo_classes: bitmask(CC_PASSENGERS);
+		non_refittable_cargo_classes: bitmask();
+        cargo_allow_refit: [];
+				}
+	graphics{
+	default: sw_stwsil_graphics;
+	purchase: gr_stwsil_purchase;
+	visual_effect_and_powered: sw_stwsil_ve;
+	additional_text: return string(STR_STWSIL_ADDITIONAL_TEXT);
+	cargo_capacity: return 56;
+	cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
+			         }
+}

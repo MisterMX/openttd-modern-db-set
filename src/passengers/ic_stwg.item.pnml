@@ -1,0 +1,55 @@
+switch(FEAT_TRAINS,PARENT,sw_stwic_graphics_wendezug_br101,vehicle_is_reversed && count_veh_id(br101) == 1){
+	1: gr_br101_rev;
+	gr_stwic_rear;
+	}
+	
+switch(FEAT_TRAINS,PARENT,sw_stwic_graphics_wendezug_br218,vehicle_is_reversed && count_veh_id(br218) == 1){
+	1: gr_br218_rev;
+	gr_stwic_rear;
+	}
+
+switch(FEAT_TRAINS,PARENT,sw_stwic_graphics,vehicle_type_id){
+	br101: sw_stwic_graphics_wendezug_br101;
+	//br218: sw_stwic_graphics_wendezug_br218;
+	gr_stwic_rear;
+	}
+switch(FEAT_TRAINS,PARENT,sw_stwic_ve_diesel,vehicle_type_id == br218 && vehicle_is_reversed == 1){
+	1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL,-1,ENABLE_WAGON_POWER);
+	visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);
+	}
+
+switch(FEAT_TRAINS,PARENT,sw_stwic_ve,vehicle_type_id == br101 && vehicle_is_reversed == 1){
+	1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC,2,ENABLE_WAGON_POWER);
+	sw_stwic_ve_diesel;
+	}
+
+item (FEAT_TRAINS,stwic,133) {
+	property {
+		sprite_id:			SPRITE_ID_NEW_TRAIN;
+		name:               string(STR_NAME_STWIC);
+		climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+		introduction_date:  date(1995,1,1);
+		model_life:			VEHICLE_NEVER_EXPIRES;
+		loading_speed:		12;
+		speed:              201 km/h;
+		cost_factor:		150;
+		running_cost_factor:190;
+		bitmask_vehicle_info: bitmask(2);
+		running_cost_base:	RUNNING_COST_ELECTRIC;
+		track_type:			RAIL;
+		power:				0 kW;
+		cargo_capacity:		56;
+		weight:				46 tons;
+		refittable_cargo_classes: bitmask(CC_PASSENGERS);
+		non_refittable_cargo_classes: bitmask();
+        cargo_allow_refit: [];
+				}
+	graphics{
+	default: sw_stwic_graphics;
+	purchase: gr_stwic_purchase;
+	visual_effect_and_powered: sw_stwic_ve;
+	additional_text: return string(STR_STWIC_ADDITIONAL_TEXT);
+	cargo_capacity: 36;
+	cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
+		         }
+}

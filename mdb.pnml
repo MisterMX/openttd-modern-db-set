@@ -1,0 +1,34 @@
+#include "src/header.pnml"
+#include "src/templates.pnml"
+
+// Sprites (will be used in the item files)
+#include "src/electric/br101.sprite.pnml"
+#include "src/electric/br143.sprite.pnml"
+#include "src/electric/br146.sprite.pnml"
+
+#include "src/diesel/br218.sprite.pnml"
+
+#include "src/passengers/ic_stwg.sprite.pnml"
+#include "src/passengers/ic.sprite.pnml"
+#include "src/passengers/ic_2.sprite.pnml"
+#include "src/passengers/ic_2_stwg.sprite.pnml"
+#include "src/passengers/silberlinge.sprite.pnml"
+#include "src/passengers/silberlinge_stwg.sprite.pnml"
+#include "src/passengers/dosto.sprite.pnml"
+#include "src/passengers/dosto_stwg.sprite.pnml"
+
+// Items
+#include "src/electric/br101.item.pnml"
+#include "src/electric/br143.item.pnml"
+#include "src/electric/br146.item.pnml"
+
+#include "src/diesel/br218.item.pnml"
+
+#include "src/passengers/silberlinge.item.pnml"
+#include "src/passengers/silberlinge_stwg.item.pnml"
+#include "src/passengers/dosto.item.pnml"
+#include "src/passengers/dosto_stwg.item.pnml"
+#include "src/passengers/ic_stwg.item.pnml"
+#include "src/passengers/ic.item.pnml"
+#include "src/passengers/ic_2.item.pnml"
+#include "src/passengers/ic_2_stwg.item.pnml"

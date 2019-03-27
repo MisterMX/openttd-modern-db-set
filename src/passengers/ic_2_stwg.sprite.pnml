@@ -1,0 +1,3 @@
+spriteset(gr_stwdostoic_front,"gfx/passengers/dosto_stwg.png"){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoStoIC Steuerwagen DB vorne
+spriteset(gr_stwdostoic_rear,"gfx/passengers/dosto_stwg.png"){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoStoIC Steuerwagen DB hinten
+spriteset(gr_stwdostoic_purchase,"gfx/purchase.png"){tmpl_purchase(41)}								// Grafik DB IC Dostosteuerwagen PURCHASE
