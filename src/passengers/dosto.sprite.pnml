@@ -1,5 +1,5 @@
-#define DOSTO_SPRITE "gfx/passengers/dosto.png"
+#define SPRITE_DOSTO "gfx/passengers/dosto.png"
 
-spriteset(gr_dostowaggon1,DOSTO_SPRITE){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 1. Klasse
-spriteset(gr_dostowaggon2,DOSTO_SPRITE){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 2. Klasse
-spriteset(gr_dosto_purchase,"gfx/purchase.png"){tmpl_purchase(10)}								// Grafik DB Dosto PURCHASE
+spriteset(gr_dostowaggon1, SPRITE_DOSTO){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 1. Klasse
+spriteset(gr_dostowaggon2, SPRITE_DOSTO){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 2. Klasse
+spriteset(gr_dosto_purchase,SPRITE_PURCHASE){tmpl_purchase(10)}								// Grafik DB Dosto PURCHASE

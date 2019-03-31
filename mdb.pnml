@@ -10,8 +10,8 @@
 
 #include "src/passengers/ic_stwg.sprite.pnml"
 #include "src/passengers/ic.sprite.pnml"
-#include "src/passengers/ic_2.sprite.pnml"
-#include "src/passengers/ic_2_stwg.sprite.pnml"
+#include "src/passengers/ic_dosto.sprite.pnml"
+#include "src/passengers/ic_dosto_stwg.sprite.pnml"
 #include "src/passengers/silberlinge.sprite.pnml"
 #include "src/passengers/silberlinge_stwg.sprite.pnml"
 #include "src/passengers/dosto.sprite.pnml"
@@ -30,5 +30,5 @@
 #include "src/passengers/dosto_stwg.item.pnml"
 #include "src/passengers/ic_stwg.item.pnml"
 #include "src/passengers/ic.item.pnml"
-#include "src/passengers/ic_2.item.pnml"
-#include "src/passengers/ic_2_stwg.item.pnml"
+#include "src/passengers/ic_dosto.item.pnml"
+#include "src/passengers/ic_dosto_stwg.item.pnml"

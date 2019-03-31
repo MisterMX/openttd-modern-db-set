@@ -1,36 +1,36 @@
-//** -------------------- ID143 propstwdostoic DB Doppelstocksteuerwagen -------------------- **//												STW Dosto
+//** -------------------- ID143 propic_dosto_stwg DB Doppelstocksteuerwagen -------------------- **//												STW Dosto
 
-switch(FEAT_TRAINS,PARENT, sw_stwdostoic_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
+switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
     1: sw_stw_146ic;
-    gr_stwdostoic_rear;
+    gr_ic_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS,PARENT, sw_stwdostoic_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
+switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
     1: gr_br218_rev;
-    gr_stwdostoic_rear;
+    gr_ic_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS,PARENT, sw_stwdostoic_graphics, vehicle_type_id) {
-    br146: sw_stwdostoic_graphics_wendezug_br146;
-    br218: sw_stwdostoic_graphics_wendezug_br218;
-    gr_stwdostoic_rear;
+switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics, vehicle_type_id) {
+    br146: sw_ic_dosto_stwg_graphics_wendezug_br146;
+    br218: sw_ic_dosto_stwg_graphics_wendezug_br218;
+    gr_ic_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS,PARENT, sw_stwdostoic_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
+switch(FEAT_TRAINS,PARENT, sw_ic_dosto_stwg_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
     1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -1, ENABLE_WAGON_POWER);
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }
 
-switch(FEAT_TRAINS,PARENT, sw_stwdostoic_ve, (vehicle_type_id == br146) && vehicle_is_reversed == 1) {
+switch(FEAT_TRAINS,PARENT, sw_ic_dosto_stwg_ve, (vehicle_type_id == br146) && vehicle_is_reversed == 1) {
     1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, ENABLE_WAGON_POWER);
-    sw_stwdostoic_ve_diesel;
+    sw_ic_dosto_stwg_ve_diesel;
 }
 
-item(FEAT_TRAINS, stwdostoic, 143) {
+item(FEAT_TRAINS, ic_dosto_stwg, 143) {
     property {
         sprite_id:			SPRITE_ID_NEW_TRAIN;
         name:               string(STR_NAME_STWDOSTOIC);
-        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
         introduction_date:  date(2013,1,1);
         model_life:			VEHICLE_NEVER_EXPIRES;
         loading_speed:		18;
@@ -48,9 +48,9 @@ item(FEAT_TRAINS, stwdostoic, 143) {
         cargo_allow_refit: [];
     }
     graphics {
-        default: sw_stwdostoic_graphics;
-        purchase: gr_stwdostoic_purchase;
-        visual_effect_and_powered: sw_stwdostoic_ve;
+        default: sw_ic_dosto_stwg_graphics;
+        purchase: gr_ic_dosto_stwg_purchase;
+        visual_effect_and_powered: sw_ic_dosto_stwg_ve;
         cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
         cargo_capacity: 81;
         additional_text: string(STR_STWDOSTOIC_ADDITIONAL_TEXT);

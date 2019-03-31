@@ -1,0 +1,5 @@
+#define SPRITE_IC_DOSTO "gfx/passengers/dosto.png"
+
+spriteset(gr_ic_dosto, SPRITE_IC_DOSTO){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 1. Klasse
+//spriteset(gr_ic_dostowaggon2, SPRITE_IC_DOSTO){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}				// Grafik DB Dosto rot 2. Klasse
+spriteset(gr_ic_dosto_purchase, SPRITE_PURCHASE){tmpl_purchase(10)}								// Grafik DB Dosto PURCHASE

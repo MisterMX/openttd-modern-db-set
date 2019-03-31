@@ -5,30 +5,30 @@ switch(FEAT_TRAINS, SELF, sw_br146_farbe, cargo_subtype) {
 
 /* - Falls Wendezugbetrieb mit Nahverkehrswagen, checken ob der Zug gewendet wurde - */
 switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug_silberlinge, vehicle_is_reversed) {
-    1: gr_stwsil_front;  // Wenn ja, dann wird die Lok durch den Nahverkehrssteuerwagen ersetzt
+    1: gr_silberlinge_stwg_front;  // Wenn ja, dann wird die Lok durch den Nahverkehrssteuerwagen ersetzt
     sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
 }
 
 /* - Falls Wendezugbetrieb mit Dostos, checken ob der Zug gewendet wurde - */
 switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug, vehicle_is_reversed) {
-    1: gr_stw_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
+    1: gr_dosto_stwg_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
     sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
 }
 
 /* - Falls Wendezugbetrieb mit DostoICs, checken ob der Zug gewendet wurde - */
-switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug_dostoic, vehicle_is_reversed) {
-    1: gr_stwdostoic_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
+switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug_ic_dosto, vehicle_is_reversed) {
+    1: gr_ic_dosto_stwg_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
     sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
 }
 
 /* - Check ob ein DOStoIC angekoppelt ist - */
-switch(FEAT_TRAINS, SELF, sw_br146_keinesil, count_veh_id(stwdostoic) > 0 && count_veh_id(br146) == 1) {
-    1: sw_br146_gr_wendezug_dostoic;			// Wenn ja, dann Wendezugbetrieb mit DostoIC
+switch(FEAT_TRAINS, SELF, sw_br146_keinesil, count_veh_id(ic_dosto_stwg) > 0 && count_veh_id(br146) == 1) {
+    1: sw_br146_gr_wendezug_ic_dosto;			// Wenn ja, dann Wendezugbetrieb mit DostoIC
     sw_br146_farbe; // Wenn nicht, dann normale Lokgrafik
 }
 
 /* - Check ob ein Nahverkehrssteuerwagen angekoppelt ist - */
-switch(FEAT_TRAINS, SELF, sw_br146_keinedostos, count_veh_id(stwsil) > 0 && count_veh_id(br146) == 1) {
+switch(FEAT_TRAINS, SELF, sw_br146_keinedostos, count_veh_id(silberlinge_stwg) > 0 && count_veh_id(br146) == 1) {
     1: sw_br146_gr_wendezug_silberlinge;			// Wenn ja, dann Wendezugbetrieb mit Nahverkehrswagen
     sw_br146_keinesil; // Wenn nicht, dann normale Lokgrafik
 }
@@ -40,19 +40,19 @@ switch(FEAT_TRAINS, SELF, sw_br146_graphics, count_veh_id(dosto_stwg) > 0 && cou
 }
 
 /* - Check ob der Zug im Wendezugbetrieb faehrt und Anpassung der visuellen Effekte - */
-switch(FEAT_TRAINS, SELF, sw_br146_ve, ((count_veh_id(dosto_stwg) > 0 || count_veh_id(stwsil) > 0 ||count_veh_id(stwdostoic) > 0  )&& vehicle_is_reversed == 1)) {
+switch(FEAT_TRAINS, SELF, sw_br146_ve, ((count_veh_id(dosto_stwg) > 0 || count_veh_id(silberlinge_stwg) > 0 ||count_veh_id(ic_dosto_stwg) > 0  )&& vehicle_is_reversed == 1)) {
     0: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC,-2,ENABLE_WAGON_POWER); // Wenn nicht, dann normale visuelle Effekte fuer die Lok
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);			// Wenn ja, dann visuelle Effekte fuer umgekehrte Fahrtrichtung ausschalten
 }
 
 /* - Check ob der Wagentyp angekoppelt werden darf - */
 switch(FEAT_TRAINS, SELF, sw_dostostw_wagon_attach_kein_stw, vehicle_type_id) {
-    stwsil:         CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrs Steuerwagen
+    silberlinge_stwg:         CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrs Steuerwagen
     silberlinge:    CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrswagen
     dosto_stwg:       CB_RESULT_ATTACH_ALLOW;     // DB Doppelstocksteuerwagen
     dostowaggon:    CB_RESULT_ATTACH_ALLOW;     // DB Doppelstockwagen
-    dostowaggonic:  CB_RESULT_ATTACH_ALLOW;
-    stwdostoic:     CB_RESULT_ATTACH_ALLOW;
+    ic_dosto:  CB_RESULT_ATTACH_ALLOW;
+    ic_dosto_stwg:     CB_RESULT_ATTACH_ALLOW;
     br146:          CB_RESULT_ATTACH_ALLOW;     // Eine weitere BR 146
     string(STR_CANNOT_ATTACH_LOK);              // Alle anderen nicht
 }

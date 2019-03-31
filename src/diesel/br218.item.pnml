@@ -1,103 +1,102 @@
 /* - Grafik-Switch fuer Wendezugbetrieb mit  DB Intercity DoStos -*/
-switch(FEAT_TRAINS,SELF,sw_br218_gr_wendezug_dostoic,vehicle_is_reversed){
-	1: gr_stwdostoic_front;
-	gr_br218;
+switch(FEAT_TRAINS, SELF, sw_br218_gr_wendezug_ic_dosto, vehicle_is_reversed) {
+    1: gr_ic_dosto_stwg_front;
+    gr_br218;
 }
 
 /* - Grafik-Switch fuer Wendezugbetrieb mit  DB Nahverkehrswagen -*/
-switch(FEAT_TRAINS,SELF,sw_br218_gr_wendezug_silberlinge,vehicle_is_reversed){
-	1: stwsil_front_spg;
-	gr_br218;
+switch(FEAT_TRAINS, SELF, sw_br218_gr_wendezug_silberlinge, vehicle_is_reversed) {
+    1: silberlinge_stwg_front_spg;
+    gr_br218;
 }
 
 /* - Grafik-Switch fuer Wendezugbetrieb mit DB Doppelstockwagen - */
-switch(FEAT_TRAINS,SELF,sw_br218_gr_wendezug,vehicle_is_reversed){
-	1: gr_stw_front;
-	gr_br218;
+switch(FEAT_TRAINS, SELF, sw_br218_gr_wendezug_dosto, vehicle_is_reversed) {
+    1: gr_dosto_stwg_front;
+    gr_br218;
 }
 
 /* - Grafik-Switch fuer Wendezugbetrieb mit DB Fernverkehrswagen - */
-switch(FEAT_TRAINS,SELF,sw_br218_gr_wendezug_ic,vehicle_is_reversed && count_veh_id(br218) == 1){
-	1: gr_stwic_front;
-	gr_br218;
+switch(FEAT_TRAINS, SELF, sw_br218_gr_wendezug_ic, vehicle_is_reversed && count_veh_id(br218) == 1) {
+    1: gr_ic_stwg_front;
+    gr_br218;
 }
 
 /* - Check ob ein DB Fernverkehrs-Steuerwagen Dosto angekoppelt und nur eine BR218 im Zug ist - */
-switch(FEAT_TRAINS,SELF,sw_gr_br218_keinic,count_veh_id(stwdostoic)== 1 && count_veh_id(br218) == 1) {
-	1: sw_br218_gr_wendezug_dostoic;		// Wenn ja, dann Wendezugbetrieb
-	gr_br218;											// Wenn nicht, ganz normaler Betrieb
-	}
-
+switch(FEAT_TRAINS, SELF, sw_gr_br218_keinic, count_veh_id(ic_dosto_stwg)== 1 && count_veh_id(br218) == 1) {
+    1: sw_br218_gr_wendezug_ic_dosto;		// Wenn ja, dann Wendezugbetrieb
+    gr_br218;								// Wenn nicht, ganz normaler Betrieb
+}
 
 /* - Check ob ein DB Fernverkehrs-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */
-switch(FEAT_TRAINS,SELF,sw_gr_br218_keinesil,count_veh_id(stwic)== 1 && count_veh_id(br218) == 1) {
-	1: sw_br218_gr_wendezug_ic;		// Wenn ja, dann Wendezugbetrieb
-	sw_gr_br218_keinic;											// Wenn nicht, DostoIC
-	}
+switch(FEAT_TRAINS, SELF, sw_gr_br218_keinesil, count_veh_id(ic_stwg)== 1 && count_veh_id(br218) == 1) {
+    1: sw_br218_gr_wendezug_ic;		// Wenn ja, dann Wendezugbetrieb
+    sw_gr_br218_keinic;				// Wenn nicht, DostoIC
+}
 
 /* - Check ob ein DB Nahverkehrs-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */
-switch(FEAT_TRAINS,SELF,sw_gr_br218_keinedostos,count_veh_id(stwsil)== 1 && count_veh_id(br218) == 1) {
-	1: sw_br218_gr_wendezug_silberlinge;		// Wenn ja, dann Wendezugbetrieb
-	sw_gr_br218_keinesil;						// Wenn nicht, dann wird nach dem IC Steuerwagen gesucht
-	}
+switch(FEAT_TRAINS, SELF, sw_gr_br218_keinedostos, count_veh_id(silberlinge_stwg)== 1 && count_veh_id(br218) == 1) {
+    1: sw_br218_gr_wendezug_silberlinge;		// Wenn ja, dann Wendezugbetrieb
+    sw_gr_br218_keinesil;						// Wenn nicht, dann wird nach dem IC Steuerwagen gesucht
+}
 
 /* - Check ob ein DB Doppelstpck-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */
-switch(FEAT_TRAINS,SELF,sw_br218_graphics,count_veh_id(dosto_stwg) > 0 && count_veh_id(br218) == 1){
-	1: sw_br218_gr_wendezug; // Wenn ja dann Wendezugbetrieb
-	sw_gr_br218_keinedostos; // Wenn nicht, dann wird nach anderen Steuerwagen gesucht
-	}
+switch(FEAT_TRAINS, SELF, sw_br218_graphics, count_veh_id(dosto_stwg) > 0 && count_veh_id(br218) == 1) {
+    1: sw_br218_gr_wendezug_dosto; // Wenn ja dann Wendezugbetrieb
+    sw_gr_br218_keinedostos; // Wenn nicht, dann wird nach anderen Steuerwagen gesucht
+}
 
 /* - Im Wendezugbetrieb wird der visuelle Effekt ausgesetzt, wenn der Zug gedreht wurde - */
-switch(FEAT_TRAINS,SELF,sw_br218_ve,(count_veh_id(dosto_stwg) > 0 | count_veh_id(stwsil) >0 | count_veh_id(stwic) > 0 | count_veh_id(stwdostoic) > 0) && vehicle_is_reversed == 1){
-	0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL,1,ENABLE_WAGON_POWER);  // Zug wurde nicht gedreht, also normaler visueller Effekt
-	visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);		// Zug wurde gedreht, kein visueller Effekt
-	}
+switch(FEAT_TRAINS, SELF, sw_br218_ve, (count_veh_id(dosto_stwg) > 0 | count_veh_id(silberlinge_stwg) > 0 | count_veh_id(ic_stwg) > 0 | count_veh_id(ic_dosto_stwg) > 0) && vehicle_is_reversed == 1) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, ENABLE_WAGON_POWER);  // Zug wurde nicht gedreht, also normaler visueller Effekt
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);	// Zug wurde gedreht, kein visueller Effekt
+}
 
 /* - Ohne Steuerwagen duerfen diese Wagen angekoppelt werden - */
-switch(FEAT_TRAINS,SELF,sw_br218_wagon_attach_kein_stw,vehicle_type_id){
-	dosto_stwg: CB_RESULT_ATTACH_ALLOW;						// DB Doppelstock-Steuerwagen
-	stwsil: CB_RESULT_ATTACH_ALLOW;							// DB Nahverkehrs-Steuerwagen
-	dostowaggon:CB_RESULT_ATTACH_ALLOW;						// DB Doppelstockwagen
-	silberlinge: CB_RESULT_ATTACH_ALLOW;					// DB Nahverkehrswagen
-	br218: CB_RESULT_ATTACH_ALLOW;							// DB BR 218
-	stwic: CB_RESULT_ATTACH_ALLOW;							// DB Fernverkehrs-Steuerwagen
-	icwaggon: CB_RESULT_ATTACH_ALLOW;						// DB Fernverkehrswagen
-	CB_RESULT_ATTACH_DISALLOW;								// alle anderen 
-	}
-	
+switch(FEAT_TRAINS, SELF, sw_br218_wagon_attach_kein_stw, vehicle_type_id) {
+    dosto_stwg: CB_RESULT_ATTACH_ALLOW;						// DB Doppelstock-Steuerwagen
+    silberlinge_stwg: CB_RESULT_ATTACH_ALLOW;							// DB Nahverkehrs-Steuerwagen
+    dostowaggon:CB_RESULT_ATTACH_ALLOW;						// DB Doppelstockwagen
+    silberlinge: CB_RESULT_ATTACH_ALLOW;					// DB Nahverkehrswagen
+    br218: CB_RESULT_ATTACH_ALLOW;							// DB BR 218
+    ic_stwg: CB_RESULT_ATTACH_ALLOW;							// DB Fernverkehrs-Steuerwagen
+    ic: CB_RESULT_ATTACH_ALLOW;						// DB Fernverkehrswagen
+    CB_RESULT_ATTACH_DISALLOW;								// alle anderen 
+}
+    
 /* -  Wenn schon ein Steuerwagen angehaengt ist, darf nichts zusaetzliches mehr angehaengt werden - */
-switch(FEAT_TRAINS,PARENT,sw_br218_wagon_attach, bitmask_consist_info & bitmask(2)){
-	0: sw_br218_wagon_attach_kein_stw;		// Ohne Steuerwagen duerfen diese Wagen angekoppelt werden
-	 CB_RESULT_ATTACH_DISALLOW;
-		}
-		
+switch(FEAT_TRAINS, PARENT, sw_br218_wagon_attach, bitmask_consist_info & bitmask(2)) {
+    0: sw_br218_wagon_attach_kein_stw;		// Ohne Steuerwagen duerfen diese Wagen angekoppelt werden
+    CB_RESULT_ATTACH_DISALLOW;
+}
+        
 /* - Definition der Eigenschaften und Callbacks - */
 item (FEAT_TRAINS,br218,20) {
-	property {
-		sprite_id:			SPRITE_ID_NEW_TRAIN;
-		name:               string(STR_NAME_BR218);
-		climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);		
-		introduction_date:  date(1968,1,1);
-		model_life:			VEHICLE_NEVER_EXPIRES;
-		speed:              141 km/h;
-		vehicle_life:		45;
-		dual_headed:		0;
-		cost_factor:		85;
-		running_cost_factor:210;
-		running_cost_base:	RUNNING_COST_DIESEL;
-		track_type:			RAIL;
-		power:				2060 kW;
-		engine_class:		ENGINE_CLASS_DIESEL;
-		cargo_capacity:		0;
-		weight:				79 tons;
-		tractive_effort_coefficient: 0.2539; // 65
-		air_drag_coefficient: 0.057;
-					}
-	graphics{
-	default: sw_br218_graphics;
-	purchase: gr_br218_purchase;
-	visual_effect_and_powered: sw_br218_ve;
-	can_attach_wagon: sw_br218_wagon_attach;
-	additional_text: string(STR_BR218_ADDITIONAL_TEXT);
-	         }
+    property {
+        sprite_id:			SPRITE_ID_NEW_TRAIN;
+        name:               string(STR_NAME_BR218);
+        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);		
+        introduction_date:  date(1968,1,1);
+        model_life:			VEHICLE_NEVER_EXPIRES;
+        speed:              141 km/h;
+        vehicle_life:		45;
+        dual_headed:		0;
+        cost_factor:		85;
+        running_cost_factor:210;
+        running_cost_base:	RUNNING_COST_DIESEL;
+        track_type:			RAIL;
+        power:				2060 kW;
+        engine_class:		ENGINE_CLASS_DIESEL;
+        cargo_capacity:		0;
+        weight:				79 tons;
+        tractive_effort_coefficient: 0.2539; // 65
+        air_drag_coefficient: 0.057;
+    }
+    graphics {
+        default: sw_br218_graphics;
+        purchase: gr_br218_purchase;
+        visual_effect_and_powered: sw_br218_ve;
+        can_attach_wagon: sw_br218_wagon_attach;
+        additional_text: string(STR_BR218_ADDITIONAL_TEXT);
+    }
 }

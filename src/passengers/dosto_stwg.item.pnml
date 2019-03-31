@@ -3,36 +3,42 @@ switch(FEAT_TRAINS, PARENT, sw_stw_146ic, cargo_subtype) {
     gr_br146_rev;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
-    1: sw_stw_146ic;
-    gr_stw_rear;
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br101, vehicle_is_reversed && count_veh_id(br101) == 1) {
+    1: gr_br101_rev;
+    gr_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_graphics_wendezug_br143, vehicle_is_reversed && count_veh_id(br143) == 1) {
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br143, vehicle_is_reversed && count_veh_id(br143) == 1) {
     1: gr_br143_rev;
-    gr_stw_rear;
+    gr_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
+    1: sw_stw_146ic;
+    gr_dosto_stwg_rear;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
     1: gr_br218_rev;
-    gr_stw_rear;
+    gr_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_graphics, vehicle_type_id){
-    br146: sw_stw_graphics_wendezug_br146;
-    br143: sw_stw_graphics_wendezug_br143;
-    br218: sw_stw_graphics_wendezug_br218;
-    gr_stw_rear;
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics, vehicle_type_id) {
+    br101: sw_dosto_stwg_graphics_wendezug_br101;
+    br143: sw_dosto_stwg_graphics_wendezug_br143;
+    br146: sw_dosto_stwg_graphics_wendezug_br146;
+    br218: sw_dosto_stwg_graphics_wendezug_br218;
+    gr_dosto_stwg_rear;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
     1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -1, ENABLE_WAGON_POWER);
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }
 
-switch(FEAT_TRAINS, PARENT, sw_stw_ve, (vehicle_type_id == br146 | vehicle_type_id == br143) && vehicle_is_reversed == 1) {
+switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_ve, (vehicle_type_id == br146 | vehicle_type_id == br143) && vehicle_is_reversed == 1) {
     1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, ENABLE_WAGON_POWER);
-    sw_stw_ve_diesel;
+    sw_dosto_stwg_ve_diesel;
 }
 
 item (FEAT_TRAINS, dosto_stwg, 135) {
@@ -57,9 +63,9 @@ item (FEAT_TRAINS, dosto_stwg, 135) {
         cargo_allow_refit: [];
     }
     graphics {
-        default: sw_stw_graphics;
-        purchase: gr_stw_purchase;
-        visual_effect_and_powered: sw_stw_ve;
+        default: sw_dosto_stwg_graphics;
+        purchase: gr_dosto_stwg_purchase;
+        visual_effect_and_powered: sw_dosto_stwg_ve;
         can_attach_wagon: sw_dostostw_wagon_attach;
         cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
         cargo_capacity: 91;

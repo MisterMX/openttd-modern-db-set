@@ -1,3 +1,5 @@
-spriteset(gr_br218,"gfx/diesel/br218.png"){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 218 ziehend rot
-spriteset(gr_br218_rev,"gfx/diesel/br218.png"){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 218 schiebend rot
-spriteset(gr_br218_purchase,"gfx/purchase.png"){tmpl_purchase(16)}								// Grafik BR 218 Kaufmenue
+#define SPRITE_BR_218 "gfx/diesel/br218.png"
+
+spriteset(gr_br218, SPRITE_BR_218){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 218 ziehend rot
+spriteset(gr_br218_rev, SPRITE_BR_218){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 218 schiebend rot
+spriteset(gr_br218_purchase, SPRITE_PURCHASE){tmpl_purchase(16)}								// Grafik BR 218 Kaufmenue

@@ -1,6 +1,6 @@
-//** -------------------- ID142 propdostoic DB IC Doppelstockwagen -------------------- **//											 DB IC Dosto
+//** -------------------- ID142 propic_dosto DB IC Doppelstockwagen -------------------- **//											 DB IC Dosto
 
-switch(FEAT_TRAINS, SELF, sw_dostowaggonic_capacity, position_in_vehid_chain_from_end) {
+switch(FEAT_TRAINS, SELF, sw_ic_dosto_capacity, position_in_vehid_chain_from_end) {
     0: return 97;
     4: return 97;
     8: return 97;
@@ -14,7 +14,7 @@ switch(FEAT_TRAINS,SELF, sw_dostowic_cargo_subtype_text, position_in_vehid_chain
     string(STR_CARGO_SUBTYPE_ZWEITE_KLASSE);
 }
 
-item(FEAT_TRAINS, dostowaggonic, 142) {
+item(FEAT_TRAINS, ic_dosto, 142) {
     property {
         sprite_id:			SPRITE_ID_NEW_TRAIN;
         name:               string(STR_NAME_DOSTOWAGGON_IC);
@@ -36,9 +36,9 @@ item(FEAT_TRAINS, dostowaggonic, 142) {
         cargo_allow_refit: [];
     }
     graphics {
-        default: gr_dostowaggonic;
-        cargo_capacity: sw_dostowaggonic_capacity;
-        purchase: gr_dostoic_purchase;
+        default: gr_ic_dosto;
+        cargo_capacity: sw_ic_dosto_capacity;
+        purchase: gr_ic_dosto_purchase;
         cargo_subtype_text: sw_dostowic_cargo_subtype_text;
         additional_text: string(STR_DOSTOWAGGON_IC_ADDITIONAL_TEXT);
     }
