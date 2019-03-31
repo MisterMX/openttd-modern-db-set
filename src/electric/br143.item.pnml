@@ -32,7 +32,7 @@ switch(FEAT_TRAINS, SELF, sw_br143_ve, (count_veh_id(dosto_stwg) > 0 || count_ve
 switch(FEAT_TRAINS, SELF, sw_br143_wagon_attach_kein_stw, vehicle_type_id) {
     dosto_stwg: CB_RESULT_ATTACH_ALLOW; 			// DB Doppelstock Steuerwagen
     silberlinge_stwg: CB_RESULT_ATTACH_ALLOW;					// DB Nahverkehrs Steuerwagen
-    dostowaggon:CB_RESULT_ATTACH_ALLOW;			// DB Doppelstockwagen
+    dosto:CB_RESULT_ATTACH_ALLOW;			// DB Doppelstockwagen
     silberlinge: CB_RESULT_ATTACH_ALLOW;		// DB Nahverkehrswagen
     br143: CB_RESULT_ATTACH_ALLOW;					// Eine weitere BR 143
     string(STR_CANNOT_ATTACH_LOK);					// Alle anderen nicht

@@ -50,7 +50,7 @@ switch(FEAT_TRAINS, SELF, sw_dostostw_wagon_attach_kein_stw, vehicle_type_id) {
     silberlinge_stwg:         CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrs Steuerwagen
     silberlinge:    CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrswagen
     dosto_stwg:       CB_RESULT_ATTACH_ALLOW;     // DB Doppelstocksteuerwagen
-    dostowaggon:    CB_RESULT_ATTACH_ALLOW;     // DB Doppelstockwagen
+    dosto:    CB_RESULT_ATTACH_ALLOW;     // DB Doppelstockwagen
     ic_dosto:  CB_RESULT_ATTACH_ALLOW;
     ic_dosto_stwg:     CB_RESULT_ATTACH_ALLOW;
     br146:          CB_RESULT_ATTACH_ALLOW;     // Eine weitere BR 146

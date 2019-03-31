@@ -1,23 +1,23 @@
-switch(FEAT_TRAINS, SELF, sw_gr_dostowaggon_not_reversed, position_in_vehid_chain_from_end) {
-    0: gr_dostowaggon1;
-    4: gr_dostowaggon1;
-    8: gr_dostowaggon1;
-    gr_dostowaggon2;
+switch(FEAT_TRAINS, SELF, sw_gr_dosto_not_reversed, position_in_vehid_chain_from_end) {
+    0: gr_dosto1;
+    4: gr_dosto1;
+    8: gr_dosto1;
+    gr_dosto2;
 }
 
-switch(FEAT_TRAINS, SELF, sw_gr_dostowaggon_reversed, position_in_vehid_chain) {
-    0: gr_dostowaggon1;
-    4: gr_dostowaggon1;
-    8: gr_dostowaggon1;
-    gr_dostowaggon2;
+switch(FEAT_TRAINS, SELF, sw_gr_dosto_reversed, position_in_vehid_chain) {
+    0: gr_dosto1;
+    4: gr_dosto1;
+    8: gr_dosto1;
+    gr_dosto2;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_gr_dostowaggon, vehicle_is_reversed) {
-    1: sw_gr_dostowaggon_reversed;
-    sw_gr_dostowaggon_not_reversed;
+switch(FEAT_TRAINS, PARENT, sw_gr_dosto, vehicle_is_reversed) {
+    1: sw_gr_dosto_reversed;
+    sw_gr_dosto_not_reversed;
 }
 
-switch(FEAT_TRAINS, SELF, sw_dostowaggon_capacity, position_in_vehid_chain_from_end) {
+switch(FEAT_TRAINS, SELF, sw_dosto_capacity, position_in_vehid_chain_from_end) {
     0: return 108;
     4: return 108;
     8: return 108;
@@ -31,7 +31,7 @@ switch(FEAT_TRAINS, SELF, sw_dostow_cargo_subtype_text, position_in_vehid_chain_
     string(STR_CARGO_SUBTYPE_ZWEITE_KLASSE);
 }
 
-item(FEAT_TRAINS, dostowaggon, 134) {
+item(FEAT_TRAINS, dosto, 134) {
     property {
         sprite_id:			SPRITE_ID_NEW_TRAIN;
         name:               string(STR_NAME_DOSTOWAGGON);
@@ -53,8 +53,8 @@ item(FEAT_TRAINS, dostowaggon, 134) {
         cargo_allow_refit: [];
     }
     graphics {
-        default: sw_gr_dostowaggon;
-        cargo_capacity: sw_dostowaggon_capacity;
+        default: sw_gr_dosto;
+        cargo_capacity: sw_dosto_capacity;
         purchase: gr_dosto_purchase;
         can_attach_wagon: sw_dostostw_wagon_attach;
         cargo_subtype_text: sw_dostow_cargo_subtype_text;
