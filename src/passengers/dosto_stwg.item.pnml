@@ -66,7 +66,6 @@ item (FEAT_TRAINS, dosto_stwg, 135) {
         default: sw_dosto_stwg_graphics;
         purchase: gr_dosto_stwg_purchase;
         visual_effect_and_powered: sw_dosto_stwg_ve;
-        can_attach_wagon: sw_dostostw_wagon_attach;
         cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
         cargo_capacity: 91;
         additional_text: string(STR_STW_ADDITIONAL_TEXT);

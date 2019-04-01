@@ -1,118 +1,31 @@
-switch(FEAT_TRAINS, SELF, sw_br146_farbe, cargo_subtype) {
-    1: gr_br146_ic;
-    gr_br146;
-}
+CONFIGURE_PUSH_PULL(br146, gr_br146, VISUAL_EFFECT_ELECTRIC)
+CONFIGURE_CC_ATTACHEMENT(br146)
 
-/* - Falls Wendezugbetrieb mit Nahverkehrswagen, checken ob der Zug gewendet wurde - */
-switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug_silberlinge, vehicle_is_reversed) {
-    1: gr_silberlinge_stwg_front;  // Wenn ja, dann wird die Lok durch den Nahverkehrssteuerwagen ersetzt
-    sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
-}
-
-/* - Falls Wendezugbetrieb mit Dostos, checken ob der Zug gewendet wurde - */
-switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug, vehicle_is_reversed) {
-    1: gr_dosto_stwg_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
-    sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
-}
-
-/* - Falls Wendezugbetrieb mit DostoICs, checken ob der Zug gewendet wurde - */
-switch(FEAT_TRAINS, SELF, sw_br146_gr_wendezug_ic_dosto, vehicle_is_reversed) {
-    1: gr_ic_dosto_stwg_front;  // Wenn ja, dann wird die Lok durch den Doppelstocksteuerwagen ersetzt
-    sw_br146_farbe;					// Wenn nicht, dann normale Lokgrafik
-}
-
-/* - Check ob ein DOStoIC angekoppelt ist - */
-switch(FEAT_TRAINS, SELF, sw_br146_keinesil, count_veh_id(ic_dosto_stwg) > 0 && count_veh_id(br146) == 1) {
-    1: sw_br146_gr_wendezug_ic_dosto;			// Wenn ja, dann Wendezugbetrieb mit DostoIC
-    sw_br146_farbe; // Wenn nicht, dann normale Lokgrafik
-}
-
-/* - Check ob ein Nahverkehrssteuerwagen angekoppelt ist - */
-switch(FEAT_TRAINS, SELF, sw_br146_keinedostos, count_veh_id(silberlinge_stwg) > 0 && count_veh_id(br146) == 1) {
-    1: sw_br146_gr_wendezug_silberlinge;			// Wenn ja, dann Wendezugbetrieb mit Nahverkehrswagen
-    sw_br146_keinesil; // Wenn nicht, dann normale Lokgrafik
-}
-
-/* - Check ob ein Doppelstocksteuerwagen angekoppelt ist - */
-switch(FEAT_TRAINS, SELF, sw_br146_graphics, count_veh_id(dosto_stwg) > 0 && count_veh_id(br146) == 1) {
-    1: sw_br146_gr_wendezug;			// Wenn ja, dann Wendezugbetrieb mit Doppelstockwagen
-    sw_br146_keinedostos; // Wenn nicht, dann check ob Nahverkehrssteuerwagen im Zug
-}
-
-/* - Check ob der Zug im Wendezugbetrieb faehrt und Anpassung der visuellen Effekte - */
-switch(FEAT_TRAINS, SELF, sw_br146_ve, ((count_veh_id(dosto_stwg) > 0 || count_veh_id(silberlinge_stwg) > 0 ||count_veh_id(ic_dosto_stwg) > 0  )&& vehicle_is_reversed == 1)) {
-    0: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC,-2,ENABLE_WAGON_POWER); // Wenn nicht, dann normale visuelle Effekte fuer die Lok
-    visual_effect_and_powered(VISUAL_EFFECT_DISABLE,0,DISABLE_WAGON_POWER);			// Wenn ja, dann visuelle Effekte fuer umgekehrte Fahrtrichtung ausschalten
-}
-
-/* - Check ob der Wagentyp angekoppelt werden darf - */
-switch(FEAT_TRAINS, SELF, sw_dostostw_wagon_attach_kein_stw, vehicle_type_id) {
-    silberlinge_stwg:         CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrs Steuerwagen
-    silberlinge:    CB_RESULT_ATTACH_ALLOW;     // DB Nahverkehrswagen
-    dosto_stwg:       CB_RESULT_ATTACH_ALLOW;     // DB Doppelstocksteuerwagen
-    dosto:    CB_RESULT_ATTACH_ALLOW;     // DB Doppelstockwagen
-    ic_dosto:  CB_RESULT_ATTACH_ALLOW;
-    ic_dosto_stwg:     CB_RESULT_ATTACH_ALLOW;
-    br146:          CB_RESULT_ATTACH_ALLOW;     // Eine weitere BR 146
-    string(STR_CANNOT_ATTACH_LOK);              // Alle anderen nicht
-}
-
-/* - Check ob ein Steuerwagen angekoppelt ist - */
-switch(FEAT_TRAINS, PARENT, sw_dostostw_wagon_attach, bitmask_consist_info & bitmask(2)) {
-    0: sw_dostostw_wagon_attach_kein_stw; // Wenn nicht, dann wird gecheckt ob der Wagentyp angekoppelt werden darf
-    string(STR_STW_VORHANDEN);  // Wenn ja, darf kein weiterer Steuerwagen hinzukommen
-}
-
-switch(FEAT_TRAINS, SELF, sw_br146_cst2, cargo_subtype) {
-    0: return string(STR_BR146_LIVERY_DEFAULT);     // verkehrsrot
-    1: return string(STR_BR146_LIVERY1);            // IC Farben
-    CB_RESULT_NO_TEXT;
-}
-
-switch(FEAT_TRAINS, SELF, sw_br146_cst1, cargo_subtype) {
-    0: return string(STR_BR146_LIVERY_DEFAULT);     // verkehrsrot
-    CB_RESULT_NO_TEXT;
-}
-
-switch(FEAT_TRAINS, SELF, sw_br146_cargo_subtype_text, current_year) {
-    1990..2013: sw_br146_cst1;
-    sw_br146_cst2;
-}
-
-switch(FEAT_TRAINS,SELF, sw_br146_capacity, cargo_subtype) {
-    1: 0;
-    0;
-}
-
-/* --- Definition der Eigenschaften und Callbacks --- */
-item(FEAT_TRAINS, br146, 41) {
+item(FEAT_TRAINS, br146, 146) {
     property {
-        sprite_id:			SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_BR146);
-        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
-        introduction_date:  date(2001,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        speed:              161 km/h;
-        vehicle_life:		32;
-        cost_factor:		160;
-        running_cost_factor:160;
-        running_cost_base:	RUNNING_COST_ELECTRIC;
-        track_type:			RAIL;
-        power:				5600 kW;
-        engine_class:		ENGINE_CLASS_ELECTRIC;
-        cargo_capacity:		1;
-        weight:				84 tons;
-        tractive_effort_coefficient: 0.3594; // 92
-        air_drag_coefficient: 0.05;
-        cargo_allow_refit: [PASS];
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_BR146);
+        climates_available:             bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        introduction_date:              date(2001, 1, 1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        speed:                          161 km/h;
+        vehicle_life:                   32;
+        cost_factor:                    160;
+        running_cost_factor:            160;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        track_type:                     RAIL;
+        power:                          5600 kW;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        weight:                         84 tons;
+        cargo_capacity:                 0;
+        tractive_effort_coefficient:    0.3594; // 92
+        air_drag_coefficient:           0.05;
     }
     graphics {
-        cargo_capacity: sw_br146_capacity;
-        default: sw_br146_graphics;
-        purchase: gr_br146_purchase;
-        cargo_subtype_text: sw_br146_cargo_subtype_text;
-        visual_effect_and_powered: sw_br146_ve;
-        can_attach_wagon: sw_dostostw_wagon_attach;
-        additional_text: string(STR_BR146_ADDITIONAL_TEXT);
+        default:                        GRAPHICS_ENGINE(br146);
+        purchase:                       gr_br146_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br146);
+        can_attach_wagon:               CC_ATTACHEMENT(br146);
+        additional_text:                string(STR_BR101_ADDITIONAL_TEXT);
     }
 }

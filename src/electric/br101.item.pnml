@@ -1,66 +1,31 @@
-/* - Check im Wendezugbetrieb, ob die Fahrtrichtung gewechselt wurde - */
-switch(FEAT_TRAINS, SELF, sw_br101_gr_wendezug, vehicle_is_reversed) {
-    1: gr_ic_stwg_front;			// Wenn ja, dann anzeigen des Steuerwagens, statt der Lok
-    gr_br101;					// Wenn nicht, dann anzeigen der normalen Lokgrafik
-}
-
-/* - Check ob genau eine BR101 und ein Steuerwagen im Verbund ist - */
-switch(FEAT_TRAINS, SELF, sw_br101_graphics, count_veh_id(ic_stwg) > 0 && count_veh_id(br101) == 1) {
-    1: sw_br101_gr_wendezug;		// Wenn ja, dann Wendezugbetrieb
-    gr_br101;						// Wenn nicht, dann Normalbetrieb
-}
-
-/* - Anpassen des visuellen Effektes entsprechend der Fahrtrichtung - */
-switch(FEAT_TRAINS, SELF, sw_br101_ve, count_veh_id(ic_stwg) > 0 && vehicle_is_reversed == 1) {
-    0: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -2, ENABLE_WAGON_POWER);
-    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-}
-
-/* - Check ob der Wagen angekoppelt werden darf - */
-switch(FEAT_TRAINS, SELF, sw_br101_wagon_attach_kein_stw, vehicle_type_id) {
-    ic: CB_RESULT_ATTACH_ALLOW;
-    ic_stwg: CB_RESULT_ATTACH_ALLOW;
-    ic_dosto: CB_RESULT_ATTACH_ALLOW;
-    ic_dosto_stwg: CB_RESULT_ATTACH_ALLOW;
-    dosto: CB_RESULT_ATTACH_ALLOW;
-    dosto_stwg: CB_RESULT_ATTACH_ALLOW;
-    silberlinge: CB_RESULT_ATTACH_ALLOW;
-    silberlinge_stwg: CB_RESULT_ATTACH_ALLOW;
-    br101: CB_RESULT_ATTACH_ALLOW;
-    CB_RESULT_ATTACH_DISALLOW;
-}
-
-/* - Check ob schon ein Steuerwagen angehaengt ist - */
-switch(FEAT_TRAINS, PARENT, sw_br101_wagon_attach, bitmask_consist_info & bitmask(2)) {
-    0: sw_br101_wagon_attach_kein_stw;		// Wenn nicht, dann check ob Wagen angekoppelt werden darf
-    string(STR_STW_VORHANDEN);				// Wenn ja, dann Meldung dass schon ein Stw vorhanden ist
-}
+CONFIGURE_PUSH_PULL(br101, gr_br101, VISUAL_EFFECT_ELECTRIC)
+CONFIGURE_CC_ATTACHEMENT(br101)
 
 item (FEAT_TRAINS, br101, 00101) {
     property {
-        sprite_id:			SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_BR101);
-        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
-        introduction_date:  date(1997,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        speed:              221 km/h;
-        vehicle_life:		34;
-        cost_factor:		179;
-        running_cost_factor:210;
-        running_cost_base:	RUNNING_COST_ELECTRIC;
-        track_type:			RAIL;
-        power:				6400 kW;
-        engine_class:		ENGINE_CLASS_ELECTRIC;
-        cargo_capacity:		0;
-        weight:				87 tons;
-        tractive_effort_coefficient: 0.34765; //89
-        air_drag_coefficient: 0.07;
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_BR101);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
+        introduction_date:              date(1997, 1, 1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        speed:                          221 km/h;
+        vehicle_life:                   34;
+        cost_factor:                    179;
+        running_cost_factor:            210;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        track_type:                     RAIL;
+        power:                          6400 kW;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        cargo_capacity:                 0;
+        weight:                         87 tons;
+        tractive_effort_coefficient:    0.34765; //89
+        air_drag_coefficient:           0.07;
     }
     graphics {
-        default: sw_br101_graphics;
-        purchase: gr_br101_purchase;
-        visual_effect_and_powered: sw_br101_ve;
-        can_attach_wagon: sw_br101_wagon_attach;
-        additional_text: string(STR_BR101_ADDITIONAL_TEXT);
+        default:                        GRAPHICS_ENGINE(br101);
+        purchase:                       gr_br101_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br101);
+        can_attach_wagon:               CC_ATTACHEMENT(br101);
+        additional_text:                string(STR_BR101_ADDITIONAL_TEXT);
     }
 }

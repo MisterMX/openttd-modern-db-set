@@ -56,7 +56,6 @@ item(FEAT_TRAINS, dosto, 134) {
         default: sw_gr_dosto;
         cargo_capacity: sw_dosto_capacity;
         purchase: gr_dosto_purchase;
-        can_attach_wagon: sw_dostostw_wagon_attach;
         cargo_subtype_text: sw_dostow_cargo_subtype_text;
         additional_text: string(STR_DOSTOWAGGON_ADDITIONAL_TEXT);
     }
