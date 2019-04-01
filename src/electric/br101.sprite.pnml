@@ -1,5 +1,5 @@
 #define SPRITE_BR_101 "gfx/electric/br101.png"
 
-spriteset(gr_br101, SPRITE_BR_101){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 101 ziehend rot
-spriteset(gr_br101_rev, SPRITE_BR_101){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 101 schiebend rot
+spriteset(GR_ENGINE(br101), SPRITE_BR_101){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 101 ziehend rot
+spriteset(GR_ENGINE_REV(br101), SPRITE_BR_101){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 101 schiebend rot
 spriteset(gr_br101_purchase, SPRITE_PURCHASE){tmpl_purchase(14)}								// Grafik BR 101 Kaufmenue

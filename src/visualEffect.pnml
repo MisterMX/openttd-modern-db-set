@@ -1,0 +1,14 @@
+#define VISUAL_EFFECT_ENGINE(engine) sw_ve_##engine
+
+#define CONFIGURE_VISUAL_EFFECT_ENGINE(engine, engine_visual_effect)\
+switch(\
+    FEAT_TRAINS, SELF,\
+    VISUAL_EFFECT_ENGINE(engine),\
+    (count_veh_id(dosto_stwg) > 0\
+        | count_veh_id(silberlinge_stwg) > 0\
+        | count_veh_id(ic_stwg) > 0\
+        | count_veh_id(ic_dosto_stwg) > 0)\
+    && vehicle_is_reversed == 1) {\
+    0: visual_effect_and_powered(engine_visual_effect, 1, ENABLE_WAGON_POWER);\
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);\
+}

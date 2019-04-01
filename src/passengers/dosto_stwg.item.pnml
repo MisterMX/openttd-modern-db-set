@@ -1,25 +1,20 @@
-switch(FEAT_TRAINS, PARENT, sw_stw_146ic, cargo_subtype) {
-    1: gr_br146_ic_rev;
-    gr_br146_rev;
-}
-
 switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br101, vehicle_is_reversed && count_veh_id(br101) == 1) {
-    1: gr_br101_rev;
+    1: GR_ENGINE_REV(br101);
     gr_dosto_stwg_rear;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br143, vehicle_is_reversed && count_veh_id(br143) == 1) {
-    1: gr_br143_rev;
+    1: GR_ENGINE_REV(br143);
     gr_dosto_stwg_rear;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
-    1: sw_stw_146ic;
+    1: GR_ENGINE_REV(br146);
     gr_dosto_stwg_rear;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: gr_br218_rev;
+    1: GR_ENGINE_REV(br218);
     gr_dosto_stwg_rear;
 }
 

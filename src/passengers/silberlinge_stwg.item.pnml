@@ -1,6 +1,6 @@
 switch(FEAT_TRAINS, PARENT, sw_silberlinge_stwg_146ic, cargo_subtype) {
-    1: gr_br146_ic_rev;
-     gr_br146_rev;
+    1: GR_ENGINE_REV(br146_ic);
+    GR_ENGINE_REV(br146);
 }
 
 switch(FEAT_TRAINS, PARENT, sw_silberlinge_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
@@ -9,12 +9,12 @@ switch(FEAT_TRAINS, PARENT, sw_silberlinge_stwg_graphics_wendezug_br146, vehicle
 }
 
 switch(FEAT_TRAINS, PARENT, sw_silberlinge_stwg_graphics_wendezug_br143, vehicle_is_reversed && count_veh_id(br143) == 1) {
-    1: gr_br143_rev;
+    1: GR_ENGINE_REV(br143);
     silberlinge_stwg_rear_spg;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_silberlinge_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: gr_br218_rev;
+    1: GR_ENGINE_REV(br218);
     silberlinge_stwg_rear_spg;
 }
 

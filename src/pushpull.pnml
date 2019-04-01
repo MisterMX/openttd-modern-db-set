@@ -1,58 +1,46 @@
-#define VISUAL_EFFECT_ENGINE(engine) sw_ve_##engine
 #define GRAPHICS_ENGINE(engine) sw_graphics_##engine
 
-#define CONFIGURE_PUSH_PULL(engine, gr_engine, engine_visual_effect)\
-/* - Grafik-Switch fuer Wendezugbetrieb mit  DB Intercity DoStos -*/\
+#define GR_ENGINE(engine) gr_##engine
+#define GR_ENGINE_REV(engine) gr_rev_##engine
+
+#define CONFIGURE_PUSH_PULL_ENGINE(engine)\
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_ic_dosto_##engine, vehicle_is_reversed) {\
     1: gr_ic_dosto_stwg_front;\
-    gr_engine;\
+    GR_ENGINE(engine);\
 }\
 \
-/* - Grafik-Switch fuer Wendezugbetrieb mit DB Fernverkehrswagen - */\
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_ic_##engine, vehicle_is_reversed && count_veh_id(engine) == 1) {\
     1: gr_ic_stwg_front;\
-    gr_engine;\
+    GR_ENGINE(engine);\
 }\
 \
-/* - Grafik-Switch fuer Wendezugbetrieb mit  DB Nahverkehrswagen -*/\
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_silberlinge_##engine, vehicle_is_reversed) {\
     1: silberlinge_stwg_front_spg;\
-    gr_engine;\
+    GR_ENGINE(engine);\
 }\
 \
-/* - Grafik-Switch fuer Wendezugbetrieb mit DB Doppelstockwagen - */\
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_dosto_##engine, vehicle_is_reversed) {\
     1: gr_dosto_stwg_front;\
-    gr_engine;\
+    GR_ENGINE(engine);\
 }\
 \
 \
-/* - Check ob ein DB Fernverkehrs-Steuerwagen Dosto angekoppelt und nur eine BR218 im Zug ist - */\
 switch(FEAT_TRAINS, SELF, sw_gr_keinic_##engine, count_veh_id(ic_dosto_stwg)== 1 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_ic_dosto_##engine;\
-    gr_engine;\
+    GR_ENGINE(engine);\
 }\
 \
-/* - Check ob ein DB Fernverkehrs-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */\
 switch(FEAT_TRAINS, SELF, sw_gr_keinesil_##engine, count_veh_id(ic_stwg)== 1 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_ic_##engine;\
     sw_gr_keinic_##engine;\
 }\
 \
-/* - Check ob ein DB Nahverkehrs-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */\
 switch(FEAT_TRAINS, SELF, sw_gr_keinedostos_##engine, count_veh_id(silberlinge_stwg)== 1 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_silberlinge_##engine;\
     sw_gr_keinesil_##engine;\
 }\
 \
-/* - Check ob ein DB Doppelstpck-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */\
 switch(FEAT_TRAINS, SELF, GRAPHICS_ENGINE(engine), count_veh_id(dosto_stwg) > 0 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_dosto_##engine;\
     sw_gr_keinedostos_##engine;\
-}\
-\
-/* - Im Wendezugbetrieb wird der visuelle Effekt ausgesetzt, wenn der Zug gedreht wurde - */\
-switch(FEAT_TRAINS, SELF, VISUAL_EFFECT_ENGINE(engine), (count_veh_id(dosto_stwg) > 0 | count_veh_id(silberlinge_stwg) > 0 | count_veh_id(ic_stwg) > 0 | count_veh_id(ic_dosto_stwg) > 0) && vehicle_is_reversed == 1) {\
-    0: visual_effect_and_powered(engine_visual_effect, 1, ENABLE_WAGON_POWER);\
-    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);\
 }

@@ -1,12 +1,12 @@
 //** -------------------- ID143 propic_dosto_stwg DB Doppelstocksteuerwagen -------------------- **//												STW Dosto
 
 switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
-    1: sw_stw_146ic;
+    1: GR_ENGINE_REV(br146_ic);
     gr_ic_dosto_stwg_rear;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: gr_br218_rev;
+    1: GR_ENGINE_REV(br218);
     gr_ic_dosto_stwg_rear;
 }
 

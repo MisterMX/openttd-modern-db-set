@@ -1,10 +1,10 @@
 switch(FEAT_TRAINS, PARENT, sw_ic_stwg_graphics_wendezug_br101, vehicle_is_reversed && count_veh_id(br101) == 1) {
-    1: gr_br101_rev;
+    1: GR_ENGINE_REV(br101);
     gr_ic_stwg_rear;
 }
     
 switch(FEAT_TRAINS,PARENT, sw_ic_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: gr_br218_rev;
+    1: GR_ENGINE_REV(br218);
     gr_ic_stwg_rear;
 }
 
