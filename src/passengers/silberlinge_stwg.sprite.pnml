@@ -1,16 +1,16 @@
 #define SPRITE_SILBERLINGE "gfx/passengers/silberlinge_stwg.png"
 
-spriteset(gr_silberlinge_stwg_front, SPRITE_SILBERLINGE){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafiken Steuerwagen Silberling geschl. vorne
-spriteset(gr_silberlinge_stwg_front_l, SPRITE_SILBERLINGE){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafiken Steuerwagen Silberling offen vorne
-spriteset(gr_silberlinge_stwg_rear, SPRITE_SILBERLINGE){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafiken Steuerwagen Silberling geschl. hinten
-spriteset(gr_silberlinge_stwg_rear_l, SPRITE_SILBERLINGE){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafiken Steuerwagen Silberling offen hinten
+spriteset(gr_silberlinge_stwg_front, SPRITE_SILBERLINGE){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_silberlinge_stwg_front_l, SPRITE_SILBERLINGE){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_silberlinge_stwg_rear, SPRITE_SILBERLINGE){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_silberlinge_stwg_rear_l, SPRITE_SILBERLINGE){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 
-spritegroup silberlinge_stwg_front_spg{														// Spritegroup STW Silberlinge vorne
+spritegroup GR_NAME_FRONT(silberlinge_stwg) {
     loading: gr_silberlinge_stwg_front_l;
     loaded: gr_silberlinge_stwg_front;
 }
-spritegroup silberlinge_stwg_rear_spg{														// Spritegroup STW Silberlinge hinten
+spritegroup GR_NAME_REAR(silberlinge_stwg) {
     loading: gr_silberlinge_stwg_rear_l;
     loaded: gr_silberlinge_stwg_rear;
 }
-spriteset(gr_silberlinge_stwg_purchase,SPRITE_PURCHASE){tmpl_purchase(7)}					// Grafik STW Silberling PURCHASE
+spriteset(gr_silberlinge_stwg_purchase, SPRITE_PURCHASE){tmpl_purchase(7)}

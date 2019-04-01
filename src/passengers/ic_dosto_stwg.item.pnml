@@ -1,58 +1,35 @@
-//** -------------------- ID143 propic_dosto_stwg DB Doppelstocksteuerwagen -------------------- **//												STW Dosto
+CONFIGURE_PUSH_PULL_CC(ic_dosto_stwg)
+CONFIGURE_VISUAL_EFFECT_CC(ic_dosto_stwg)
 
-switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
-    1: GR_ENGINE_REV(br146_ic);
-    gr_ic_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: GR_ENGINE_REV(br218);
-    gr_ic_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_ic_dosto_stwg_graphics, vehicle_type_id) {
-    br146: sw_ic_dosto_stwg_graphics_wendezug_br146;
-    br218: sw_ic_dosto_stwg_graphics_wendezug_br218;
-    gr_ic_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS,PARENT, sw_ic_dosto_stwg_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
-    1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -1, ENABLE_WAGON_POWER);
-    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-}
-
-switch(FEAT_TRAINS,PARENT, sw_ic_dosto_stwg_ve, (vehicle_type_id == br146) && vehicle_is_reversed == 1) {
-    1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, ENABLE_WAGON_POWER);
-    sw_ic_dosto_stwg_ve_diesel;
-}
+#define IC_DOSTO_CC_CARGO_CAPACITY 81
 
 item(FEAT_TRAINS, ic_dosto_stwg, 143) {
     property {
-        sprite_id:			SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_STWDOSTOIC);
-        climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
-        introduction_date:  date(2013,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        loading_speed:		18;
-        speed:              161 km/h;
-        cost_factor:		195;
-        running_cost_factor:240;
-        running_cost_base:	RUNNING_COST_ELECTRIC;
-        track_type:			RAIL;
-        power:				0 kW;
-        cargo_capacity:		81;
-        bitmask_vehicle_info: bitmask(2);
-        weight:				50 tons;
-        refittable_cargo_classes: bitmask(CC_PASSENGERS);
-        non_refittable_cargo_classes: bitmask();
-        cargo_allow_refit: [];
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_STWDOSTOIC);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
+        introduction_date:              date(2013,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        loading_speed:                  18;
+        speed:                          161 km/h;
+        cost_factor:                    195;
+        running_cost_factor:            240;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        track_type:                     RAIL;
+        power:                          0 kW;
+        cargo_capacity:                 IC_DOSTO_CC_CARGO_CAPACITY;
+        bitmask_vehicle_info:           bitmask(2);
+        weight:                         50 tons;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   bitmask();
+        cargo_allow_refit:              [];
     }
     graphics {
-        default: sw_ic_dosto_stwg_graphics;
-        purchase: gr_ic_dosto_stwg_purchase;
-        visual_effect_and_powered: sw_ic_dosto_stwg_ve;
-        cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
-        cargo_capacity: 81;
-        additional_text: string(STR_STWDOSTOIC_ADDITIONAL_TEXT);
+        default:                        GRAPHICS(ic_dosto_stwg);
+        purchase:                       gr_ic_dosto_stwg_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_CC(ic_dosto_stwg);
+        cargo_capacity:                 IC_DOSTO_CC_CARGO_CAPACITY;
+        cargo_subtype_text:             string(STR_CARGO_SUBTYPE_STW);
+        additional_text:                string(STR_STWDOSTOIC_ADDITIONAL_TEXT);
     }
 }

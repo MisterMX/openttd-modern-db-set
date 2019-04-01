@@ -23,7 +23,7 @@ item (FEAT_TRAINS, br101, 00101) {
         air_drag_coefficient:           0.07;
     }
     graphics {
-        default:                        GRAPHICS_ENGINE(br101);
+        default:                        GRAPHICS(br101);
         purchase:                       gr_br101_purchase;
         visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br101);
         can_attach_wagon:               CC_ATTACHEMENT(br101);

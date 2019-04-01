@@ -1,33 +1,35 @@
-#define GRAPHICS_ENGINE(engine) sw_graphics_##engine
+#define GRAPHICS(id) sw_graphics_##id
 
-#define GR_ENGINE(engine) gr_##engine
-#define GR_ENGINE_REV(engine) gr_rev_##engine
+#define GR_NAME(id) gr_##id
+#define GR_NAME_REV(id) gr_rev_##id
+#define GR_NAME_FRONT(id) gr_front_##id
+#define GR_NAME_REAR(id) gr_rear_##id
 
 #define CONFIGURE_PUSH_PULL_ENGINE(engine)\
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_ic_dosto_##engine, vehicle_is_reversed) {\
-    1: gr_ic_dosto_stwg_front;\
-    GR_ENGINE(engine);\
+    1: GR_NAME_FRONT(ic_dosto_stwg);\
+    GR_NAME(engine);\
 }\
 \
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_ic_##engine, vehicle_is_reversed && count_veh_id(engine) == 1) {\
-    1: gr_ic_stwg_front;\
-    GR_ENGINE(engine);\
+    1: GR_NAME_FRONT(ic_stwg);\
+    GR_NAME(engine);\
 }\
 \
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_silberlinge_##engine, vehicle_is_reversed) {\
-    1: silberlinge_stwg_front_spg;\
-    GR_ENGINE(engine);\
+    1: GR_NAME_FRONT(silberlinge_stwg);\
+    GR_NAME(engine);\
 }\
 \
 switch(FEAT_TRAINS, SELF, sw_gr_pushpull_dosto_##engine, vehicle_is_reversed) {\
-    1: gr_dosto_stwg_front;\
-    GR_ENGINE(engine);\
+    1: GR_NAME_FRONT(dosto_stwg);\
+    GR_NAME(engine);\
 }\
 \
 \
 switch(FEAT_TRAINS, SELF, sw_gr_keinic_##engine, count_veh_id(ic_dosto_stwg)== 1 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_ic_dosto_##engine;\
-    GR_ENGINE(engine);\
+    GR_NAME(engine);\
 }\
 \
 switch(FEAT_TRAINS, SELF, sw_gr_keinesil_##engine, count_veh_id(ic_stwg)== 1 && count_veh_id(engine) == 1) {\
@@ -40,7 +42,33 @@ switch(FEAT_TRAINS, SELF, sw_gr_keinedostos_##engine, count_veh_id(silberlinge_s
     sw_gr_keinesil_##engine;\
 }\
 \
-switch(FEAT_TRAINS, SELF, GRAPHICS_ENGINE(engine), count_veh_id(dosto_stwg) > 0 && count_veh_id(engine) == 1) {\
+switch(FEAT_TRAINS, SELF, GRAPHICS(engine), count_veh_id(dosto_stwg) > 0 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_dosto_##engine;\
     sw_gr_keinedostos_##engine;\
+}
+
+
+
+#define SW_GRAPHICS_PUSH_PULL_CC_NAME(engine, car) sw_pushpull_graphics_##engine##car
+
+#define SW_GRAPHICS_PUSH_PULL_CC(engine, car)\
+switch(FEAT_TRAINS, PARENT, SW_GRAPHICS_PUSH_PULL_CC_NAME(engine, car), vehicle_is_reversed && count_veh_id(engine) == 1) {\
+    1: GR_NAME_REV(engine);\
+    GR_NAME_REAR(car);\
+}
+
+#define CONFIGURE_PUSH_PULL_CC(car)\
+SW_GRAPHICS_PUSH_PULL_CC(br101, car)\
+SW_GRAPHICS_PUSH_PULL_CC(br143, car)\
+SW_GRAPHICS_PUSH_PULL_CC(br146, car)\
+SW_GRAPHICS_PUSH_PULL_CC(br146_ic, car)\
+SW_GRAPHICS_PUSH_PULL_CC(br218, car)\
+\
+switch(FEAT_TRAINS, PARENT, GRAPHICS(car), vehicle_type_id) {\
+    br101: SW_GRAPHICS_PUSH_PULL_CC_NAME(br101, car);\
+    br143: SW_GRAPHICS_PUSH_PULL_CC_NAME(br143, car);\
+    br146: SW_GRAPHICS_PUSH_PULL_CC_NAME(br146, car);\
+    br146_ic: SW_GRAPHICS_PUSH_PULL_CC_NAME(br146_ic, car);\
+    br218: SW_GRAPHICS_PUSH_PULL_CC_NAME(br218, car);\
+    GR_NAME_REAR(car);\
 }

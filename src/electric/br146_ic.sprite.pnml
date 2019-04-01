@@ -1,5 +1,5 @@
 #define SPRITE_BR_146_IC "gfx/electric/br146.png"
 
-spriteset(GR_ENGINE(br146_ic), SPRITE_BR_146_IC){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(GR_ENGINE_REV(br146_ic), SPRITE_BR_146_IC){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME(br146_ic), SPRITE_BR_146_IC){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME_REV(br146_ic), SPRITE_BR_146_IC){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br146_ic_purchase, SPRITE_PURCHASE){tmpl_purchase(55)}

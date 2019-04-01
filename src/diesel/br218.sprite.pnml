@@ -1,5 +1,5 @@
 #define SPRITE_BR_218 "gfx/diesel/br218.png"
 
-spriteset(GR_ENGINE(br218), SPRITE_BR_218){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(GR_ENGINE_REV(br218), SPRITE_BR_218){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME(br218), SPRITE_BR_218){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME_REV(br218), SPRITE_BR_218){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br218_purchase, SPRITE_PURCHASE){tmpl_purchase(16)}

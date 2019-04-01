@@ -1,68 +1,35 @@
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br101, vehicle_is_reversed && count_veh_id(br101) == 1) {
-    1: GR_ENGINE_REV(br101);
-    gr_dosto_stwg_rear;
-}
+CONFIGURE_PUSH_PULL_CC(dosto_stwg)
+CONFIGURE_VISUAL_EFFECT_CC(dosto_stwg)
 
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br143, vehicle_is_reversed && count_veh_id(br143) == 1) {
-    1: GR_ENGINE_REV(br143);
-    gr_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br146, vehicle_is_reversed && count_veh_id(br146) == 1) {
-    1: GR_ENGINE_REV(br146);
-    gr_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics_wendezug_br218, vehicle_is_reversed && count_veh_id(br218) == 1) {
-    1: GR_ENGINE_REV(br218);
-    gr_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_graphics, vehicle_type_id) {
-    br101: sw_dosto_stwg_graphics_wendezug_br101;
-    br143: sw_dosto_stwg_graphics_wendezug_br143;
-    br146: sw_dosto_stwg_graphics_wendezug_br146;
-    br218: sw_dosto_stwg_graphics_wendezug_br218;
-    gr_dosto_stwg_rear;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_ve_diesel, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {
-    1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -1, ENABLE_WAGON_POWER);
-    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-}
-
-switch(FEAT_TRAINS, PARENT, sw_dosto_stwg_ve, (vehicle_type_id == br146 | vehicle_type_id == br143) && vehicle_is_reversed == 1) {
-    1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, ENABLE_WAGON_POWER);
-    sw_dosto_stwg_ve_diesel;
-}
+#define DOSTO_CC_CARGO_CAPACITY 91
 
 item (FEAT_TRAINS, dosto_stwg, 135) {
     property {
-        sprite_id:			    SPRITE_ID_NEW_TRAIN;
-        name:                   string(STR_NAME_STW);
-        climates_available:     bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
-        introduction_date:      date(1996, 1, 1);
-        model_life:			    VEHICLE_NEVER_EXPIRES;
-        loading_speed:		    23;
-        speed:                  161 km/h;
-        cost_factor:		    180;
-        running_cost_factor:    220;
-        running_cost_base:	    RUNNING_COST_ELECTRIC;
-        track_type:			    RAIL;
-        power:				    0 kW;
-        cargo_capacity:		    91;
-        bitmask_vehicle_info:   bitmask(2);
-        weight:				    50 tons;
-        refittable_cargo_classes: bitmask(CC_PASSENGERS);
-        non_refittable_cargo_classes: bitmask();
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_STW);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
+        introduction_date:              date(1996, 1, 1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        loading_speed:                  23;
+        speed:                          161 km/h;
+        cost_factor:                    180;
+        running_cost_factor:            220;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        track_type:                     RAIL;
+        power:                          0 kW;
+        cargo_capacity:                 DOSTO_CC_CARGO_CAPACITY;
+        bitmask_vehicle_info:           bitmask(2);
+        weight:                         50 tons;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   bitmask();
         cargo_allow_refit: [];
     }
     graphics {
-        default: sw_dosto_stwg_graphics;
-        purchase: gr_dosto_stwg_purchase;
-        visual_effect_and_powered: sw_dosto_stwg_ve;
-        cargo_subtype_text: string(STR_CARGO_SUBTYPE_STW);
-        cargo_capacity: 91;
-        additional_text: string(STR_STW_ADDITIONAL_TEXT);
+        default:                        GRAPHICS(dosto_stwg);
+        purchase:                       gr_dosto_stwg_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_CC(dosto_stwg);
+        cargo_capacity:                 DOSTO_CC_CARGO_CAPACITY;
+        cargo_subtype_text:             string(STR_CARGO_SUBTYPE_STW);
+        additional_text:                string(STR_STW_ADDITIONAL_TEXT);
     }
 }

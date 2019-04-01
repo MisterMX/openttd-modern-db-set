@@ -12,3 +12,16 @@ switch(\
     0: visual_effect_and_powered(engine_visual_effect, 1, ENABLE_WAGON_POWER);\
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);\
 }
+
+#define VISUAL_EFFECT_CC(car) sw_ve_##car
+
+#define CONFIGURE_VISUAL_EFFECT_CC(car)\
+switch(FEAT_TRAINS, PARENT, sw_ve_diesel_##car, (vehicle_type_id == br218) && vehicle_is_reversed == 1) {\
+    1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -1, ENABLE_WAGON_POWER);\
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);\
+}\
+\
+switch(FEAT_TRAINS, PARENT, VISUAL_EFFECT_CC(car), (vehicle_type_id == br146 | vehicle_type_id == br143) && vehicle_is_reversed == 1) {\
+    1: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, ENABLE_WAGON_POWER);\
+    sw_ve_diesel_##car;\
+}
