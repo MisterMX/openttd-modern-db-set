@@ -26,6 +26,6 @@ item(FEAT_TRAINS, br143, 40) {
         purchase:                       gr_br143_purchase;
         visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br143);
         can_attach_wagon:               CC_ATTACHEMENT(br143);
-        additional_text:                string(STR_BR101_ADDITIONAL_TEXT);
+        additional_text:                string(STR_BR143_ADDITIONAL_TEXT);
     }
 }

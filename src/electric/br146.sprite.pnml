@@ -2,6 +2,4 @@
 
 spriteset(gr_br146, SPRITE_BR_146){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 146 ziehend rot
 spriteset(gr_br146_rev, SPRITE_BR_146){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 146 schiebend rot
-spriteset(gr_br146_ic, SPRITE_BR_146){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 146 ziehend weiss
-spriteset(gr_br146_ic_rev, SPRITE_BR_146){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 146 schiebend weiss
 spriteset(gr_br146_purchase,SPRITE_PURCHASE){tmpl_purchase(13)}

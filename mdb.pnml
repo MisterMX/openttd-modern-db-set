@@ -10,6 +10,7 @@
 #include "src/electric/br101.sprite.pnml"
 #include "src/electric/br143.sprite.pnml"
 #include "src/electric/br146.sprite.pnml"
+#include "src/electric/br146_ic.sprite.pnml"
 
 #include "src/diesel/br218.sprite.pnml"
 
@@ -26,6 +27,7 @@
 #include "src/electric/br101.item.pnml"
 #include "src/electric/br143.item.pnml"
 #include "src/electric/br146.item.pnml"
+#include "src/electric/br146_ic.item.pnml"
 
 #include "src/diesel/br218.item.pnml"
 

@@ -1,7 +1,7 @@
-CONFIGURE_PUSH_PULL(br146, gr_br146, VISUAL_EFFECT_ELECTRIC)
-CONFIGURE_CC_ATTACHEMENT(br146)
+CONFIGURE_PUSH_PULL(br146_ic, gr_br146_ic, VISUAL_EFFECT_ELECTRIC)
+CONFIGURE_CC_ATTACHEMENT(br146_ic)
 
-item(FEAT_TRAINS, br146, 146) {
+item(FEAT_TRAINS, br146_ic, 1461) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         name:                           string(STR_NAME_BR146);
@@ -22,10 +22,10 @@ item(FEAT_TRAINS, br146, 146) {
         air_drag_coefficient:           0.05;
     }
     graphics {
-        default:                        GRAPHICS_ENGINE(br146);
-        purchase:                       gr_br146_purchase;
-        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br146);
-        can_attach_wagon:               CC_ATTACHEMENT(br146);
+        default:                        GRAPHICS_ENGINE(br146_ic);
+        purchase:                       gr_br146_ic_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br146_ic);
+        can_attach_wagon:               CC_ATTACHEMENT(br146_ic);
         additional_text:                string(STR_BR146_ADDITIONAL_TEXT);
     }
 }
