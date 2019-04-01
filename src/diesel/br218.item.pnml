@@ -1,50 +1,32 @@
 CONFIGURE_PUSH_PULL(br218, gr_br218, VISUAL_EFFECT_DIESEL)
+CONFIGURE_CC_ATTACHEMENT(br218)
 
-/* - Ohne Steuerwagen duerfen diese Wagen angekoppelt werden - */
-switch(FEAT_TRAINS, SELF, sw_br218_wagon_attach_kein_stw, vehicle_type_id) {
-    dosto: CB_RESULT_ATTACH_ALLOW;
-    dosto_stwg: CB_RESULT_ATTACH_ALLOW;
-    silberlinge: CB_RESULT_ATTACH_ALLOW;
-    silberlinge_stwg: CB_RESULT_ATTACH_ALLOW;
-    ic: CB_RESULT_ATTACH_ALLOW;
-    ic_stwg: CB_RESULT_ATTACH_ALLOW;
-    br218: CB_RESULT_ATTACH_ALLOW;
-    CB_RESULT_ATTACH_DISALLOW;
-}
-
-/* -  Wenn schon ein Steuerwagen angehaengt ist, darf nichts zusaetzliches mehr angehaengt werden - */
-switch(FEAT_TRAINS, PARENT, sw_br218_wagon_attach, bitmask_consist_info & bitmask(2)) {
-    0: sw_br218_wagon_attach_kein_stw;		// Ohne Steuerwagen duerfen diese Wagen angekoppelt werden
-    CB_RESULT_ATTACH_DISALLOW;
-}
-        
-/* - Definition der Eigenschaften und Callbacks - */
 item (FEAT_TRAINS, br218, 218) {
     property {
-        sprite_id:			SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_BR218);
-        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);		
-        introduction_date:  date(1968,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        speed:              141 km/h;
-        vehicle_life:		45;
-        dual_headed:		0;
-        cost_factor:		85;
-        running_cost_factor:210;
-        running_cost_base:	RUNNING_COST_DIESEL;
-        track_type:			RAIL;
-        power:				2060 kW;
-        engine_class:		ENGINE_CLASS_DIESEL;
-        cargo_capacity:		0;
-        weight:				79 tons;
-        tractive_effort_coefficient: 0.2539; // 65
-        air_drag_coefficient: 0.057;
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_BR218);
+        climates_available:             bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);		
+        introduction_date:              date(1968,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        speed:                          141 km/h;
+        vehicle_life:                   45;
+        dual_headed:                    0;
+        cost_factor:                    85;
+        running_cost_factor:            210;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        track_type:                     RAIL;
+        power:                          2060 kW;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        cargo_capacity:                 0;
+        weight:                         79 tons;
+        tractive_effort_coefficient:    0.2539; // 65
+        air_drag_coefficient:           0.057;
     }
     graphics {
-        default: sw_graphics_br218;
-        purchase: gr_br218_purchase;
-        visual_effect_and_powered: sw_ve_br218;
-        can_attach_wagon: sw_br218_wagon_attach;
-        additional_text: string(STR_BR218_ADDITIONAL_TEXT);
+        default:                        GRAPHICS_ENGINE(br218);
+        purchase:                       gr_br218_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br218);
+        can_attach_wagon:               CC_ATTACHEMENT(br218);
+        additional_text:                string(STR_BR218_ADDITIONAL_TEXT);
     }
 }

@@ -2,4 +2,4 @@
 
 spriteset(gr_ic_dosto_stwg_front, SPRITE_IC_DOSTO_STWG){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoStoIC Steuerwagen DB vorne
 spriteset(gr_ic_dosto_stwg_rear, SPRITE_IC_DOSTO_STWG){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoStoIC Steuerwagen DB hinten
-spriteset(gr_ic_dosto_stwg_purchase,SPRITE_PURCHASE){tmpl_purchase(41)}								// Grafik DB IC Dostosteuerwagen PURCHASE
+spriteset(gr_ic_dosto_stwg_purchase, SPRITE_PURCHASE){tmpl_purchase(41)}								// Grafik DB IC Dostosteuerwagen PURCHASE

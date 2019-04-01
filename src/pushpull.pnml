@@ -1,4 +1,5 @@
-// Multiline macro for push pull trains
+#define VISUAL_EFFECT_ENGINE(engine) sw_ve_##engine
+#define GRAPHICS_ENGINE(engine) sw_graphics_##engine
 
 #define CONFIGURE_PUSH_PULL(engine, gr_engine, engine_visual_effect)\
 /* - Grafik-Switch fuer Wendezugbetrieb mit  DB Intercity DoStos -*/\
@@ -45,13 +46,13 @@ switch(FEAT_TRAINS, SELF, sw_gr_keinedostos_##engine, count_veh_id(silberlinge_s
 }\
 \
 /* - Check ob ein DB Doppelstpck-Steuerwagen angekoppelt und nur eine BR218 im Zug ist - */\
-switch(FEAT_TRAINS, SELF, sw_graphics_##engine, count_veh_id(dosto_stwg) > 0 && count_veh_id(engine) == 1) {\
+switch(FEAT_TRAINS, SELF, GRAPHICS_ENGINE(engine), count_veh_id(dosto_stwg) > 0 && count_veh_id(engine) == 1) {\
     1: sw_gr_pushpull_dosto_##engine;\
     sw_gr_keinedostos_##engine;\
 }\
 \
 /* - Im Wendezugbetrieb wird der visuelle Effekt ausgesetzt, wenn der Zug gedreht wurde - */\
-switch(FEAT_TRAINS, SELF, sw_ve_##engine, (count_veh_id(dosto_stwg) > 0 | count_veh_id(silberlinge_stwg) > 0 | count_veh_id(ic_stwg) > 0 | count_veh_id(ic_dosto_stwg) > 0) && vehicle_is_reversed == 1) {\
+switch(FEAT_TRAINS, SELF, VISUAL_EFFECT_ENGINE(engine), (count_veh_id(dosto_stwg) > 0 | count_veh_id(silberlinge_stwg) > 0 | count_veh_id(ic_stwg) > 0 | count_veh_id(ic_dosto_stwg) > 0) && vehicle_is_reversed == 1) {\
     0: visual_effect_and_powered(engine_visual_effect, 1, ENABLE_WAGON_POWER);\
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);\
-}\
+}

@@ -1,0 +1,12 @@
+#define BITMASK_CC bitmask(2)
+#define BITMASK_NO_CC bitmask(1)
+
+#define IS_CC_ATTACHED bitmask_consist_info & BITMASK_CC
+
+#define CC_ATTACHEMENT(engineId) sw_wagon_attach_##engineId
+
+#define CONFIGURE_CC_ATTACHEMENT(engineId)\
+switch(FEAT_TRAINS, PARENT, CC_ATTACHEMENT(engineId), IS_CC_ATTACHED) {\
+    1: CB_RESULT_ATTACH_DISALLOW;\
+    CB_RESULT_ATTACH_ALLOW;\
+}
