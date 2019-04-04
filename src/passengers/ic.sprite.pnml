@@ -1,5 +1,4 @@
 #define SPRITE_IC "gfx/passengers/ic.png"
 
-spriteset(gr_ic, SPRITE_IC){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}				// Grafik IC Wagen
-spriteset(gr_ic_bordbistro, SPRITE_IC){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}	// Grafik IC Wagen Bordbistro
-spriteset(gr_ic_purchase,SPRITE_PURCHASE){tmpl_purchase(8)}									// Grafik DB Fernverkehrswaggon PURCHASE
+spriteset(gr_ic, SPRITE_IC){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}
+spriteset(gr_ic_purchase,SPRITE_PURCHASE){tmpl_purchase(8)}

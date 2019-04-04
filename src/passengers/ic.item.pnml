@@ -1,57 +1,29 @@
-switch(FEAT_TRAINS, SELF, sw_gr_ic_not_reversed, position_in_vehid_chain) {
-    2: gr_ic_bordbistro;
-    gr_ic;
-}
-
-switch(FEAT_TRAINS, SELF, sw_gr_ic_reversed, position_in_vehid_chain_from_end) {
-    2: gr_ic_bordbistro;
-    gr_ic;
-}
-
-switch(FEAT_TRAINS,PARENT, sw_gr_ic, vehicle_is_reversed) {
-    1: sw_gr_ic_reversed;
-    sw_gr_ic_not_reversed;
-}
-
-switch(FEAT_TRAINS,SELF, sw_ic_capacity, position_in_vehid_chain) {
-    0..1: return 40;
-    2: return 20;
-    return 56;
-}
-
-switch(FEAT_TRAINS, SELF, sw_ic_cargo_subtype_text, position_in_vehid_chain) {
-    0..1: string(STR_CARGO_SUBTYPE_ERSTE_KLASSE);
-    2: string(STR_CARGO_SUBTYPE_RESTAURANT);
-    3..50:	string(STR_CARGO_SUBTYPE_ZWEITE_KLASSE);
-    CB_RESULT_NO_TEXT;
-}
+#define IC_CARGO_CAPACITY 76
 
 item(FEAT_TRAINS, ic, 132) {
     property {
-        sprite_id:			SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_ICWAGGON);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_ICWAGGON);
         climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
-        introduction_date:  date(1991,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        loading_speed:		16;
-        speed:              201 km/h;
-        cost_factor:		135;
-        running_cost_factor:150;
+        introduction_date: date(1991,1,1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        loading_speed: 16;
+        speed: 201 km/h;
+        cost_factor: 135;
+        running_cost_factor: 150;
         bitmask_vehicle_info: bitmask(1);
-        running_cost_base:	RUNNING_COST_ELECTRIC;
-        track_type:			RAIL;
-        power:				0 kW;
-        cargo_capacity:		76;
-        weight:				42 tons;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        track_type: RAIL;
+        power: 0 kW;
+        cargo_capacity: IC_CARGO_CAPACITY;
+        weight: 42 tons;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
         cargo_allow_refit: [];
     }
     graphics {
         default: sw_gr_ic;
-        cargo_capacity: sw_ic_capacity;
+        cargo_capacity: IC_CARGO_CAPACITY;
         purchase: gr_ic_purchase;
-        additional_text: return string(STR_ICWAGGON_ADDITIONAL_TEXT);
-        cargo_subtype_text: sw_ic_cargo_subtype_text;
     }
 }
