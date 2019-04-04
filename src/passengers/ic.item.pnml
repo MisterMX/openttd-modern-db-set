@@ -22,7 +22,7 @@ item(FEAT_TRAINS, ic, 132) {
         cargo_allow_refit: [];
     }
     graphics {
-        default: sw_gr_ic;
+        default: gr_ic;
         cargo_capacity: IC_CARGO_CAPACITY;
         purchase: gr_ic_purchase;
     }
