@@ -1,45 +1,29 @@
-//** -------------------- ID142 propic_dosto DB IC Doppelstockwagen -------------------- **//											 DB IC Dosto
-
-switch(FEAT_TRAINS, SELF, sw_ic_dosto_capacity, position_in_vehid_chain_from_end) {
-    0: return 97;
-    4: return 97;
-    8: return 97;
-    return 115;
-}
-
-switch(FEAT_TRAINS,SELF, sw_dostowic_cargo_subtype_text, position_in_vehid_chain_from_end) {
-    0:string(STR_CARGO_SUBTYPE_ERSTE_KLASSE);
-    4:string(STR_CARGO_SUBTYPE_ERSTE_KLASSE);
-    8:string(STR_CARGO_SUBTYPE_ERSTE_KLASSE);
-    string(STR_CARGO_SUBTYPE_ZWEITE_KLASSE);
-}
+#define IC_DOSTO_CARGO_CAPACITY 115
 
 item(FEAT_TRAINS, ic_dosto, 142) {
     property {
-        sprite_id:          SPRITE_ID_NEW_TRAIN;
-        name:               string(STR_NAME_DOSTOWAGGON_IC);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_DOSTOWAGGON_IC);
         climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
-        introduction_date:  date(2015,1,1);
-        model_life:			VEHICLE_NEVER_EXPIRES;
-        loading_speed:		25;
-        speed:              161 km/h;
-        cost_factor:		185;
-        running_cost_factor:185;
+        introduction_date: date(2015,1,1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        loading_speed: 25;
+        speed: 161 km/h;
+        cost_factor: 185;
+        running_cost_factor: 185;
         bitmask_vehicle_info: bitmask(1);
-        running_cost_base:	RUNNING_COST_ELECTRIC;
-        track_type:			RAIL;
-        power:				0 kW;
-        cargo_capacity:		115;
-        weight:				47 tons;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        track_type: RAIL;
+        power: 0 kW;
+        cargo_capacity: IC_DOSTO_CARGO_CAPACITY;
+        weight: 47 tons;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
         cargo_allow_refit: [];
     }
     graphics {
         default: gr_ic_dosto;
-        cargo_capacity: sw_ic_dosto_capacity;
+        cargo_capacity: IC_DOSTO_CARGO_CAPACITY;
         purchase: gr_ic_dosto_purchase;
-        cargo_subtype_text: sw_dostowic_cargo_subtype_text;
-        additional_text: string(STR_DOSTOWAGGON_IC_ADDITIONAL_TEXT);
     }
 }
