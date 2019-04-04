@@ -1,55 +1,29 @@
-switch(FEAT_TRAINS, SELF, sw_gr_silberlinge_reversed, position_in_consist_from_end) {
-	1: silberlinge_1k_spg;
-	silberlinge_2k_spg;
-}
-
-switch(FEAT_TRAINS, SELF, sw_gr_silberlinge_normal, position_in_consist) {
-	1: silberlinge_1k_spg;
-	silberlinge_2k_spg;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_gr_silberlinge, vehicle_is_reversed && (bitmask_consist_info & bitmask(2))) {
-	0: sw_gr_silberlinge_normal;
-	sw_gr_silberlinge_reversed;
-}
-
-switch(FEAT_TRAINS, SELF, sw_silberlinge_capacity, position_in_consist) {
-	1: return 76;
-	return 96;
-}
-
-switch(FEAT_TRAINS, SELF, sw_silberlinge_text, position_in_consist) {
-	1: string(STR_CARGO_SUBTYPE_ERSTE_KLASSE);
-	2..26: string(STR_CARGO_SUBTYPE_ZWEITE_KLASSE);
-	CB_RESULT_NO_TEXT;
-}
+#define SILBERLINGE_CARGO_CAPACITY 96
 
 item(FEAT_TRAINS, silberlinge, 130) {
-	property {
-		sprite_id:			SPRITE_ID_NEW_TRAIN;
-		name:               string(STR_NAME_SILBERLINGE);
-		climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
-		introduction_date:  date(1988,1,1);
-		model_life:			VEHICLE_NEVER_EXPIRES;
-		loading_speed:		25;
-		speed:              141 km/h;
-		cost_factor:		105;
-		running_cost_factor:120;
-		bitmask_vehicle_info: bitmask(1);
-		running_cost_base:	RUNNING_COST_ELECTRIC;
-		track_type:			RAIL;
-		power:				0 kW;
-		cargo_capacity:		96;
-		weight:				30 tons;
-		refittable_cargo_classes: bitmask(CC_PASSENGERS);
-		non_refittable_cargo_classes: bitmask();
+    property {
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_SILBERLINGE);
+        climates_available: bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        introduction_date: date(1988,1,1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        loading_speed: 25;
+        speed: 141 km/h;
+        cost_factor: 105;
+        running_cost_factor: 120;
+        bitmask_vehicle_info: bitmask(1);
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        track_type: RAIL;
+        power: 0 kW;
+        cargo_capacity: SILBERLINGE_CARGO_CAPACITY;
+        weight: 30 tons;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
         cargo_allow_refit: [];
-	}
-	graphics {
-		default: sw_gr_silberlinge;
-		purchase: gr_silberlinge_purchase;
-		cargo_capacity: sw_silberlinge_capacity;
-		cargo_subtype_text: sw_silberlinge_text;
-		additional_text: return string(STR_SILBERLINGE_ADDITIONAL_TEXT);
-	}
+    }
+    graphics {
+        default: gr_silberlinge;
+        purchase: gr_silberlinge_purchase;
+        cargo_capacity: SILBERLINGE_CARGO_CAPACITY;
+    }
 }

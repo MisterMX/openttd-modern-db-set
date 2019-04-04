@@ -1,16 +1,11 @@
 #define SPRITE_SILBERLINGE_STWG "gfx/passengers/silberlinge.png"
 
-spriteset(gr_silberlinge_2k,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}			// Grafiken Silberlinge 2. Kl. geschl.
-spriteset(gr_silberlinge_2k_l,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}		// Grafiken Silberlinge 2. Kl. offen
-spriteset(gr_silberlinge_1k,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,80,0,0,0,0,0,0,0,0)}			// Grafiken Silberlinge 1. Kl. geschl.
-spriteset(gr_silberlinge_1k_l,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,110,0,0,0,0,0,0,0,0)}		// Grafiken Silberlinge 1. Kl. offen
+spriteset(gr_silberlinge_2k,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}
+spriteset(gr_silberlinge_2k_l,SPRITE_SILBERLINGE_STWG){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}
 
-spritegroup silberlinge_2k_spg{														// Spritegroup Silberlinge 2. Klasse
+spritegroup  gr_silberlinge {
     loading: gr_silberlinge_2k_l;
     loaded: gr_silberlinge_2k;
 }
-spritegroup silberlinge_1k_spg{														// Spritegroup Silberlinge 1. Klasse
-    loading: gr_silberlinge_1k_l;
-    loaded: gr_silberlinge_1k;
-}
-spriteset(gr_silberlinge_purchase,SPRITE_PURCHASE){tmpl_purchase(6)}				// Grafik Silberlinge PURCHASE
+
+spriteset(gr_silberlinge_purchase,SPRITE_PURCHASE){tmpl_purchase(6)}
