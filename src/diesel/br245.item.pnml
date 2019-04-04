@@ -1,0 +1,33 @@
+CONFIGURE_PUSH_PULL_ENGINE(br245)
+CONFIGURE_CC_ATTACHEMENT(br245)
+CONFIGURE_VISUAL_EFFECT_ENGINE(br245, VISUAL_EFFECT_DIESEL)
+
+item (FEAT_TRAINS, br245, 245) {
+    property {
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_BR245);
+        climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);		
+        introduction_date: date(2012, 1, 1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        speed: 161 km/h;
+        vehicle_life: 45;
+        dual_headed: 0;
+        cost_factor: 120;
+        running_cost_factor: 210;
+        running_cost_base: RUNNING_COST_DIESEL;
+        track_type: RAIL;
+        power: 2252 kW;
+        engine_class: ENGINE_CLASS_DIESEL;
+        cargo_capacity: 0;
+        weight: 81 tons;
+        tractive_effort_coefficient: 0.2539; // 65
+        air_drag_coefficient: 0.057;
+    }
+    graphics {
+        default: GRAPHICS(br245);
+        purchase: gr_br245_purchase;
+        visual_effect_and_powered: VISUAL_EFFECT_ENGINE(br245);
+        can_attach_wagon: CC_ATTACHEMENT(br245);
+        additional_text: string(STR_BR245_ADDITIONAL_TEXT);
+    }
+}

@@ -23,6 +23,7 @@ STR_NAME_BR628													:DB BR 628 (Diesel)
 STR_NAME_SBBEW4													:SBB Einheitswagen IV
 STR_NAME_RJ													  	:ÖBB 1116 "Railjet" (Elektrisch)
 STR_NAME_BR218													:DB BR 218 (Diesel)
+STR_NAME_BR245													:DB BR 245 (Diesel)
 STR_NAME_RE460													:SBB Re 460 "Lok 2000" (Elektrisch)
 STR_NAME_SBBSTW													:SBB Steuerwagen
 STR_NAME_GTWMTHB												:Stadler GTW 2/6 (Elektrisch)
@@ -57,7 +58,8 @@ STR_BR146_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalv
 STR_BR143_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen und Nahverkehrswagen ist Wendezugbetrieb möglich.
 STR_BR101_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit Fernverkehrswagen ist Wendezugbetrieb möglich.
 STR_RE460_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit Einheitswagen IV ist Wendezugbetrieb möglich.
-STR_BR218_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen, Nahverkehrswagen und Fernverkehrswagen ist Wendezugbetrieb möglich.
+STR_BR218_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb möglich.
+STR_BR245_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb möglich.
 STR_FLIRT_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}Den FLIRT gibt es in einer 3-teiligen, einer 4-teiligen und einer 5-teiligen Version.
 STR_KISS_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}Den KISS gibt es in einer 4-teiligen, einer 5-teiligen und einer 6-teiligen Version.
 STR_RE450_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}S-Bahneinheit mit 1./2.-Klasse-Waggon, 2.-Klasse-Waggon und Steuerwagen

@@ -63,6 +63,7 @@ SW_GRAPHICS_PUSH_PULL_CC(br143, car)\
 SW_GRAPHICS_PUSH_PULL_CC(br146, car)\
 SW_GRAPHICS_PUSH_PULL_CC(br146_ic, car)\
 SW_GRAPHICS_PUSH_PULL_CC(br218, car)\
+SW_GRAPHICS_PUSH_PULL_CC(br245, car)\
 \
 switch(FEAT_TRAINS, PARENT, GRAPHICS(car), vehicle_type_id) {\
     br101: SW_GRAPHICS_PUSH_PULL_CC_NAME(br101, car);\
@@ -70,5 +71,6 @@ switch(FEAT_TRAINS, PARENT, GRAPHICS(car), vehicle_type_id) {\
     br146: SW_GRAPHICS_PUSH_PULL_CC_NAME(br146, car);\
     br146_ic: SW_GRAPHICS_PUSH_PULL_CC_NAME(br146_ic, car);\
     br218: SW_GRAPHICS_PUSH_PULL_CC_NAME(br218, car);\
+    br245: SW_GRAPHICS_PUSH_PULL_CC_NAME(br245, car);\
     GR_NAME_REAR(car);\
 }

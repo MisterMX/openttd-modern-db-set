@@ -23,6 +23,7 @@ STR_NAME_BR628													:DB BR 628 (Diesel)
 STR_NAME_SBBEW4													:SBB standard coach IV
 STR_NAME_RJ													  	:ÖBB 1116 “Railjet” (Electric)
 STR_NAME_BR218													:DB BR 218 (Diesel)
+STR_NAME_BR245													:DB BR 245 (Diesel)
 STR_NAME_RE460													:SBB Re 460 “Lok 2000” (Electric)
 STR_NAME_SBBSTW													:SBB control car
 STR_NAME_GTWMTHB												:Stadler GTW 2/6 (Electric)
@@ -56,7 +57,8 @@ STR_BR146_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLA
 STR_BR143_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches and local transport coaches, push-pull operation is possible.
 STR_BR101_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With intercity coaches, push-pull operation is possible.
 STR_RE460_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With SBB standard coach IV, push-pull operation is possible.
-STR_BR218_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Universal{}{BLACK}Miscellaneous:  {GOLD}With double-decker coaches, local transport coaches, and intercity coaches, push-pull operation is possible.
+STR_BR218_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Universal{}{BLACK}Miscellaneous:  {GOLD}Push-pull operation is possible.
+STR_BR245_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Universal{}{BLACK}Miscellaneous:  {GOLD}Push-pull operation is possible.
 STR_FLIRT_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}FLIRT is available with 3, 4 or 5 parts.
 STR_KISS_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}KISS is available with 4, 5 or 6 parts.
 STR_RE450_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {GOLD}suburban train with 1st/2nd class coach, 2nd class coach, and control car
