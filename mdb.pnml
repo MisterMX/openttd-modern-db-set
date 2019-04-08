@@ -16,6 +16,8 @@
 #include "src/diesel/br218.sprite.pnml"
 #include "src/diesel/br245.sprite.pnml"
 
+#include "src/emu/br403.sprite.pnml"
+
 #include "src/passengers/ic_stwg.sprite.pnml"
 #include "src/passengers/ic.sprite.pnml"
 #include "src/passengers/ic_dosto.sprite.pnml"
@@ -33,6 +35,8 @@
 
 #include "src/diesel/br218.item.pnml"
 #include "src/diesel/br245.item.pnml"
+
+#include "src/emu/br403.item.pnml"
 
 #include "src/passengers/silberlinge.item.pnml"
 #include "src/passengers/silberlinge_stwg.item.pnml"

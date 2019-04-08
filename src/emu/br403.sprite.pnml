@@ -1,0 +1,11 @@
+#define SPRITE_BR_403 "gfx/emu/br403.png"
+
+spriteset(gr_br403_front, SPRITE_BR_403){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_waggon1_power, SPRITE_BR_403){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_waggon2_power, SPRITE_BR_403){tmpl_32_mirrored(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_waggon1, SPRITE_BR_403){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_waggon2, SPRITE_BR_403){tmpl_32_mirrored(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_restaurant1, SPRITE_BR_403){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_restaurant2, SPRITE_BR_403){tmpl_32_mirrored(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_rear, SPRITE_BR_403){tmpl_32(0,140,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br403_purchase, SPRITE_PURCHASE){tmpl_purchase(57)}

@@ -13,6 +13,17 @@ template tmpl_32(x,y,xrel1,xrel2,xrel3,xrel4,xrel5,xrel6,xrel7,xrel8,yrel1,yrel2
     [x+210,	y,	26,	28,	-8+xrel8,	-18+yrel8]
 }
 
+template tmpl_32_mirrored(x,y,xrel1,xrel2,xrel3,xrel4,xrel5,xrel6,xrel7,xrel8,yrel1,yrel2,yrel3,yrel4,yrel5,yrel6,yrel7,yrel8) {
+    [x+120,	y,	10,	28,	-4+xrel5,	-15+yrel5]
+    [x+140,	y,	26,	28,	-15+xrel6,	-19+yrel6]
+    [x+170,	y,	36,	28,	-18+xrel7,	-22+yrel7]
+    [x+210,	y,	26,	28,	-8+xrel8,	-18+yrel8]
+    [x,		y,	10,	28,	-4+xrel1,	-15+yrel1]
+    [x+20,	y,	26,	28,	-15+xrel2,	-19+yrel2]
+    [x+50,	y,	36,	28,	-18+xrel3,	-22+yrel3]
+    [x+90,	y,	26,	28,	-8+xrel4,	-18+yrel4]
+}
+
 template tmpl_32_4(x,y,xrel1,xrel2,xrel3,xrel4,yrel1,yrel2,yrel3,yrel4) {
     [x,		y,	10,	28,	-4+xrel1,	-15+yrel1]
     [x+20,	y,	26,	28,	-15+xrel2,	-19+yrel2]

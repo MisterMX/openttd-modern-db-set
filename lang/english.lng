@@ -53,6 +53,7 @@ STR_NAME_OBB5022												:ÖBB 5022 “Desiro” (Diesel)
 STR_NAME_OBB5047												:ÖBB 5047 (Diesel)
 STR_NAME_OBB5147												:ÖBB 5147 (Diesel)
 STR_NAME_OBB1116												:ÖBB 1116 “Taurus” (Electric)
+STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_BR146_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches, push-pull operation is possible.
 STR_BR143_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches and local transport coaches, push-pull operation is possible.
 STR_BR101_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {GOLD}With intercity coaches, push-pull operation is possible.
@@ -88,6 +89,7 @@ STR_OBB1142_ADDITIONAL_TEXT 									:{BLACK}Usage: {GOLD}Local transport
 STR_OBB4024_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and regional transport{}{BLACK}Multiple-unit control: {GOLD}2 units{}{BLACK}Miscellaneous: {GOLD}TALENT is available with 3 or 4 parts.
 STR_BLS535_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
 STR_OBB5022_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
+STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_KISS_ATTACH_WAGON											:Can't attach coaches to KISS.
 STR_FLIRT_ATTACH_WAGON											:Can't attach coaches to FLIRT.
 STR_OBB4024_ATTACH_WAGON										:Can't attach anything else than ÖBB 4024
