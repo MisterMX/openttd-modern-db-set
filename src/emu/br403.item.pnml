@@ -8,6 +8,7 @@ switch(FEAT_TRAINS, SELF, sw_br403_articulated_parts, extra_callback_info1) {
 
 switch(FEAT_TRAINS, SELF, sw_br403_wagon_attach, vehicle_type_id) {
     br403: CB_RESULT_ATTACH_ALLOW;
+    br407: CB_RESULT_ATTACH_ALLOW;
     CB_RESULT_ATTACH_DISALLOW;
 }
 
