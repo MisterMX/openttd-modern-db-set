@@ -1,0 +1,55 @@
+switch(FEAT_TRAINS,SELF, sw_br628_articulated, extra_callback_info1) {
+    1: br628;
+    CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS,SELF, sw_br628_gr, position_in_consist % 2) {
+    0: gr_br628_1k_front;
+    gr_br628_2k_rear;
+}
+
+switch(FEAT_TRAINS,SELF,sw_br628_wagon_attach,vehicle_type_id) {
+    br628: CB_RESULT_ATTACH_ALLOW;
+    string(STR_BR611_ATTACH_WAGON);
+}
+
+switch(FEAT_TRAINS,SELF, sw_br628_ve, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 2, DISABLE_WAGON_POWER);
+}
+
+item (FEAT_TRAINS, br628, 80) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_NAME_BR628);
+        climates_available:             bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        introduction_date:              date(1986, 1, 1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        loading_speed:                  18;
+        speed:                          121 km/h;
+        cost_factor:                    25;
+        vehicle_life:                   25;
+        dual_headed:                    0;
+        running_cost_factor:            170;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        track_type:                     RAIL;
+        power:                          410 kW;
+        cargo_capacity:                 71;
+        length:                         7;
+        weight:                         67 tons;
+        tractive_effort_coefficient:    0.15;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   bitmask();
+        cargo_allow_refit:              [];
+    }
+    graphics {
+        articulated_part:               sw_br628_articulated;
+        default:                        sw_br628_gr;
+        purchase:                       gr_br628_purchase;
+        can_attach_wagon:               sw_br628_wagon_attach;
+        visual_effect_and_powered:      sw_br628_ve;
+        additional_text:                string(STR_BR628_ADDITIONAL_TEXT);
+        cargo_capacity:                 71;
+    }
+}

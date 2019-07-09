@@ -1,0 +1,5 @@
+#define SPRITE_BR_628 "gfx/dmu/br628.png"
+
+spriteset(gr_br628_1k_front, SPRITE_BR_628){tmpl_28_short(0,20)}
+spriteset(gr_br628_2k_rear, SPRITE_BR_628){tmpl_28_short(0,50)}
+spriteset(gr_br628_purchase, SPRITE_PURCHASE){tmpl_purchase(20)}
