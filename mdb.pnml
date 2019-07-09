@@ -21,6 +21,7 @@
 #include "src/emu/br408.sprite.pnml"
 
 #include "src/dmu/br628.sprite.pnml"
+#include "src/dmu/br641.sprite.pnml"
 
 #include "src/passengers/ic_stwg.sprite.pnml"
 #include "src/passengers/ic.sprite.pnml"
@@ -45,6 +46,7 @@
 #include "src/emu/br408.item.pnml"
 
 #include "src/dmu/br628.item.pnml"
+#include "src/dmu/br641.item.pnml"
 
 #include "src/passengers/silberlinge.item.pnml"
 #include "src/passengers/silberlinge_stwg.item.pnml"
