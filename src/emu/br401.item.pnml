@@ -1,0 +1,73 @@
+#define BR_401_CARGO_CAPACITY 57
+#define BR_401_WAGON_LENGTH 14
+
+switch(FEAT_TRAINS, SELF, sw_br401_articulated_parts, extra_callback_info1) {
+    BR_401_WAGON_LENGTH: CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+    br401;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br401_wagon_attach, vehicle_type_id) {
+    br401: CB_RESULT_ATTACH_ALLOW;
+    CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br401_gr_reversed, position_in_consist_from_end % BR_401_WAGON_LENGTH) {
+    0: gr_br401_rear;
+    1..5: gr_br401_waggon;
+    6: gr_br401_restaurant;
+    7..10: gr_br401_waggon;
+    gr_br401_front;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br401_gr_not_reversed, position_in_consist % BR_401_WAGON_LENGTH) {
+    0: gr_br401_front;
+    1..5: gr_br401_waggon;
+    6: gr_br401_restaurant;
+    7..10: gr_br401_waggon;
+    gr_br401_rear;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_br401_gr, vehicle_is_reversed) {
+    1: sw_br401_gr_reversed;
+    sw_br401_gr_not_reversed;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br401_ve, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    11: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+item (FEAT_TRAINS, br401, 401) {
+    property {
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_BR401);
+        climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
+        introduction_date: date(1991, 1, 1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        loading_speed: 18;
+        speed: 281 km/h;
+        cost_factor: 1;
+        vehicle_life: 30;
+        dual_headed: 0;
+        running_cost_factor: 170;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        track_type: RAIL;
+        power: 9600 kW;
+        cargo_capacity: BR_401_CARGO_CAPACITY;
+        length:	8;
+        weight: 795 tons;
+        tractive_effort_coefficient: 0.15;
+        cargo_allow_refit: [];
+    }
+    graphics {
+        articulated_part: sw_br401_articulated_parts;
+        default: sw_br401_gr;
+        purchase: gr_br401_purchase;
+        can_attach_wagon: sw_br401_wagon_attach;
+        visual_effect_and_powered: sw_br401_ve;
+        additional_text: string(STR_BR401_ADDITIONAL_TEXT);
+        cargo_capacity: BR_401_CARGO_CAPACITY;
+    }
+}

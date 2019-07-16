@@ -16,6 +16,7 @@
 #include "src/diesel/br218.sprite.pnml"
 #include "src/diesel/br245.sprite.pnml"
 
+#include "src/emu/br401.sprite.pnml"
 #include "src/emu/br403.sprite.pnml"
 #include "src/emu/br407.sprite.pnml"
 #include "src/emu/br408.sprite.pnml"
@@ -41,6 +42,7 @@
 #include "src/diesel/br218.item.pnml"
 #include "src/diesel/br245.item.pnml"
 
+#include "src/emu/br401.item.pnml"
 #include "src/emu/br403.item.pnml"
 #include "src/emu/br407.item.pnml"
 #include "src/emu/br408.item.pnml"

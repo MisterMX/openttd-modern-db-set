@@ -53,6 +53,7 @@ STR_NAME_OBB5022												:ÖBB 5022 "Desiro" (Diesel)
 STR_NAME_OBB5047												:ÖBB 5047 (Diesel)
 STR_NAME_OBB5147												:ÖBB 5147 (Diesel)
 STR_NAME_OBB1116												:ÖBB 1116 "Taurus" (Elektrisch)
+STR_NAME_BR401                                                  :DB BR 403 ICE 1
 STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_NAME_BR407                                                  :DB BR 407 "Neuer" ICE 3 (Siemens Velaro D)
 STR_NAME_BR408                                                  :DB BR 408 ICE 4
@@ -91,6 +92,7 @@ STR_OBB4024_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Region
 STR_OBB1142_ADDITIONAL_TEXT 									:{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_BLS535_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
 STR_OBB5022_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
+STR_BR401_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
