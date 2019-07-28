@@ -54,6 +54,7 @@ STR_NAME_OBB5047												:ÖBB 5047 (Diesel)
 STR_NAME_OBB5147												:ÖBB 5147 (Diesel)
 STR_NAME_OBB1116												:ÖBB 1116 “Taurus” (Electric)
 STR_NAME_BR401                                                  :DB BR 401 ICE 1
+STR_NAME_BR402                                                  :DB BR 402 ICE 2
 STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_NAME_BR407                                                  :DB BR 407 ICE "New" ICE (Siemens Velaro D)
 STR_NAME_BR408                                                  :DB BR 408 ICE 4
@@ -93,6 +94,7 @@ STR_OBB4024_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Suburban train and reg
 STR_BLS535_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
 STR_OBB5022_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Local transport{}{BLACK}multiple-unit control: {GOLD}3 units
 STR_BR401_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR402_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
