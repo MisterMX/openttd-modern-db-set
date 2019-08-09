@@ -2,6 +2,7 @@
 
 spriteset(gr_br401_front, SPRITE_BR_401){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br401_waggon, SPRITE_BR_401){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(gr_br401_restaurant, SPRITE_BR_401){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br401_restaurant1, SPRITE_BR_401){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br401_restaurant2, SPRITE_BR_401){tmpl_32_mirrored(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br401_rear, SPRITE_BR_401){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br401_purchase, SPRITE_PURCHASE){tmpl_purchase(57)}

@@ -14,7 +14,7 @@ switch(FEAT_TRAINS, SELF, sw_br401_wagon_attach, vehicle_type_id) {
 switch(FEAT_TRAINS, SELF, sw_br401_gr_reversed, position_in_consist_from_end % BR_401_WAGON_LENGTH) {
     0: gr_br401_rear;
     1..5: gr_br401_waggon;
-    6: gr_br401_restaurant;
+    6: gr_br401_restaurant1;
     7..10: gr_br401_waggon;
     gr_br401_front;
 }
@@ -22,7 +22,7 @@ switch(FEAT_TRAINS, SELF, sw_br401_gr_reversed, position_in_consist_from_end % B
 switch(FEAT_TRAINS, SELF, sw_br401_gr_not_reversed, position_in_consist % BR_401_WAGON_LENGTH) {
     0: gr_br401_front;
     1..5: gr_br401_waggon;
-    6: gr_br401_restaurant;
+    6: gr_br401_restaurant2;
     7..10: gr_br401_waggon;
     gr_br401_rear;
 }
