@@ -100,6 +100,7 @@ STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendu
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
+STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_KISS_ATTACH_WAGON											:Keine Waggons am KISS erlaubt
 STR_FLIRT_ATTACH_WAGON											:Keine Waggons am FLIRT erlaubt
 STR_OBB4024_ATTACH_WAGON										:Diese Zugkonfiguration ist nicht möglich
