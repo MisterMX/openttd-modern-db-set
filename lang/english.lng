@@ -58,7 +58,8 @@ STR_NAME_BR402                                                  :DB BR 402 ICE 2
 STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_NAME_BR407                                                  :DB BR 407 ICE "New" ICE (Siemens Velaro D)
 STR_NAME_BR408                                                  :DB BR 408 ICE 4
-STR_NAME_BR429                                                  :DB BR 429 Stadler FLIRT 3
+STR_NAME_BR1428                                                 :DB BR 1428 Stadler FLIRT 3 (4 cars)
+STR_NAME_BR429                                                  :DB BR 429 Stadler FLIRT 3 (5 cars)
 STR_NAME_BR429_1                                                :DB BR 429 Stadler FLIRT 3 "SÜWEX"
 STR_BR146_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches, push-pull operation is possible.
 STR_BR143_ADDITIONAL_TEXT										:{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}With double-decker coaches and local transport coaches, push-pull operation is possible.
@@ -100,6 +101,7 @@ STR_BR402_ADDITIONAL_TEXT                                       :{BLACK}Usage: {
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Usage: {GOLD}Regional transport
 STR_KISS_ATTACH_WAGON											:Can't attach coaches to KISS.
