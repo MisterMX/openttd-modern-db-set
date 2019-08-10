@@ -58,6 +58,7 @@ STR_NAME_BR402                                                  :DB BR 402 ICE 2
 STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_NAME_BR407                                                  :DB BR 407 "Neuer" ICE 3 (Siemens Velaro D)
 STR_NAME_BR408                                                  :DB BR 408 ICE 4
+STR_NAME_BR429                                                  :DB BR 429 Stadler FLIRT 3
 STR_OBB1144_ADDITIONAL_TEXT 									:{BLACK}Verwendung: {GOLD}universal
 STR_BR146_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen ist Wendezugbetrieb möglich.
 STR_BR143_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen und Nahverkehrswagen ist Wendezugbetrieb möglich.
@@ -98,6 +99,7 @@ STR_BR402_ADDITIONAL_TEXT                                       :{BLACK}Verwendu
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_KISS_ATTACH_WAGON											:Keine Waggons am KISS erlaubt
 STR_FLIRT_ATTACH_WAGON											:Keine Waggons am FLIRT erlaubt
 STR_OBB4024_ATTACH_WAGON										:Diese Zugkonfiguration ist nicht möglich
