@@ -12,19 +12,19 @@ switch(FEAT_TRAINS, SELF, sw_br402_wagon_attach, vehicle_type_id) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_br402_gr_reversed, position_in_consist_from_end % BR_402_WAGON_LENGTH) {
-    0: gr_br402_end_power_front;
+    0: gr_br402_end_power_rear;
     1..3: gr_br402_waggon;
     4: gr_br402_restaurant1;
     5..6: gr_br402_waggon;
-    gr_br402_end_rear;
+    gr_br402_end_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_br402_gr_not_reversed, position_in_consist % BR_402_WAGON_LENGTH) {
-    0: gr_br402_end_power_rear;
+    0: gr_br402_end_power_front;
     1..3: gr_br402_waggon;
     4: gr_br402_restaurant2;
     5..6: gr_br402_waggon;
-    gr_br402_end_front;
+    gr_br402_end_rear;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_br402_gr, vehicle_is_reversed) {
@@ -37,7 +37,7 @@ switch(FEAT_TRAINS, SELF, sw_br402_ve, position_in_consist % 2) {
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
 }
 
-item (FEAT_TRAINS, br402, 401) {
+item (FEAT_TRAINS, br402, 402) {
     property {
         sprite_id: SPRITE_ID_NEW_TRAIN;
         name: string(STR_NAME_BR402);
