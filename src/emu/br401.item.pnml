@@ -15,7 +15,7 @@ switch(FEAT_TRAINS, SELF, sw_br401_gr_reversed, position_in_consist_from_end % B
     0: gr_br401_rear;
     1..5: gr_br401_waggon;
     6: gr_br401_restaurant1;
-    7..10: gr_br401_waggon;
+    7..12: gr_br401_waggon;
     gr_br401_front;
 }
 
@@ -23,7 +23,7 @@ switch(FEAT_TRAINS, SELF, sw_br401_gr_not_reversed, position_in_consist % BR_401
     0: gr_br401_front;
     1..5: gr_br401_waggon;
     6: gr_br401_restaurant2;
-    7..10: gr_br401_waggon;
+    7..12: gr_br401_waggon;
     gr_br401_rear;
 }
 
@@ -34,7 +34,7 @@ switch(FEAT_TRAINS, PARENT, sw_br401_gr, vehicle_is_reversed) {
 
 switch(FEAT_TRAINS, SELF, sw_br401_ve, position_in_consist % 2) {
     0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
-    11: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    12: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
     visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
 }
 
