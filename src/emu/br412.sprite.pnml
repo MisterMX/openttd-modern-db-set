@@ -1,0 +1,13 @@
+#define SPRITE_BR_412 "gfx/emu/br412.png"
+
+spriteset(gr_br412_front, SPRITE_BR_412){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon1_power, SPRITE_BR_412){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon2_power, SPRITE_BR_412){tmpl_32_mirrored(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon1, SPRITE_BR_412){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon2, SPRITE_BR_412){tmpl_32_mirrored(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon3, SPRITE_BR_412){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_waggon4, SPRITE_BR_412){tmpl_32_mirrored(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_restaurant1, SPRITE_BR_412){tmpl_32(0,140,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_restaurant2, SPRITE_BR_412){tmpl_32_mirrored(0,140,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_rear, SPRITE_BR_412){tmpl_32(0,170,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br412_purchase, SPRITE_PURCHASE){tmpl_purchase(58)}

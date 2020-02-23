@@ -1,0 +1,106 @@
+#define BR412_CARGO_CAPACITY 69
+#define BR_412_WAGON_LENGTH 12
+
+switch(FEAT_TRAINS, SELF, sw_br412_articulated_parts, extra_callback_info1) {
+    BR_412_WAGON_LENGTH: CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+    br412;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_wagon_attach, vehicle_type_id) {
+    br412: CB_RESULT_ATTACH_ALLOW;
+    CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_gr_reversed, position_in_consist_from_end % BR_412_WAGON_LENGTH) {
+    0: gr_br412_rear;
+    1: gr_br412_waggon4;
+    2: gr_br412_waggon4;
+    3: gr_br412_waggon2;
+    4: gr_br412_waggon4;
+    5: gr_br412_waggon4;
+    6: gr_br412_waggon4;
+    7: gr_br412_waggon1_power;
+    8: gr_br412_restaurant1;
+    9: gr_br412_waggon3;
+    10: gr_br412_waggon3;
+    gr_br412_front;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_gr_not_reversed, position_in_consist % BR_412_WAGON_LENGTH) {
+    0: gr_br412_front;
+    1: gr_br412_waggon3;
+    2: gr_br412_waggon3;
+    3: gr_br412_waggon1_power;
+    4: gr_br412_waggon3;
+    5: gr_br412_waggon3;
+    6: gr_br412_waggon3;
+    7: gr_br412_waggon2;
+    8: gr_br412_restaurant2;
+    9: gr_br412_waggon4;
+    10: gr_br412_waggon4;
+    gr_br412_rear;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_br412_gr, vehicle_is_reversed) {
+    1: sw_br412_gr_reversed;
+    sw_br412_gr_not_reversed;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_ve_reversed_other, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF ,sw_br412_ve_reversed, position_in_consist) {
+    6: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br412_ve_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_ve_not_reversed_other, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_ve_not_reversed, position_in_consist) {
+    6: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br412_ve_not_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br412_ve, vehicle_is_reversed) {
+    1: sw_br412_ve_reversed;
+    sw_br412_ve_not_reversed;
+}
+
+item (FEAT_TRAINS, br412, 412) {
+    property {
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        name: string(STR_NAME_BR412);
+        climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC);
+        introduction_date: date(2016, 1, 1);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        loading_speed: 18;
+        speed: 251 km/h;
+        cost_factor: 1;
+        vehicle_life: 30;
+        dual_headed: 0;
+        running_cost_factor: 170;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        track_type: RAIL;
+        power: 8000 kW;
+        cargo_capacity: BR412_CARGO_CAPACITY;
+        length:	8;
+        weight: 454 tons;
+        tractive_effort_coefficient: 0.15;
+        cargo_allow_refit: [];
+    }
+    graphics {
+        articulated_part: sw_br412_articulated_parts;
+        default: sw_br412_gr;
+        purchase: gr_br412_purchase;
+        can_attach_wagon: sw_br412_wagon_attach;
+        visual_effect_and_powered: sw_br412_ve;
+        additional_text: string(STR_BR412_ADDITIONAL_TEXT);
+        cargo_capacity: BR412_CARGO_CAPACITY;
+    }
+}

@@ -57,7 +57,7 @@ STR_NAME_BR401                                                  :DB BR 401 ICE 1
 STR_NAME_BR402                                                  :DB BR 402 ICE 2
 STR_NAME_BR403                                                  :DB BR 403 ICE 3
 STR_NAME_BR407                                                  :DB BR 407 "Neuer" ICE 3 (Siemens Velaro D)
-STR_NAME_BR408                                                  :DB BR 408 ICE 4
+STR_NAME_BR412                                                  :DB BR 412 ICE 4
 STR_NAME_BR1428                                                 :DB BR 1428 Stadler FLIRT 3 (4 Wagen)
 STR_NAME_BR429                                                  :DB BR 429 Stadler FLIRT 3 (5 Wagen)
 STR_NAME_BR429_1                                                :DB BR 429 Stadler FLIRT 3 "SÜWEX"
@@ -100,7 +100,7 @@ STR_BR401_ADDITIONAL_TEXT                                       :{BLACK}Verwendu
 STR_BR402_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
-STR_BR408_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Verwendung: {GOLD}Regionalverkehr
