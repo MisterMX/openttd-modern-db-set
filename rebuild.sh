@@ -7,8 +7,13 @@ rm -f mdb.grf mdb.nml
 echo "Starting build"
 make mdb.grf
 
-install_path = "$(cygpath -A -O)/OpenTTD/newgrf/"
+case "$OSTYPE" in
+  darwin*)  install_dir="~/Documents/OpenTTD/newgrf/" ;; 
+  linux*)   install_dir="~/.openttd/newgrf/" ;;
+  bsd*)     install_dir="~/.openttd/newgrf/" ;;
+  msys*)    install_dir="$USERPROFILE/Documents/OpenTTD/newgrf/" ;; 
+  *)        echo "unknown: $OSTYPE" && exit 1 ;;
+esac
 
-echo "Copying to OpenTTD directory $install_path"
-cp mdb.grf install_path
-
+echo "Copying to OpenTTD directory $install_dir"
+cp mdb.grf $install_dir
