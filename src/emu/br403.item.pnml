@@ -82,7 +82,7 @@ item (FEAT_TRAINS, br403, 403) {
         track_type: RAIL;
         power: 8000 kW;
         cargo_capacity: BR403_CARGO_CAPACITY;
-        length:	BR_403_WAGON_LENGTH;
+        length:	8;
         weight: 409 tons;
         tractive_effort_coefficient: 0.15;
         cargo_allow_refit: [];

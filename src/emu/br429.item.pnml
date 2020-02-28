@@ -72,7 +72,7 @@ item (FEAT_TRAINS, br429, 429) {
         track_type: RAIL;
         power: 3000 kW;
         cargo_capacity: BR_429_CARGO_CAPACITY;
-        length:	BR_429_WAGON_LENGTH;
+        length:	8;
         weight: 145 tons;
         tractive_effort_coefficient: 0.15;
         cargo_allow_refit: [];
