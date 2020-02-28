@@ -1,5 +1,5 @@
 #define SPRITE_DOSTO_STWG "gfx/passengers/dosto_stwg.png"
 
-spriteset(GR_NAME_FRONT(dosto_stwg), SPRITE_DOSTO_STWG){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoSto Steuerwagen DB vorne
-spriteset(GR_NAME_REAR(dosto_stwg), SPRITE_DOSTO_STWG){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}		// Grafik DoSto Steuerwagen DB hinten
-spriteset(gr_dosto_stwg_purchase, SPRITE_PURCHASE){tmpl_purchase(11)}								// Grafik DB Dostosteuerwagen PURCHASE
+spriteset(GR_NAME_FRONT(dosto_stwg), SPRITE_DOSTO_STWG){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME_REAR(dosto_stwg), SPRITE_DOSTO_STWG){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_dosto_stwg_purchase, SPRITE_DOSTO_STWG){tmpl_purchase()}

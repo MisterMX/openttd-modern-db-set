@@ -2,4 +2,4 @@
 
 spriteset(GR_NAME(br245), SPRITE_BR_245){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(GR_NAME_REV(br245), SPRITE_BR_245){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(gr_br245_purchase, SPRITE_PURCHASE){tmpl_purchase(56)}
+spriteset(gr_br245_purchase, SPRITE_BR_245){tmpl_purchase()}

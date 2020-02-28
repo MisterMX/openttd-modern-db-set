@@ -8,4 +8,4 @@ spritegroup  gr_silberlinge {
     loaded: gr_silberlinge_2k;
 }
 
-spriteset(gr_silberlinge_purchase,SPRITE_PURCHASE){tmpl_purchase(6)}
+spriteset(gr_silberlinge_purchase,SPRITE_SILBERLINGE_STWG){tmpl_purchase()}

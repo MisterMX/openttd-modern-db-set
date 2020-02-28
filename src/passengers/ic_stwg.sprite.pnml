@@ -2,4 +2,4 @@
 
 spriteset(GR_NAME_FRONT(ic_stwg), SPRITE_IC_STWG){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(GR_NAME_REAR(ic_stwg), SPRITE_IC_STWG){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(gr_ic_stwg_purchase, SPRITE_PURCHASE){tmpl_purchase(9)}
+spriteset(gr_ic_stwg_purchase, SPRITE_IC_STWG){tmpl_purchase()}

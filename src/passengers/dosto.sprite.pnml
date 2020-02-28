@@ -2,4 +2,4 @@
 
 spriteset(gr_dosto, SPRITE_DOSTO){tmpl_32_4(0,50,0,0,0,0,0,0,0,0)}
 //spriteset(gr_dosto2, SPRITE_DOSTO){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}
-spriteset(gr_dosto_purchase,SPRITE_PURCHASE){tmpl_purchase(10)}
+spriteset(gr_dosto_purchase,SPRITE_DOSTO){tmpl_purchase()}

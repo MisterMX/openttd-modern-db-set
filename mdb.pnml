@@ -5,7 +5,6 @@
 #include "src/pushpull.pnml"
 #include "src/attachement.pnml"
 #include "src/visualEffect.pnml"
-#include "src/purchase.pnml"
 
 // Sprites (will be used in the item files)
 #include "src/electric/br101.sprite.pnml"

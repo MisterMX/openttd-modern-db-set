@@ -13,4 +13,4 @@ spritegroup GR_NAME_REAR(silberlinge_stwg) {
     loading: gr_silberlinge_stwg_rear_l;
     loaded: gr_silberlinge_stwg_rear;
 }
-spriteset(gr_silberlinge_stwg_purchase, SPRITE_PURCHASE){tmpl_purchase(7)}
+spriteset(gr_silberlinge_stwg_purchase, SPRITE_SILBERLINGE){tmpl_purchase()}

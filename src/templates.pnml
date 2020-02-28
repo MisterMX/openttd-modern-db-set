@@ -1,5 +1,5 @@
-template tmpl_purchase(pl) {
-    [0,(pl - 1) * 14, 118, 13, -16,-7]
+template tmpl_purchase() {
+    [237, 35, 118, 13, -16, -7]
 }
 
 template tmpl_32(x,y,xrel1,xrel2,xrel3,xrel4,xrel5,xrel6,xrel7,xrel8,yrel1,yrel2,yrel3,yrel4,yrel5,yrel6,yrel7,yrel8) {

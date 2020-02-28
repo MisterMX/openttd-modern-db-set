@@ -3,4 +3,4 @@
 spriteset(gr_br1428_front, SPRITE_BR_1428){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br1428_middle, SPRITE_BR_1428){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
 spriteset(gr_br1428_rear, SPRITE_BR_1428){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
-spriteset(gr_br1428_purchase, SPRITE_PURCHASE){tmpl_purchase(62)}
+spriteset(gr_br1428_purchase, SPRITE_BR_1428){tmpl_purchase()}

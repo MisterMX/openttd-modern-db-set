@@ -1,4 +1,4 @@
 #define SPRITE_IC "gfx/passengers/ic.png"
 
 spriteset(gr_ic, SPRITE_IC){tmpl_32_4(0,20,0,0,0,0,0,0,0,0)}
-spriteset(gr_ic_purchase,SPRITE_PURCHASE){tmpl_purchase(8)}
+spriteset(gr_ic_purchase, SPRITE_IC){tmpl_purchase()}

@@ -1,5 +1,5 @@
 #define SPRITE_BR_143 "gfx/electric/br143.png"
 
-spriteset(GR_NAME(br143), SPRITE_BR_143){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}				// Grafik BR 143 ziehend rot
-spriteset(GR_NAME_REV(br143), SPRITE_BR_143){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}			// Grafik BR 143 schiebend rot
-spriteset(gr_br143_purchase, SPRITE_PURCHASE){tmpl_purchase(12)}
+spriteset(GR_NAME(br143), SPRITE_BR_143){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME_REV(br143), SPRITE_BR_143){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br143_purchase, SPRITE_BR_143){tmpl_purchase()}
