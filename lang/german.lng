@@ -1,153 +1,77 @@
 ﻿##grflangid 0x02
-STR_GRF_NAME                                                    :DACH Dreiländerset {VERSION}
-STR_GRF_DESCRIPTION                                             :{GOLD}DACH {BLACK}enthält Züge aus Deutschland, Österreich und der Schweiz{}{BLACK}Gezeichnet von {SILVER}Matthias Gürtler (Yoshi) {BLACK}und programmiert von {SILVER}David Hilker (officercrockey){}{BLACK}Lizenz: {SILVER}GPL v2
-STR_NAME_RS											          	:Stadler Regio Shuttle (Diesel)
-STR_NAME_BR611													:DB BR 611 (Diesel)
-STR_NAME_KISS							     					:Stadler KISS (Elektrisch)
-STR_NAME_FLIRT							     					:Stadler FLIRT (Elektrisch)
-STR_NAME_BR146													:DB BR 146.2 (Elektrisch)
-STR_NAME_DOSTOWAGGON											:Doppelstockwaggon
-STR_NAME_STW												  	:Doppelstock-Steuerwagen
-STR_NAME_BR143													:DB BR 143 (Elektrisch)
-STR_NAME_BR101													:DB BR 101 (Elektrisch)
-STR_NAME_ICWAGGON												:DB Fernverkehrswaggon
-STR_NAME_RJWAGGON												:ÖBB Railjetwaggon
-STR_NAME_STWIC													:IC-Steuerwagen
-STR_NAME_SILBERLINGE											:DB Nahverkehrswaggon
-STR_NAME_STWSIL													:DB Nahverkehrssteuerwagen
-STR_NAME_STWRJ													:ÖBB Railjet Steuerwagen
-STR_NAME_RE450													:SBB Re 450 (Elektrisch)
-STR_NAME_RE450_WAGGON											:SBB Re 450 Waggon
-STR_NAME_BR641													:DB BR 641 (Diesel)
-STR_NAME_BR628													:DB BR 628 (Diesel)
-STR_NAME_SBBEW4													:SBB Einheitswagen IV
-STR_NAME_RJ													  	:ÖBB 1116 "Railjet" (Elektrisch)
-STR_NAME_BR218													:DB BR 218 (Diesel)
-STR_NAME_BR245													:DB BR 245 (Diesel)
-STR_NAME_RE460													:SBB Re 460 "Lok 2000" (Elektrisch)
-STR_NAME_SBBSTW													:SBB Steuerwagen
-STR_NAME_GTWMTHB												:Stadler GTW 2/6 (Elektrisch)
-STR_NAME_TRAXX													:Bombardier TRAXX (Elektrisch)
-STR_NAME_POSTSBB												:SBB Postwaggon
-STR_NAME_EAOS													:SBB offener Güterwaggon (EAOS)
-STR_NAME_KESSEL3												:Kesselwagen
-STR_NAME_SCHIEBEWAND											:SBB Schiebewandwagen
-STR_NAME_AUTOTRANSPORT											:Autotransportwagen
-STR_NAME_RUNGENWAGEN											:Rungenwagen
-STR_NAME_SBBICN													:SBB RABDe 500 "ICN" (Elektrisch)
-STR_NAME_CISWAGGON												:"Cisalpino" Waggon
-STR_NAME_OBBICWAGGON											:ÖBB Fernverkehrswaggon
-STR_NAME_OBB1144												:ÖBB 1144 (Elektrisch)
-STR_NAME_DOSTOWAGGON_IC											:DB Intercity-Doppelstockwaggon
-STR_NAME_STWDOSTOIC												:DB Intercity Doppelstock-Steuerwagen
-STR_NAME_OBB4024												:ÖBB 4024 "Talent" (Elektrisch)
-STR_NAME_OBB1142												:ÖBB 1142 (Elektrisch)
-STR_NAME_SBBIC2000												:SBB IC 2000
-STR_NAME_SBBIC2000STW											:SBB IC 2000 Steuerwagen
-STR_NAME_BLS535													:BLS RABe 535 "Lötschberger" (Elektrisch)
-STR_NAME_CITYSHUTTLEDOSTO										:ÖBB CityShuttle Doppelstockwagen
-STR_NAME_STWCITYSHUTTLEDOSTO									:ÖBB CityShuttle Doppelstocksteuerwagen
-STR_NAME_CITYSHUTTLE											:ÖBB CityShuttle 
-STR_NAME_STWCITYSHUTTLE											:ÖBB CityShuttle Steuerwagen
-STR_NAME_OBB5022												:ÖBB 5022 "Desiro" (Diesel)
-STR_NAME_OBB5047												:ÖBB 5047 (Diesel)
-STR_NAME_OBB5147												:ÖBB 5147 (Diesel)
-STR_NAME_OBB1116												:ÖBB 1116 "Taurus" (Elektrisch)
-STR_NAME_BR401                                                  :DB BR 401 ICE 1
-STR_NAME_BR402                                                  :DB BR 402 ICE 2
-STR_NAME_BR403                                                  :DB BR 403 ICE 3
-STR_NAME_BR407                                                  :DB BR 407 "Neuer" ICE 3 (Siemens Velaro D)
-STR_NAME_BR412                                                  :DB BR 412 ICE 4
-STR_NAME_BR1428                                                 :DB BR 1428 Stadler FLIRT 3 (4 Wagen)
-STR_NAME_BR429                                                  :DB BR 429 Stadler FLIRT 3 (5 Wagen)
-STR_NAME_BR429_1                                                :DB BR 429 Stadler FLIRT 3 "SÜWEX"
-STR_OBB1144_ADDITIONAL_TEXT 									:{BLACK}Verwendung: {GOLD}universal
-STR_BR146_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen ist Wendezugbetrieb möglich.
-STR_BR143_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit Doppelstockwagen und Nahverkehrswagen ist Wendezugbetrieb möglich.
-STR_BR101_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit Fernverkehrswagen ist Wendezugbetrieb möglich.
-STR_RE460_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit Einheitswagen IV ist Wendezugbetrieb möglich.
-STR_BR218_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb möglich.
-STR_BR245_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb möglich.
-STR_FLIRT_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}Den FLIRT gibt es in einer 3-teiligen, einer 4-teiligen und einer 5-teiligen Version.
-STR_KISS_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}Den KISS gibt es in einer 4-teiligen, einer 5-teiligen und einer 6-teiligen Version.
-STR_RE450_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {GOLD}S-Bahneinheit mit 1./2.-Klasse-Waggon, 2.-Klasse-Waggon und Steuerwagen
-STR_RS_ADDITIONAL_TEXT											:{BLACK}Verwendung: {GOLD}Nahverkehr{}{BLACK}Vielfachsteuerung: {GOLD}6-fach{}{BLACK}Farbgebungen: {GOLD}HzL (beige/rot), HzL (blau/gelb), DB Regio, BOB {GREEN}(umrüstbar)
-STR_BR641_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Nahverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
-STR_BR611_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}4-fach{}{BLACK}Sonstiges: {RED}Neigetechnikzug
-STR_BR628_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
-STR_SILBERLINGE_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse
-STR_STWSIL_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit der BR 143 und der BR 218 ist Wendezugbetrieb möglich.
-STR_ICWAGGON_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse sowie Bordrestaurant
-STR_STWIC_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr {}{BLACK}Sonstiges:{GOLD} Mit der BR 101 und der BR 218 ist Wendezugbetrieb möglich.
-STR_DOSTOWAGGON_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse
-STR_STW_ADDITIONAL_TEXT											:{BLACK}Verwendung: {GOLD}Schneller Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Mit der BR 143, der BR 218 und der BR 146 ist Wendezugbetrieb möglich.
-STR_SBBEW4_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse
-STR_SBBSTW_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit der Re460 ist Wendezugbetrieb möglich.
-STR_RJ_ADDITIONAL_TEXT											:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit ÖBB Railjetwagen ist Wendezugbetrieb möglich.
-STR_STWRJ_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit ÖBB Railjet ist Wendezugbetrieb möglich.
-STR_RJWAGGON_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse sowie Bordbistro.
-STR_GTWMTHB_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Nahverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
-STR_TRAXX_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}universal{}{BLACK}Versionen: {GOLD}BLS Re 485, SBB Re 481, DB BR 185, DB BR 186, Cisalpino {GREEN}(umrüstbar)
-STR_SBBICN_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Vielfachsteuerung: {GOLD}2-fach{}{BLACK}Sonstiges: {RED}Neigetechnikzug
-STR_OBBICWAGGON_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Fernverkehr
-STR_DOSTOWAGGON_IC_ADDITIONAL_TEXT								:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit 1. und 2. Klasse
-STR_STWDOSTOIC_ADDITIONAL_TEXT									:{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Mit der BR 218 und der BR 146 ist Wendezugbetrieb möglich.
-STR_OBB4024_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}S-Bahn und Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}2-fach{}{BLACK}Sonstiges: {GOLD}Den TALENT gibt es in einer 3-teiligen und einer 4-teiligen Version.
-STR_OBB1142_ADDITIONAL_TEXT 									:{BLACK}Verwendung: {GOLD}Regionalverkehr
-STR_BLS535_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
-STR_OBB5022_ADDITIONAL_TEXT										:{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Vielfachsteuerung: {GOLD}3-fach
+
+# Package
+STR_GRF_NAME                                                    :Modern DB Train Set {VERSION}
+STR_GRF_DESCRIPTION                                             :{GOLD}Modern DB Train Set {BLACK} mit modernen Zügen der Deutschen Bahn.
+
+# Electric
+STR_BR101_NAME                                                  :DB BR 101 (Elektrisch)
+STR_BR101_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+STR_BR143_NAME                                                  :DB BR 143 (Elektrisch)
+STR_BR143_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+STR_BR146_NAME                                                  :DB BR 146.2 (Elektrisch)
+STR_BR146_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+STR_BR146_ATTACH_WAGON                                          :Hinter einen Steuerwagen können keine zusätzlichen Wagen angehängt werden.
+
+# Diesel
+STR_BR218_NAME                                                  :DB BR 218 (Diesel)
+STR_BR218_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Universal{}{BLACK}Sonstiges:  {GOLD}Wendezugbetrieb ist möglich.
+STR_BR245_NAME                                                  :DB BR 245 (Diesel)
+STR_BR245_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Universal{}{BLACK}Sonstiges:  {GOLD}Wendezugbetrieb ist möglich.
+
+# EMU
+STR_BR401_NAME                                                  :DB BR 401 ICE 1 (Elektrisch)
 STR_BR401_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR402_NAME                                                  :DB BR 402 ICE 2 (Elektrisch)
 STR_BR402_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR403_NAME                                                  :DB BR 403 ICE 3 (Elektrisch)
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR407_NAME                                                  :DB BR 407 Siemens Velaro D (Elektrisch)
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR412_NAME                                                  :DB BR 412 ICE 4 (Elektrisch)
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR1428_NAME                                                 :DB BR 1428 Stadler FLIRT 3 (Elektrisch, 4 Wagen)
 STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Verwendung: {GOLD}Regionalverkehr
+STR_BR429_NAME                                                  :DB BR 429 Stadler FLIRT 3 (Elekrtisch, 5 Wagen)
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
+STR_BR429_1_NAME                                                :DB BR 429 Stadler FLIRT 3 "SÜWEX" (Elekrtisch, 5 Wagen)
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Verwendung: {GOLD}Regionalverkehr
-STR_KISS_ATTACH_WAGON											:Keine Waggons am KISS erlaubt
-STR_FLIRT_ATTACH_WAGON											:Keine Waggons am FLIRT erlaubt
-STR_OBB4024_ATTACH_WAGON										:Diese Zugkonfiguration ist nicht möglich
-STR_BR611_ATTACH_WAGON											:Diese Zugkonfiguration ist nicht möglich
-STR_146_ATTACH_WAGON											:Nach einem Steuerwagen kann kein weiterer Waggon angekoppelt werden.
-STR_RS_ATTACH_WAGON												:Diese Zugkonfiguration ist nicht möglich
-STR_CANNOT_ATTACH_LOK											:Kann an diese Lok nicht angehängt werden
-STR_STW_VORHANDEN												:Es befindet sich bereits ein Steuerwagen in diesem Zug
-STR_BR641_CANNOT_START											:BR 641 dürfen höchstens in Dreifachtraktion gefahren werden
-STR_KISS_CANNOT_START											:Es dürfen höchstens vier Fahrzeuge zusammengekoppelt werden
-STR_BR628_CANNOT_START											:Es dürfen höchstens drei Fahrzeuge zusammengekoppelt werden
-STR_OBB4024_CANNOT_START										:Es dürfen höchstens zwei Fahrzeuge zusammengekoppelt werden
-STR_RS_CANNOT_START												:Regio-Shuttle dürfen höchstens in Sechsfachtraktion gefahren werden
-STR_CARGO_SUBTYPE_ERSTE_KLASSE									: (Erste-Klasse-Wagen)
-STR_CARGO_SUBTYPE_FAHRRADWAGEN									: (Fahrradwagen)
-STR_CARGO_SUBTYPE_ZWEITE_KLASSE									: (Zweite-Klasse-Wagen)
-STR_CARGO_SUBTYPE_STW											: (Steuerwagen)
-STR_CARGO_SUBTYPE_RESTAURANT									: (Bordrestaurant)
-STR_RJ_PREMIUM													: (Premium/First Class)
-STR_RJ_FIRST													: (First Class)
-STR_RJ_ECONOMY													: (Economy Class)
-STR_RJ_KINDERKINO												: (Kinderkino)
-STR_RS_LIVERY_DEFAULT											: (Hohenzollerische Landesbahn AG beige-rot)
-STR_RS_LIVERY1													: (Hohenzollerische Landesbahn AG blau-gelb)
-STR_RS_LIVERY2													: (Bodensee-Oberschwaben-Bahn)
-STR_RS_LIVERY3													: (DB Regio AG)
-STR_TRAXX_LIVERY_DEFAULT										: (BLS Re 485)
-STR_TRAXX_LIVERY1												: (SBB Re 481)
-STR_TRAXX_LIVERY2												: (DB BR 185)
-STR_TRAXX_LIVERY3												: (SBB Re 484 "Cisalpino")
-STR_BR146_LIVERY_DEFAULT										: (verkehrsrot)
-STR_BR146_LIVERY1												: (Intercity)
-STR_OBB1116_LIVERY_DEFAULT										: (ÖBB Farbgebung)
-STR_OBB1116_LIVERY1												: (DB Farbgebung)
-STR_KISS_6T														: (6-teilig)
-STR_KISS_5T														: (5-teilig)
-STR_KISS_4T														: (4-teilig)
-STR_KISS_3T														: (3-teilig)
-STR_RE460_LIVERY_DEFAULT										: (SBB Re 460 rot)
-STR_RE460_LIVERY1												: (SBB Re 460 blau)
-STR_PARAM_BUILDTRAIN											: building costs for trains and wagons
-STR_PARAM_BUILDTRAIN_DESC										: Adjusts the prices for trains and wagons
-STR_PARAM_BUILDTRAIN_QUARTER									: x 1/4
-STR_PARAM_BUILDTRAIN_HALF										: x 1/2
-STR_PARAM_BUILDTRAIN_NORMAL										: normal
-STR_PARAM_BUILDTRAIN_DOUBLE										: x 2
-STR_PARAM_BUILDTRAIN_QUADRUPLE									: x 4
+
+# DMU
+STR_BR611_NAME                                                  :DB BR 611 (Diesel)
+STR_BR611_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 4 Züge{}{BLACK}Sonstiges: {RED}Neigetechnick
+STR_BR611_ATTACH_WAGON                                          :Es können keine Wagen zur BR 611 hinzugefügt werden.
+STR_BR628_NAME                                                  :DB BR 628 (Diesel)
+STR_BR628_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 3 Züge{}
+STR_BR628_CANNOT_START                                          :Ein Zug kann maximal aus drei BR 628 bestehen.
+STR_BR641_NAME                                                  :DB BR 641 (Diesel)
+STR_BR641_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 3 Züge{}
+STR_BR641_CANNOT_START                                          :Ein Zug kann maximal aus drei BR 641 bestehen.
+
+# Coaches
+STR_DOSTO_NAME                                                  :DB Doppelstockwagen
+STR_DOSTO_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
+STR_DOSTO_STW_NAME                                              :DB Doppelstock-Steuerwagen
+STR_DOSTO_STW_ADDITIONAL_TEXT                                   :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+STR_DOSTO_IC_NAME                                               :DB Intercity Doppelstockwagen
+STR_DOSTO_IC_ADDITIONAL_TEXT                                    :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_DOSTO_IC_STW_NAME                                           :DB Intercity Doppelstock-Steuerwagen
+STR_DOSTO_IC_STW_ADDITIONAL_TEXT                                :{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+STR_IC_COACH_NAME                                               :DB Intercity Wagen
+STR_IC_COACH_ADDITIONAL_TEXT                                    :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_IC_COACH_STW_NAME                                           :DB Intercity Steuerwagen
+STR_IC_COACH_STW_ADDITIONAL_TEXT                                :{BLACK}Verwendung: {GOLD}Fernverkehr {}{BLACK}Sonstiges:{GOLD}Wendezugbetrieb ist möglich.
+STR_REGIO_COACH_NAME                                            :DB Regio Wagen "Silberling"
+STR_REGIO_COACH_ADDITIONAL_TEXT                                 :{BLACK}Verwendung: {GOLD}Regionalverkehr
+STR_REGIO_COACH_STW_NAME                                        :DB Regio Steuerwagen "Silberling"
+STR_REGIO_COACH_STW_ADDITIONAL_TEXT                             :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
+
+# Others
+STR_CARGO_SUBTYPE_STW                                           : (control car)
+STR_PARAM_BUILDTRAIN                                            : Train Purchase Costs
+STR_PARAM_BUILDTRAIN_DESC                                       : Adjust the purchase price of trains
+STR_PARAM_BUILDTRAIN_QUARTER                                    : 1/4x
+STR_PARAM_BUILDTRAIN_HALF                                       : 1/2x
+STR_PARAM_BUILDTRAIN_NORMAL                                     : Normal
+STR_PARAM_BUILDTRAIN_DOUBLE                                     : 2x
+STR_PARAM_BUILDTRAIN_QUADRUPLE                                  : 4x

@@ -5,7 +5,7 @@ CONFIGURE_VISUAL_EFFECT_ENGINE(br218, VISUAL_EFFECT_DIESEL)
 item (FEAT_TRAINS, br218, 218) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_NAME_BR218);
+        name:                           string(STR_BR218_NAME);
         climates_available:             ALL_CLIMATES;		
         introduction_date:              date(1968,1,1);
         model_life:                     VEHICLE_NEVER_EXPIRES;

@@ -5,13 +5,13 @@ switch(FEAT_TRAINS, SELF, sw_br641_start_stop, num_vehs_in_consist) {
 
 switch(FEAT_TRAINS, SELF, sw_br641_wagon_attach, vehicle_type_id) {
     br641: CB_RESULT_ATTACH_ALLOW;
-    string(STR_RS_ATTACH_WAGON);
+    string(STR_BR641_CANNOT_START);
 }
 
 item (FEAT_TRAINS, br641, 83) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_NAME_BR641);
+        name:                           string(STR_BR641_NAME);
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2001, 1, 1);
         model_life:                     5;

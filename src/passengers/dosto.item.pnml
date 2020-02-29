@@ -3,7 +3,7 @@
 item(FEAT_TRAINS, dosto, 134) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_NAME_DOSTOWAGGON);
+        name:                           string(STR_DOSTO_NAME);
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1996, 1, 1);
         model_life:                     VEHICLE_NEVER_EXPIRES;
@@ -23,6 +23,6 @@ item(FEAT_TRAINS, dosto, 134) {
         default:                        gr_dosto;
         cargo_capacity:                 DOSTO_CARGO_CAPACITY;
         purchase:                       gr_dosto_purchase;
-        additional_text:                string(STR_DOSTOWAGGON_ADDITIONAL_TEXT);
+        additional_text:                string(STR_DOSTO_ADDITIONAL_TEXT);
     }
 }

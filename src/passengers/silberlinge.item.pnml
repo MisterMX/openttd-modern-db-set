@@ -3,7 +3,7 @@
 item(FEAT_TRAINS, silberlinge, 130) {
     property {
         sprite_id: SPRITE_ID_NEW_TRAIN;
-        name: string(STR_NAME_SILBERLINGE);
+        name: string(STR_REGIO_COACH_NAME);
         climates_available: ALL_CLIMATES;
         introduction_date: date(1988,1,1);
         model_life: VEHICLE_NEVER_EXPIRES;
