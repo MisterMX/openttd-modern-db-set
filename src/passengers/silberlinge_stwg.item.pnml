@@ -7,7 +7,7 @@ item (FEAT_TRAINS, silberlinge_stwg, 131) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         name:                           string(STR_NAME_STWSIL);
-        climates_available:             bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        climates_available:             ALL_CLIMATES;
         introduction_date:              date(1993,1,1);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         loading_speed:                  23;

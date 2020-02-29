@@ -6,7 +6,7 @@ item(FEAT_TRAINS, br146_ic, 1461) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         name:                           string(STR_NAME_BR146);
-        climates_available:             bitmask(CLIMATE_TEMPERATE,CLIMATE_ARCTIC);
+        climates_available:             ALL_CLIMATES;
         introduction_date:              date(2001, 1, 1);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         speed:                          161 km/h;
