@@ -83,4 +83,4 @@ This train set allows push-pull configuration for trains with a locomotive at on
 
 Special thanks to the creators of the [2cc](https://wiki.openttd.org/2cc_TrainSet) and [DACH](https://www.tt-forums.net/viewtopic.php?t=56666) train sets. Parts of the graphics and the code is heavily inspired from their work.
 
-A full list of all locomotives, EMUs and DMUs can be found on the (German Wikipedia)[https://de.wikipedia.org/wiki/Liste_der_Lokomotiv-_und_Triebwagenbaureihen_der_Deutschen_Bahn]
+A full list of all locomotives, EMUs and DMUs can be found on the [German Wikipedia](https://de.wikipedia.org/wiki/Liste_der_Lokomotiv-_und_Triebwagenbaureihen_der_Deutschen_Bahn)
