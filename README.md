@@ -9,7 +9,7 @@ Electric Locomotives:
 * [x] Class 101
 * [x] Class 143
 * [x] Class 146
-* [x] Class 146 IC (for IC 2)
+* [x] Class 146 IC colors (for IC 2)
 * [ ] Class 182
 * [ ] Class 187
 * [ ] Class 193
@@ -28,6 +28,7 @@ EMUs:
 * [x] Class 403 (ICE 3)
 * [x] Class 407 (Siemens Velaro D)
 * [ ] Class 411 (ICE T, 7 Cars)
+* [ ] Class 4110 (Stadler K.I.S.S. IC 2)
 * [x] Class 412 (ICE 4)
 * [ ] Class 415 (ICE T, 5 Cars)
 * [ ] Class 420
@@ -36,9 +37,9 @@ EMUs:
 * [ ] Class 424
 * [ ] Class 425
 * [ ] Class 426
-* [x] Class 1428 (Stadler F.L.I.R.T, 4 Cars) 
-* [x] Class 429 (Stadler F.L.I.R.T, 5 Cars)
-* [x] Class 429.1 (Stadler F.L.I.R.T "Süwex", 5 Cars)
+* [x] Class 1428 (Stadler F.L.I.R.T., 4 Cars) 
+* [x] Class 429 (Stadler F.L.I.R.T., 5 Cars)
+* [x] Class 429.1 (Stadler F.L.I.R.T. "Süwex", 5 Cars)
 * [ ] Class 430
 * [ ] Class 440
 * [ ] Class 442 (Bombardier Talent 2)
