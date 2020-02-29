@@ -47,6 +47,8 @@ STR_BR628_CANNOT_START                                          :Ein Zug kann ma
 STR_BR641_NAME                                                  :DB BR 641 (Diesel)
 STR_BR641_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 3 Züge{}
 STR_BR641_CANNOT_START                                          :Ein Zug kann maximal aus drei BR 641 bestehen.
+STR_BR182_NAME                                                  :DB Class 182 (Electric)
+STR_BR182_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Interciy, regional, freight transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 
 # Coaches
 STR_DOSTO_NAME                                                  :DB Doppelstockwagen

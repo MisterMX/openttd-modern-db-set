@@ -10,7 +10,7 @@ Electric Locomotives:
 * [x] Class 143
 * [x] Class 146
 * [x] Class 146 IC colors (for IC 2)
-* [ ] Class 182
+* [x] Class 182
 * [ ] Class 187
 * [ ] Class 193
 
@@ -77,7 +77,7 @@ Passenger Coaches:
 
 ## Push-pull Configuration
 
-This train set allows push-pull configuration for trains with a locomotive at one end, and a control car at the other. If the train's direction is reversed, the locomotive will stay at its position and *push* the train instead of pulling it. This only works with a single locomotive and onyl with coaches and locomotives from this train set.
+This train set allows push-pull configuration for trains with a locomotive at one end, and a control car at the other. If the train's direction is reversed, the locomotive will stay at its position and *push* the rest of the train instead of pulling it. This only works with a single locomotive and only with coaches and locomotives from this train set.
 
 ## Acknowledgements
 

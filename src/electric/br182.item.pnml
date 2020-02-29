@@ -1,0 +1,32 @@
+CONFIGURE_PUSH_PULL_ENGINE(br182)
+CONFIGURE_CC_ATTACHEMENT(br182)
+CONFIGURE_VISUAL_EFFECT_ENGINE(br182, VISUAL_EFFECT_ELECTRIC)
+
+item(FEAT_TRAINS, br182, 182) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        name:                           string(STR_BR182_NAME);
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1999, 1, 1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        speed:                          231 km/h;
+        vehicle_life:                   32;
+        cost_factor:                    160;
+        running_cost_factor:            160;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        track_type:                     RAIL;
+        power:                          6400 kW;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        weight:                         86 tons;
+        cargo_capacity:                 0;
+        tractive_effort_coefficient:    0.3594; // 92
+        air_drag_coefficient:           0.05;
+    }
+    graphics {
+        default:                        GRAPHICS(br182);
+        purchase:                       gr_br182_purchase;
+        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br182);
+        can_attach_wagon:               CC_ATTACHEMENT(br182);
+        additional_text:                string(STR_BR182_ADDITIONAL_TEXT);
+    }
+}

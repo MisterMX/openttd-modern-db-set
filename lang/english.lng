@@ -12,6 +12,8 @@ STR_BR143_ADDITIONAL_TEXT                                       :{BLACK}Usage: {
 STR_BR146_NAME                                                  :DB Class 146.2 (Electric)
 STR_BR146_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 STR_BR146_ATTACH_WAGON                                          :Can't attach more coaches behind a control car.
+STR_BR182_NAME                                                  :DB Class 182 (Electric)
+STR_BR182_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Interciy, regional, freight transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 
 # Diesel
 STR_BR218_NAME                                                  :DB Class 218 (Diesel)
