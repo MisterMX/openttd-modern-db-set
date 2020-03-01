@@ -36,7 +36,7 @@ EMUs:
 * [x] Class 1428 (Stadler F.L.I.R.T., 4 cars) 
 * [x] Class 429 (Stadler F.L.I.R.T., 5 cars)
 * [x] Class 429.1 (Stadler F.L.I.R.T. "Süwex", 5 cars)
-* [ ] Class 430
+* [x] Class 430
 * [ ] Class 440
 * [ ] Class 442 (Bombardier Talent 2)
 * [ ] Class 446 (Bombardier Twindexx)

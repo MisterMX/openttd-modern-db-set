@@ -1,0 +1,7 @@
+#define SPRITE_BR_430 "gfx/emu/br430.png"
+
+spriteset(gr_br430_front, SPRITE_BR_430){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br430_middle, SPRITE_BR_430){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br430_middle_power, SPRITE_BR_430){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br430_rear, SPRITE_BR_430){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br430_purchase, SPRITE_BR_430){tmpl_purchase()}

@@ -44,6 +44,8 @@ STR_BR429_NAME                                                  :DB Class 429 St
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_1_NAME                                                :DB Class 429 Stadler FLIRT 3 "SÜWEX" (Electric, 5 cars)
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Usage: {GOLD}Regional transport
+STR_BR430_NAME                                                  :DB Class 430 (Electric)
+STR_BR430_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 
 # DMU
 STR_BR611_NAME                                                  :DB Class 611 (Diesel)
