@@ -31,11 +31,7 @@ EMUs:
 * [X] Class 4110 (Stadler K.I.S.S. IC, 4 cars)
 * [x] Class 412 (ICE 4)
 * [ ] Class 415 (ICE T, 5 cars)
-* [ ] Class 420
-* [ ] Class 422
-* [ ] Class 423
-* [ ] Class 424
-* [ ] Class 425
+* [x] Class 425
 * [ ] Class 426
 * [x] Class 1428 (Stadler F.L.I.R.T., 4 cars) 
 * [x] Class 429 (Stadler F.L.I.R.T., 5 cars)
@@ -43,7 +39,7 @@ EMUs:
 * [ ] Class 430
 * [ ] Class 440
 * [ ] Class 442 (Bombardier Talent 2)
-* [ ] Class 445 (Bombardier Twindexx)
+* [ ] Class 446 (Bombardier Twindexx)
 * [ ] Class 481
 * [ ] Class 482
 * [ ] Class 490
