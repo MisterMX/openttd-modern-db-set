@@ -32,7 +32,7 @@ EMUs:
 * [x] Class 412 (ICE 4)
 * [ ] Class 415 (ICE T, 5 cars)
 * [x] Class 425
-* [ ] Class 426
+* [x] Class 426
 * [x] Class 1428 (Stadler F.L.I.R.T., 4 cars) 
 * [x] Class 429 (Stadler F.L.I.R.T., 5 cars)
 * [x] Class 429.1 (Stadler F.L.I.R.T. "Süwex", 5 cars)

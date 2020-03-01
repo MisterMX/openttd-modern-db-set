@@ -36,6 +36,8 @@ STR_BR4110_NAME                                                 :DB Class 4110 S
 STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR425_NAME                                                  :DB Class 425 (Electric)
 STR_BR425_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
+STR_BR426_NAME                                                  :DB Class 426 (Electric)
+STR_BR426_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR1428_NAME                                                 :DB Class 1428 Stadler FLIRT 3 (Electric, 4 cars)
 STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_NAME                                                  :DB Class 429 Stadler FLIRT 3 (Electric, 5 cars)
