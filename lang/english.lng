@@ -32,6 +32,8 @@ STR_BR407_NAME                                                  :DB Class 407 Si
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR412_NAME                                                  :DB Class 412 ICE 4 (Electric)
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR4110_NAME                                                 :DB Class 4110 Stadler IC 2
+STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR1428_NAME                                                 :DB Class 1428 Stadler FLIRT 3 (Electric, 4 cars)
 STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_NAME                                                  :DB Class 429 Stadler FLIRT 3 (Electric, 5 cars)

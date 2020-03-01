@@ -1,0 +1,6 @@
+#define SPRITE_BR_4110 "gfx/emu/br4110.png"
+
+spriteset(gr_br4110_front, SPRITE_BR_4110){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br4110_middle, SPRITE_BR_4110){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br4110_rear, SPRITE_BR_4110){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br4110_purchase, SPRITE_BR_4110){tmpl_purchase()}
