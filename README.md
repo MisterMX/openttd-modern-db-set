@@ -27,7 +27,7 @@ EMUs:
 * [x] Class 402 (ICE 2)
 * [x] Class 403 (ICE 3)
 * [x] Class 407 (Siemens Velaro D)
-* [ ] Class 411 (ICE T, 7 cars)
+* [x] Class 411 (ICE T, 7 cars)
 * [X] Class 4110 (Stadler K.I.S.S. IC, 4 cars)
 * [x] Class 412 (ICE 4)
 * [ ] Class 415 (ICE T, 5 cars)
@@ -46,7 +46,7 @@ EMUs:
 
 DMUs:
 
-* [ ] Class 605
+* [ ] Class 605 (ICE TD)
 * [ ] Class 611
 * [ ] Class 612
 * [ ] Class 618

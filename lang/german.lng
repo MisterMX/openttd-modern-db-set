@@ -28,6 +28,8 @@ STR_BR403_NAME                                                  :DB BR 403 ICE 3
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR407_NAME                                                  :DB BR 407 Siemens Velaro D (Elektrisch)
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR411_NAME                                                  :DB BR 411 ICE T7 (Elektrisch)
+STR_BR411_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR412_NAME                                                  :DB BR 412 ICE 4 (Elektrisch)
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR4110_NAME                                                 :DB BR 4110 Stadler IC 2 (Elektrisch)
