@@ -59,6 +59,7 @@
 #include "src/emu/br411.item.pnml"
 #include "src/emu/br412.item.pnml"
 #include "src/emu/br4110.item.pnml"
+#include "src/emu/br415.item.pnml"
 #include "src/emu/br425.item.pnml"
 #include "src/emu/br426.item.pnml"
 #include "src/emu/br1428.item.pnml"

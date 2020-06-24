@@ -34,6 +34,8 @@ STR_BR412_NAME                                                  :DB BR 412 ICE 4
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR4110_NAME                                                 :DB BR 4110 Stadler IC 2 (Elektrisch)
 STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR415_NAME                                                  :DB BR 415 ICE T5 (Elektrisch)
+STR_BR415_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR425_NAME                                                  :DB BR 425 (Elektrisch)
 STR_BR425_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_BR426_NAME                                                  :DB BR 426 (Elektrisch)

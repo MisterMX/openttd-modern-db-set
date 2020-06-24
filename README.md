@@ -30,7 +30,7 @@ EMUs:
 * [x] Class 411 (ICE T, 7 cars)
 * [X] Class 4110 (Stadler K.I.S.S. IC, 4 cars)
 * [x] Class 412 (ICE 4)
-* [ ] Class 415 (ICE T, 5 cars)
+* [x] Class 415 (ICE T, 5 cars)
 * [x] Class 425
 * [x] Class 426
 * [x] Class 1428 (Stadler F.L.I.R.T., 4 cars) 

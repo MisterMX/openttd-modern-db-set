@@ -36,6 +36,8 @@ STR_BR412_NAME                                                  :DB Class 412 IC
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR4110_NAME                                                 :DB Class 4110 Stadler IC 2
 STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR415_NAME                                                  :DB Class 415 ICE T5 (Electric)
+STR_BR415_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR425_NAME                                                  :DB Class 425 (Electric)
 STR_BR425_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR426_NAME                                                  :DB Class 426 (Electric)

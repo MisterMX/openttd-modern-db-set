@@ -1,4 +1,4 @@
-#define BR411_CARGO_CAPACITY 69
+#define BR411_CARGO_CAPACITY 56
 #define BR_411_WAGON_LENGTH 7
 
 switch(FEAT_TRAINS, SELF, sw_br411_articulated_parts, extra_callback_info1) {
@@ -83,6 +83,7 @@ item (FEAT_TRAINS, br411, 411) {
         weight: 368 tons;
         tractive_effort_coefficient: 0.15;
         cargo_allow_refit: [];
+        misc_flags: bitmask(TRAIN_FLAG_TILT);
     }
     graphics {
         articulated_part: sw_br411_articulated_parts;
