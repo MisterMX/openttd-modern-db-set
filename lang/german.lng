@@ -29,13 +29,13 @@ STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Verwendu
 STR_BR407_NAME                                                  :DB BR 407 Siemens Velaro D (Elektrisch)
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR411_NAME                                                  :DB BR 411 ICE T7 (Elektrisch)
-STR_BR411_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR411_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {RED}Neigetechnick
 STR_BR412_NAME                                                  :DB BR 412 ICE 4 (Elektrisch)
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR4110_NAME                                                 :DB BR 4110 Stadler IC 2 (Elektrisch)
 STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Verwendung: {GOLD}Fernverkehr
 STR_BR415_NAME                                                  :DB BR 415 ICE T5 (Elektrisch)
-STR_BR415_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr
+STR_BR415_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {RED}Neigetechnick
 STR_BR425_NAME                                                  :DB BR 425 (Elektrisch)
 STR_BR425_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
 STR_BR426_NAME                                                  :DB BR 426 (Elektrisch)
@@ -50,6 +50,8 @@ STR_BR430_NAME                                                  :DB BR 430 (Elek
 STR_BR430_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr
 
 # DMU
+STR_BR605_NAME                                                  :DB BR 605 ICE TD (Diesel)
+STR_BR605_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Fernverkehr{}{BLACK}Sonstiges: {RED}Neigetechnick
 STR_BR611_NAME                                                  :DB BR 611 (Diesel)
 STR_BR611_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 4 Züge{}{BLACK}Sonstiges: {RED}Neigetechnick
 STR_BR611_ATTACH_WAGON                                          :Es können keine Wagen zur BR 611 hinzugefügt werden.

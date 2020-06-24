@@ -46,7 +46,7 @@ EMUs:
 
 DMUs:
 
-* [ ] Class 605 (ICE TD)
+* [x] Class 605 (ICE TD)
 * [ ] Class 611
 * [ ] Class 612
 * [ ] Class 618
