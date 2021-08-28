@@ -12,6 +12,8 @@ STR_BR143_ADDITIONAL_TEXT                                       :{BLACK}Verwendu
 STR_BR146_NAME                                                  :DB BR 146.2 (Elektrisch)
 STR_BR146_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Sonstiges: {GOLD}Wendezugbetrieb ist möglich.
 STR_BR146_ATTACH_WAGON                                          :Hinter einen Steuerwagen können keine zusätzlichen Wagen angehängt werden.
+STR_BR182_NAME                                                  :DB Class 182 (Electric)
+STR_BR182_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Interciy, regional, freight transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 
 # Diesel
 STR_BR218_NAME                                                  :DB BR 218 (Diesel)
@@ -63,8 +65,9 @@ STR_BR628_CANNOT_START                                          :Ein Zug kann ma
 STR_BR641_NAME                                                  :DB BR 641 (Diesel)
 STR_BR641_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 3 Züge{}
 STR_BR641_CANNOT_START                                          :Ein Zug kann maximal aus drei BR 641 bestehen.
-STR_BR182_NAME                                                  :DB Class 182 (Electric)
-STR_BR182_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Interciy, regional, freight transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
+STR_BR670_NAME                                                  :DB BR 670 (Diesel)
+STR_BR670_ADDITIONAL_TEXT                                       :{BLACK}Verwendung: {GOLD}Regionalverkehr{}{BLACK}Zugverband: {GOLD}Max. 3 Züge{}
+STR_BR670_CANNOT_START                                          :Ein Zug kann maximal aus drei BR 670 bestehen.
 
 # Coaches
 STR_DOSTO_NAME                                                  :DB Doppelstockwagen

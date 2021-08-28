@@ -58,7 +58,7 @@ DMUs:
 * [ ] Class 642
 * [ ] Class 643
 * [ ] Class 644
-* [ ] Class 670
+* [x] Class 670
 
 Passenger Coaches:
 

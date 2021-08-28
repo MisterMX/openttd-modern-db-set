@@ -65,6 +65,9 @@ STR_BR628_CANNOT_START                                          :Class 628 can b
 STR_BR641_NAME                                                  :DB Class 641 (Diesel)
 STR_BR641_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
 STR_BR641_CANNOT_START                                          :Class 641 can be built up to three times per train.
+STR_BR670_NAME                                                  :DB Class 670 (Diesel)
+STR_BR670_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
+STR_BR670_CANNOT_START                                          :Class 670 can be built up to three times per train.
 
 # Coaches
 STR_DOSTO_NAME                                                  :DB double-decker coach

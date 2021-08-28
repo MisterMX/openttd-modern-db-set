@@ -34,6 +34,7 @@
 #include "src/dmu/br605.sprite.pnml"
 #include "src/dmu/br628.sprite.pnml"
 #include "src/dmu/br641.sprite.pnml"
+#include "src/dmu/br670.sprite.pnml"
 
 #include "src/passengers/ic_stwg.sprite.pnml"
 #include "src/passengers/ic.sprite.pnml"
@@ -73,6 +74,7 @@
 #include "src/dmu/br605.item.pnml"
 #include "src/dmu/br628.item.pnml"
 #include "src/dmu/br641.item.pnml"
+#include "src/dmu/br670.item.pnml"
 
 #include "src/passengers/silberlinge.item.pnml"
 #include "src/passengers/silberlinge_stwg.item.pnml"

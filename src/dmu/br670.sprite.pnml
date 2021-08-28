@@ -1,0 +1,5 @@
+
+#define SPRITE_BR_670 "gfx/dmu/br670.png"
+
+spriteset(gr_br670, SPRITE_BR_670){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br670_purchase, SPRITE_BR_670){tmpl_purchase()}
