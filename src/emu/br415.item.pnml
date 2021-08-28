@@ -66,7 +66,7 @@ item (FEAT_TRAINS, br415, 415) {
         model_life: VEHICLE_NEVER_EXPIRES;
         loading_speed: 18;
         speed: 230 km/h;
-        cost_factor: 1;
+        cost_factor: 140;
         vehicle_life: 30;
         dual_headed: 0;
         running_cost_factor: 170;

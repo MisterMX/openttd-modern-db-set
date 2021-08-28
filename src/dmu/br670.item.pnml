@@ -18,7 +18,7 @@ item (FEAT_TRAINS, br670, 670) {
         speed:                          100 km/h;
         vehicle_life:                   20;
         loading_speed:                  25;
-        cost_factor:                    30;
+        cost_factor:                    32;
         running_cost_factor:            100;
         running_cost_base:              RUNNING_COST_DIESEL;
         track_type:                     RAIL;
