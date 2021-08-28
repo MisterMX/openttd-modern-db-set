@@ -39,7 +39,7 @@ EMUs:
 * [x] Class 430
 * [ ] Class 440
 * [ ] Class 442 (Bombardier Talent 2)
-* [ ] Class 446 (Bombardier Twindexx)
+* [x] Class 446 (Bombardier Twindexx)
 * [ ] Class 481
 * [ ] Class 482
 * [ ] Class 490

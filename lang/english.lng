@@ -50,6 +50,8 @@ STR_BR429_1_NAME                                                :DB Class 429 St
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Usage: {GOLD}Regional transport
 STR_BR430_NAME                                                  :DB Class 430 (Electric)
 STR_BR430_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
+STR_BR446_NAME                                                  :DB Class 446 (Electric)
+STR_BR446_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 
 # DMU
 STR_BR605_NAME                                                  :DB Class 605 ICE TD (Diesel)

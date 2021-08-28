@@ -29,6 +29,7 @@
 #include "src/emu/br429.sprite.pnml"
 #include "src/emu/br429_1.sprite.pnml"
 #include "src/emu/br430.sprite.pnml"
+#include "src/emu/br446.sprite.pnml"
 
 #include "src/dmu/br605.sprite.pnml"
 #include "src/dmu/br628.sprite.pnml"
@@ -67,6 +68,7 @@
 #include "src/emu/br429.item.pnml"
 #include "src/emu/br429_1.item.pnml"
 #include "src/emu/br430.item.pnml"
+#include "src/emu/br446.item.pnml"
 
 #include "src/dmu/br605.item.pnml"
 #include "src/dmu/br628.item.pnml"
