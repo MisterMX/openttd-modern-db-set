@@ -4,29 +4,29 @@ CONFIGURE_VISUAL_EFFECT_ENGINE(br146, VISUAL_EFFECT_ELECTRIC)
 
 item(FEAT_TRAINS, br146, 146) {
     property {
-        sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_BR146_NAME);
-        climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2001, 1, 1);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
-        speed:                          161 km/h;
-        vehicle_life:                   32;
-        cost_factor:                    160;
-        running_cost_factor:            160;
-        running_cost_base:              RUNNING_COST_ELECTRIC;
-        track_type:                     RAIL;
-        power:                          5600 kW;
-        engine_class:                   ENGINE_CLASS_ELECTRIC;
-        weight:                         84 tons;
-        cargo_capacity:                 0;
-        tractive_effort_coefficient:    0.3594; // 92
-        air_drag_coefficient:           0.05;
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR146_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(2001, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        speed:                       161 km/h;
+        vehicle_life:                32;
+        cost_factor:                 33;
+        running_cost_factor:         185;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       5600 kW;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        weight:                      84 tons;
+        cargo_capacity:              0;
+        tractive_effort_coefficient: 0.3;
+        air_drag_coefficient:        0.05;
     }
     graphics {
-        default:                        GRAPHICS(br146);
-        purchase:                       gr_br146_purchase;
-        visual_effect_and_powered:      VISUAL_EFFECT_ENGINE(br146);
-        can_attach_wagon:               CC_ATTACHEMENT(br146);
-        additional_text:                string(STR_BR146_ADDITIONAL_TEXT);
+        default:                   GRAPHICS(br146);
+        purchase:                  gr_br146_purchase;
+        visual_effect_and_powered: VISUAL_EFFECT_ENGINE(br146);
+        can_attach_wagon:          CC_ATTACHEMENT(br146);
+        additional_text:           string(STR_BR146_ADDITIONAL_TEXT);
     }
 }

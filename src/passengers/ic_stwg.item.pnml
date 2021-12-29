@@ -3,33 +3,33 @@ CONFIGURE_VISUAL_EFFECT_CC(ic_stwg)
 
 #define IC_CC_CARGO_CAPACITY 56
 
-item (FEAT_TRAINS, ic_stwg, 133) {
+item (FEAT_TRAINS, ic_stwg, 50133) {
     property {
-        sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_IC_COACH_STW_NAME);
-        climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1995,1,1);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
-        loading_speed:                  12;
-        speed:                          201 km/h;
-        cost_factor:                    150;
-        running_cost_factor:            190;
-        bitmask_vehicle_info:           bitmask(2);
-        running_cost_base:	            RUNNING_COST_ELECTRIC;
-        track_type:                     RAIL;
-        power:                          0 kW;
-        cargo_capacity:                 IC_CC_CARGO_CAPACITY;
-        weight:                         46 tons;
-        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
-        non_refittable_cargo_classes:   bitmask();
-        cargo_allow_refit:              [];
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        name:                         string(STR_IC_COACH_STW_NAME);
+        climates_available:           ALL_CLIMATES;
+        introduction_date:            date(1995, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        loading_speed:                12;
+        speed:                        200 km/h;
+        cost_factor:                  13;
+        running_cost_factor:          30;
+        bitmask_vehicle_info:         bitmask(2);
+        running_cost_base:	          RUNNING_COST_ELECTRIC;
+        track_type:                   RAIL;
+        power:                        0 kW;
+        cargo_capacity:               IC_CC_CARGO_CAPACITY;
+        weight:                       46 tons;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        cargo_allow_refit:            [];
     }
     graphics {
-        default:                        GRAPHICS(ic_stwg);
-        purchase:                       gr_ic_stwg_purchase;
-        visual_effect_and_powered:      VISUAL_EFFECT_CC(ic_stwg);
-        cargo_capacity:                 IC_CC_CARGO_CAPACITY;
-        cargo_subtype_text:             string(STR_CARGO_SUBTYPE_STW);
-        additional_text:                string(STR_IC_COACH_STW_ADDITIONAL_TEXT);
+        default:                   GRAPHICS(ic_stwg);
+        purchase:                  gr_ic_stwg_purchase;
+        visual_effect_and_powered: VISUAL_EFFECT_CC(ic_stwg);
+        cargo_capacity:            IC_CC_CARGO_CAPACITY;
+        cargo_subtype_text:        string(STR_CARGO_SUBTYPE_STW);
+        additional_text:           string(STR_IC_COACH_STW_ADDITIONAL_TEXT);
     }
 }

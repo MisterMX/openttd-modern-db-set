@@ -1,5 +1,5 @@
 #define BR_426_WAGON_LENGTH 2
-#define BR_426_CARGO_CAPACITY 51	
+#define BR_426_CARGO_CAPACITY 109	
 
 switch(FEAT_TRAINS, SELF, sw_br426_articulated_parts, extra_callback_info1) {
     BR_426_WAGON_LENGTH: CB_RESULT_NO_MORE_ARTICULATED_PARTS;
@@ -54,34 +54,34 @@ switch(FEAT_TRAINS, SELF, sw_br426_ve, vehicle_is_reversed) {
 
 item (FEAT_TRAINS, br426, 426) {
     property {
-        sprite_id: SPRITE_ID_NEW_TRAIN;
-        name: string(STR_BR426_NAME);
-        climates_available: ALL_CLIMATES;
-        introduction_date: date(1999, 1, 1);
-        model_life: VEHICLE_NEVER_EXPIRES;
-        loading_speed: 18;
-        speed: 161 km/h;
-        cost_factor: 80;
-        vehicle_life: 30;
-        dual_headed: 0;
-        running_cost_factor: 170;
-        running_cost_base: RUNNING_COST_ELECTRIC;
-        engine_class: ENGINE_CLASS_ELECTRIC;
-        track_type: RAIL;
-        power: 1175 kW;
-        cargo_capacity: BR_426_CARGO_CAPACITY;
-        length:	8;
-        weight: 63 tons;
-        tractive_effort_coefficient: 0.15;
-        cargo_allow_refit: [];
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR426_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(1999, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        loading_speed:               8;
+        speed:                       160 km/h;
+        vehicle_life:                40;
+        dual_headed:                 0;
+        cost_factor:                 50;
+        running_cost_factor:         120;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       1175 kW;
+        cargo_capacity:              BR_426_CARGO_CAPACITY;
+        length:	                     8;
+        weight:                      63 tons;
+        tractive_effort_coefficient: 0.3;
+        cargo_allow_refit:           [];
     }
     graphics {
-        articulated_part: sw_br426_articulated_parts;
-        default: sw_br426_gr;
-        purchase: gr_br426_purchase;
-        can_attach_wagon: sw_br426_wagon_attach;
+        articulated_part:          sw_br426_articulated_parts;
+        default:                   sw_br426_gr;
+        purchase:                  gr_br426_purchase;
+        can_attach_wagon:          sw_br426_wagon_attach;
         visual_effect_and_powered: sw_br426_ve;
-        additional_text: string(STR_BR426_ADDITIONAL_TEXT);
-        cargo_capacity: BR_426_CARGO_CAPACITY;
+        additional_text:           string(STR_BR426_ADDITIONAL_TEXT);
+        cargo_capacity:            BR_426_CARGO_CAPACITY;
     }
 }

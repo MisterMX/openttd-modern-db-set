@@ -1,4 +1,4 @@
-#define BR411_CARGO_CAPACITY 56
+#define BR_411_CARGO_CAPACITY 55
 #define BR_411_WAGON_LENGTH 7
 
 switch(FEAT_TRAINS, SELF, sw_br411_articulated_parts, extra_callback_info1) {
@@ -63,35 +63,35 @@ switch(FEAT_TRAINS, SELF, sw_br411_ve, vehicle_is_reversed) {
 
 item (FEAT_TRAINS, br411, 411) {
     property {
-        sprite_id: SPRITE_ID_NEW_TRAIN;
-        name: string(STR_BR411_NAME);
-        climates_available: ALL_CLIMATES;
-        introduction_date: date(1996, 1, 1);
-        model_life: VEHICLE_NEVER_EXPIRES;
-        loading_speed: 18;
-        speed: 230 km/h;
-        cost_factor: 110;
-        vehicle_life: 30;
-        dual_headed: 0;
-        running_cost_factor: 170;
-        running_cost_base: RUNNING_COST_ELECTRIC;
-        engine_class: ENGINE_CLASS_ELECTRIC;
-        track_type: RAIL;
-        power: 4000 kW;
-        cargo_capacity: BR411_CARGO_CAPACITY;
-        length:	8;
-        weight: 368 tons;
-        tractive_effort_coefficient: 0.15;
-        cargo_allow_refit: [];
-        misc_flags: bitmask(TRAIN_FLAG_TILT);
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR411_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(1996, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        loading_speed:               5;
+        speed:                       230 km/h;
+        vehicle_life:                40;
+        dual_headed:                 0;
+        cost_factor:                 79;
+        running_cost_factor:         200;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       4000 kW;
+        cargo_capacity:              BR_411_CARGO_CAPACITY;
+        length:	                     8;
+        weight:                      368 tons;
+        tractive_effort_coefficient: 0.3;
+        cargo_allow_refit:           [];
+        misc_flags:                  bitmask(TRAIN_FLAG_TILT);
     }
     graphics {
-        articulated_part: sw_br411_articulated_parts;
-        default: sw_br411_gr;
-        purchase: gr_br411_purchase;
-        can_attach_wagon: sw_br411_wagon_attach;
+        articulated_part:          sw_br411_articulated_parts;
+        default:                   sw_br411_gr;
+        purchase:                  gr_br411_purchase;
+        can_attach_wagon:          sw_br411_wagon_attach;
         visual_effect_and_powered: sw_br411_ve;
-        additional_text: string(STR_BR411_ADDITIONAL_TEXT);
-        cargo_capacity: BR411_CARGO_CAPACITY;
+        additional_text:           string(STR_BR411_ADDITIONAL_TEXT);
+        cargo_capacity:            BR_411_CARGO_CAPACITY;
     }
 }

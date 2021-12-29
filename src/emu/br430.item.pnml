@@ -58,34 +58,34 @@ switch(FEAT_TRAINS, SELF, sw_br430_ve, vehicle_is_reversed) {
 
 item (FEAT_TRAINS, br430, 430) {
     property {
-        sprite_id: SPRITE_ID_NEW_TRAIN;
-        name: string(STR_BR430_NAME);
-        climates_available: ALL_CLIMATES;
-        introduction_date: date(1999, 1, 1);
-        model_life: VEHICLE_NEVER_EXPIRES;
-        loading_speed: 25;
-        speed: 161 km/h;
-        cost_factor: 80;
-        vehicle_life: 30;
-        dual_headed: 0;
-        running_cost_factor: 170;
-        running_cost_base: RUNNING_COST_ELECTRIC;
-        engine_class: ENGINE_CLASS_ELECTRIC;
-        track_type: RAIL;
-        power: 2350 kW;
-        cargo_capacity: BR_430_CARGO_CAPACITY;
-        length:	8;
-        weight: 114 tons;
-        tractive_effort_coefficient: 0.15;
-        cargo_allow_refit: [];
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR430_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(1999, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        loading_speed:               10;
+        speed:                       160 km/h;
+        vehicle_life:                40;
+        dual_headed:                 0;
+        cost_factor:                 98;
+        running_cost_factor:         125;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       2350 kW;
+        cargo_capacity:              BR_430_CARGO_CAPACITY;
+        length:	                     8;
+        weight:                      114 tons;
+        tractive_effort_coefficient: 0.3;
+        cargo_allow_refit:           [];
     }
     graphics {
-        articulated_part: sw_br430_articulated_parts;
-        default: sw_br430_gr;
-        purchase: gr_br430_purchase;
-        can_attach_wagon: sw_br430_wagon_attach;
+        articulated_part:          sw_br430_articulated_parts;
+        default:                   sw_br430_gr;
+        purchase:                  gr_br430_purchase;
+        can_attach_wagon:          sw_br430_wagon_attach;
         visual_effect_and_powered: sw_br430_ve;
-        additional_text: string(STR_BR430_ADDITIONAL_TEXT);
-        cargo_capacity: BR_430_CARGO_CAPACITY;
+        additional_text:           string(STR_BR430_ADDITIONAL_TEXT);
+        cargo_capacity:            BR_430_CARGO_CAPACITY;
     }
 }
