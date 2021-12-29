@@ -1,0 +1,89 @@
+#define BR_4110_WAGON_LENGTH 4
+#define BR_4110_CARGO_CAPACITY 55	
+
+switch(FEAT_TRAINS, SELF, sw_br4110_articulated_parts, extra_callback_info1) {
+    BR_4110_WAGON_LENGTH: CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+    br4110;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_wagon_attach, vehicle_type_id) {
+    br4110: CB_RESULT_ATTACH_ALLOW;
+    CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_gr_reversed, position_in_consist_from_end % BR_4110_WAGON_LENGTH) {
+    0: gr_br4110_rear;
+	1..2: gr_br4110_middle;
+	gr_br4110_front;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_gr_not_reversed, position_in_consist % BR_4110_WAGON_LENGTH) {
+    0: gr_br4110_front;
+	1..2: gr_br4110_middle;
+	gr_br4110_rear; 
+}
+
+switch(FEAT_TRAINS, PARENT, sw_br4110_gr, vehicle_is_reversed) {
+    1: sw_br4110_gr_reversed;
+    sw_br4110_gr_not_reversed;
+}
+
+
+switch(FEAT_TRAINS, SELF, sw_br4110_ve_reversed_other, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF ,sw_br4110_ve_reversed, position_in_consist) {
+    4: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br4110_ve_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_ve_not_reversed_other, position_in_consist % 2) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_ve_not_reversed, position_in_consist) {
+    4: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br4110_ve_not_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br4110_ve, vehicle_is_reversed) {
+    1: sw_br4110_ve_reversed;
+    sw_br4110_ve_not_reversed;
+}
+
+item (FEAT_TRAINS, br4110, 4110) {
+    property {
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR4110_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(2019, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        loading_speed:               7;
+        speed:                       200 km/h;
+        vehicle_life:                40;
+        dual_headed:                 0;
+        cost_factor:                 105;
+        running_cost_factor:         125;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       4000 kW;
+        cargo_capacity:              BR_4110_CARGO_CAPACITY;
+        length:                      8;
+        weight:                      212 tons;
+        tractive_effort_coefficient: 0.3;
+        cargo_allow_refit:           [];
+    }
+    graphics {
+        articulated_part:          sw_br4110_articulated_parts;
+        default:                   sw_br4110_gr;
+        purchase:                  gr_br4110_purchase;
+        can_attach_wagon:          sw_br4110_wagon_attach;
+        visual_effect_and_powered: sw_br4110_ve;
+        additional_text:           string(STR_BR4110_ADDITIONAL_TEXT);
+        cargo_capacity:            BR_4110_CARGO_CAPACITY;
+    }
+}

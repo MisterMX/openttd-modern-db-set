@@ -1,0 +1,91 @@
+#define BR_425_WAGON_LENGTH 4
+#define BR_425_CARGO_CAPACITY 51	
+
+switch(FEAT_TRAINS, SELF, sw_br425_articulated_parts, extra_callback_info1) {
+    BR_425_WAGON_LENGTH: CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+    br425;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_wagon_attach, vehicle_type_id) {
+    br425: CB_RESULT_ATTACH_ALLOW;
+    CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_gr_reversed, position_in_consist_from_end % BR_425_WAGON_LENGTH) {
+    0: gr_br425_rear;
+	1: gr_br425_middle;
+    2: gr_br425_middle_power;
+	gr_br425_front;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_gr_not_reversed, position_in_consist % BR_425_WAGON_LENGTH) {
+    0: gr_br425_front;
+    1: gr_br425_middle;
+    2: gr_br425_middle_power;
+	gr_br425_rear;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_br425_gr, vehicle_is_reversed) {
+    1: sw_br425_gr_reversed;
+    sw_br425_gr_not_reversed;
+}
+
+
+switch(FEAT_TRAINS, SELF, sw_br425_ve_reversed_other, position_in_consist % 2) {
+    2: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF ,sw_br425_ve_reversed, position_in_consist) {
+    2: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br425_ve_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_ve_not_reversed_other, position_in_consist % 2) {
+    2: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 1, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_ve_not_reversed, position_in_consist) {
+    2: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, ENABLE_WAGON_POWER);
+    sw_br425_ve_not_reversed_other;
+}
+
+switch(FEAT_TRAINS, SELF, sw_br425_ve, vehicle_is_reversed) {
+    1: sw_br425_ve_reversed;
+    sw_br425_ve_not_reversed;
+}
+
+item (FEAT_TRAINS, br425, 425) {
+    property {
+        sprite_id:                   SPRITE_ID_NEW_TRAIN;
+        name:                        string(STR_BR425_NAME);
+        climates_available:          ALL_CLIMATES;
+        introduction_date:           date(1999, 1, 1);
+        model_life:                  VEHICLE_NEVER_EXPIRES;
+        loading_speed:               8;
+        speed:                       160 km/h;
+        vehicle_life:                40;
+        dual_headed:                 0;
+        cost_factor:                 70;
+        running_cost_factor:         120;
+        running_cost_base:           RUNNING_COST_ELECTRIC;
+        engine_class:                ENGINE_CLASS_ELECTRIC;
+        track_type:                  RAIL;
+        power:                       2350 kW;
+        cargo_capacity:              BR_425_CARGO_CAPACITY;
+        length:	                     8;
+        weight:                      114 tons;
+        tractive_effort_coefficient: 0.3;
+        cargo_allow_refit:           [];
+    }
+    graphics {
+        articulated_part:          sw_br425_articulated_parts;
+        default:                   sw_br425_gr;
+        purchase:                  gr_br425_purchase;
+        can_attach_wagon:          sw_br425_wagon_attach;
+        visual_effect_and_powered: sw_br425_ve;
+        additional_text:           string(STR_BR425_ADDITIONAL_TEXT);
+        cargo_capacity:            BR_425_CARGO_CAPACITY;
+    }
+}

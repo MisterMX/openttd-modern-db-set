@@ -1,0 +1,7 @@
+#define SPRITE_BR_605 "gfx/dmu/br605.png"
+
+spriteset(gr_br605_front, SPRITE_BR_605){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br605_waggon, SPRITE_BR_605){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br605_waggon2, SPRITE_BR_605){tmpl_32_mirrored(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br605_rear, SPRITE_BR_605){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br605_purchase, SPRITE_BR_605){tmpl_purchase()}

@@ -1,0 +1,8 @@
+#define SPRITE_BR_411 "gfx/emu/br411.png"
+
+spriteset(gr_br411_front, SPRITE_BR_411){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br411_waggon, SPRITE_BR_411){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br411_waggon2, SPRITE_BR_411){tmpl_32_mirrored(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br411_restaurant, SPRITE_BR_411){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br411_rear, SPRITE_BR_411){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br411_purchase, SPRITE_BR_411){tmpl_purchase()}

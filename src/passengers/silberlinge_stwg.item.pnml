@@ -3,33 +3,33 @@ CONFIGURE_VISUAL_EFFECT_CC(silberlinge_stwg)
 
 #define SILBERLINGE_CC_CARGO_CAPACITY 78
 
-item (FEAT_TRAINS, silberlinge_stwg, 131) {
+item (FEAT_TRAINS, silberlinge_stwg, 50131) {
     property {
-        sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        name:                           string(STR_REGIO_COACH_STW_NAME);
-        climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1993,1,1);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
-        loading_speed:                  23;
-        speed:                          141 km/h;
-        cost_factor:                    120;
-        running_cost_factor:            220;
-        running_cost_base:              RUNNING_COST_ELECTRIC;
-        track_type:                     RAIL;
-        bitmask_vehicle_info:           bitmask(2);
-        power:                          0 kW;
-        cargo_capacity:                 SILBERLINGE_CC_CARGO_CAPACITY;
-        weight:                         34 tons;
-        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
-        non_refittable_cargo_classes:   bitmask();
-        cargo_allow_refit:              [];
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        name:                         string(STR_REGIO_COACH_STW_NAME);
+        climates_available:           ALL_CLIMATES;
+        introduction_date:            date(1993,1,1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        loading_speed:                23;
+        speed:                        140 km/h;
+        cost_factor:                  8;
+        running_cost_factor:          25;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        track_type:                   RAIL;
+        bitmask_vehicle_info:         bitmask(2);
+        power:                        0 kW;
+        cargo_capacity:               SILBERLINGE_CC_CARGO_CAPACITY;
+        weight:                       34 tons;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        cargo_allow_refit:            [];
     }
     graphics {
-        default:                        GRAPHICS(silberlinge_stwg);
-        purchase:                       gr_silberlinge_stwg_purchase;
-        visual_effect_and_powered:      VISUAL_EFFECT_CC(silberlinge_stwg);
-        cargo_capacity:                 SILBERLINGE_CC_CARGO_CAPACITY;
-        cargo_subtype_text:             string(STR_CARGO_SUBTYPE_STW);
-        additional_text:                string(STR_REGIO_COACH_STW_ADDITIONAL_TEXT);
+        default:                   GRAPHICS(silberlinge_stwg);
+        purchase:                  gr_silberlinge_stwg_purchase;
+        visual_effect_and_powered: VISUAL_EFFECT_CC(silberlinge_stwg);
+        cargo_capacity:            SILBERLINGE_CC_CARGO_CAPACITY;
+        cargo_subtype_text:        string(STR_CARGO_SUBTYPE_STW);
+        additional_text:           string(STR_REGIO_COACH_STW_ADDITIONAL_TEXT);
     }
 }

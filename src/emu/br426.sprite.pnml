@@ -1,0 +1,5 @@
+#define SPRITE_BR_426 "gfx/emu/br426.png"
+
+spriteset(gr_br426_front, SPRITE_BR_426){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br426_rear, SPRITE_BR_426){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br426_purchase, SPRITE_BR_426){tmpl_purchase()}

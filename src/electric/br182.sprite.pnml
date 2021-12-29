@@ -1,0 +1,5 @@
+#define SPRITE_BR_182 "gfx/electric/br182.png"
+
+spriteset(GR_NAME(br182), SPRITE_BR_182){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(GR_NAME_REV(br182), SPRITE_BR_182){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br182_purchase, SPRITE_BR_182){tmpl_purchase()}

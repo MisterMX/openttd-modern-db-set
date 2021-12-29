@@ -1,0 +1,7 @@
+#define SPRITE_BR_425 "gfx/emu/br425.png"
+
+spriteset(gr_br425_front, SPRITE_BR_425){tmpl_32(0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br425_middle, SPRITE_BR_425){tmpl_32(0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br425_middle_power, SPRITE_BR_425){tmpl_32(0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br425_rear, SPRITE_BR_425){tmpl_32(0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)}
+spriteset(gr_br425_purchase, SPRITE_BR_425){tmpl_purchase()}

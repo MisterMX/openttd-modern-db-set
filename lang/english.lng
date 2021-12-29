@@ -12,6 +12,8 @@ STR_BR143_ADDITIONAL_TEXT                                       :{BLACK}Usage: {
 STR_BR146_NAME                                                  :DB Class 146.2 (Electric)
 STR_BR146_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 STR_BR146_ATTACH_WAGON                                          :Can't attach more coaches behind a control car.
+STR_BR182_NAME                                                  :DB Class 182 (Electric)
+STR_BR182_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Interciy, regional, freight transport{}{BLACK}Miscellaneous: {GOLD}Push-pull operation is possible.
 
 # Diesel
 STR_BR218_NAME                                                  :DB Class 218 (Diesel)
@@ -28,16 +30,32 @@ STR_BR403_NAME                                                  :DB Class 403 IC
 STR_BR403_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
 STR_BR407_NAME                                                  :DB Class 407 Siemens Velaro D (Electric)
 STR_BR407_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR411_NAME                                                  :DB Class 411 ICE T7 (Electric)
+STR_BR411_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {RED}tilting train
 STR_BR412_NAME                                                  :DB Class 412 ICE 4 (Electric)
 STR_BR412_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR4110_NAME                                                 :DB Class 4110 Stadler IC 2
+STR_BR4110_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Intercity transport
+STR_BR415_NAME                                                  :DB Class 415 ICE T5 (Electric)
+STR_BR415_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {RED}tilting train
+STR_BR425_NAME                                                  :DB Class 425 (Electric)
+STR_BR425_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
+STR_BR426_NAME                                                  :DB Class 426 (Electric)
+STR_BR426_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR1428_NAME                                                 :DB Class 1428 Stadler FLIRT 3 (Electric, 4 cars)
 STR_BR1428_ADDITIONAL_TEXT                                      :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_NAME                                                  :DB Class 429 Stadler FLIRT 3 (Electric, 5 cars)
 STR_BR429_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 STR_BR429_1_NAME                                                :DB Class 429 Stadler FLIRT 3 "SÜWEX" (Electric, 5 cars)
 STR_BR429_1_ADDITIONAL_TEXT                                     :{BLACK}Usage: {GOLD}Regional transport
+STR_BR430_NAME                                                  :DB Class 430 (Electric)
+STR_BR430_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
+STR_BR446_NAME                                                  :DB Class 446 (Electric)
+STR_BR446_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport
 
 # DMU
+STR_BR605_NAME                                                  :DB Class 605 ICE TD (Diesel)
+STR_BR605_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Intercity transport{}{BLACK}Miscellaneous: {RED}tilting train
 STR_BR611_NAME                                                  :DB Class 611 (Diesel)
 STR_BR611_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}4 units{}{BLACK}Miscellaneous: {RED}tilting train
 STR_BR611_ATTACH_WAGON                                          :Can't attach coaches to Class 611.
@@ -47,6 +65,9 @@ STR_BR628_CANNOT_START                                          :Class 628 can b
 STR_BR641_NAME                                                  :DB Class 641 (Diesel)
 STR_BR641_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
 STR_BR641_CANNOT_START                                          :Class 641 can be built up to three times per train.
+STR_BR670_NAME                                                  :DB Class 670 (Diesel)
+STR_BR670_ADDITIONAL_TEXT                                       :{BLACK}Usage: {GOLD}Regional transport{}{BLACK}Multiple-unit control: {GOLD}3 units
+STR_BR670_CANNOT_START                                          :Class 670 can be built up to three times per train.
 
 # Coaches
 STR_DOSTO_NAME                                                  :DB double-decker coach

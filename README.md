@@ -10,7 +10,7 @@ Electric Locomotives:
 * [x] Class 143
 * [x] Class 146
 * [x] Class 146 IC colors (for IC 2)
-* [ ] Class 182
+* [x] Class 182
 * [ ] Class 187
 * [ ] Class 193
 
@@ -27,30 +27,26 @@ EMUs:
 * [x] Class 402 (ICE 2)
 * [x] Class 403 (ICE 3)
 * [x] Class 407 (Siemens Velaro D)
-* [ ] Class 411 (ICE T, 7 Cars)
-* [ ] Class 4110 (Stadler K.I.S.S. IC 2)
+* [x] Class 411 (ICE T, 7 cars)
+* [X] Class 4110 (Stadler K.I.S.S. IC, 4 cars)
 * [x] Class 412 (ICE 4)
-* [ ] Class 415 (ICE T, 5 Cars)
-* [ ] Class 420
-* [ ] Class 422
-* [ ] Class 423
-* [ ] Class 424
-* [ ] Class 425
-* [ ] Class 426
-* [x] Class 1428 (Stadler F.L.I.R.T., 4 Cars) 
-* [x] Class 429 (Stadler F.L.I.R.T., 5 Cars)
-* [x] Class 429.1 (Stadler F.L.I.R.T. "Süwex", 5 Cars)
-* [ ] Class 430
+* [x] Class 415 (ICE T, 5 cars)
+* [x] Class 425
+* [x] Class 426
+* [x] Class 1428 (Stadler F.L.I.R.T., 4 cars) 
+* [x] Class 429 (Stadler F.L.I.R.T., 5 cars)
+* [x] Class 429.1 (Stadler F.L.I.R.T. "Süwex", 5 cars)
+* [x] Class 430
 * [ ] Class 440
 * [ ] Class 442 (Bombardier Talent 2)
-* [ ] Class 445 (Bombardier Twindexx)
+* [x] Class 446 (Bombardier Twindexx)
 * [ ] Class 481
 * [ ] Class 482
 * [ ] Class 490
 
 DMUs:
 
-* [ ] Class 605
+* [x] Class 605 (ICE TD)
 * [ ] Class 611
 * [ ] Class 612
 * [ ] Class 618
@@ -62,7 +58,7 @@ DMUs:
 * [ ] Class 642
 * [ ] Class 643
 * [ ] Class 644
-* [ ] Class 670
+* [x] Class 670
 
 Passenger Coaches:
 
@@ -77,10 +73,10 @@ Passenger Coaches:
 
 ## Push-pull Configuration
 
-This train set allows push-pull configuration for trains with a locomotive at one end, and a control car at the other. If the train's direction is reversed, the locomotive will stay at its position and *push* the train instead of pulling it. This only works with a single locomotive and onyl with coaches and locomotives from this train set.
+This train set allows push-pull configuration for trains with a locomotive at one end, and a control car at the other. If the train's direction is reversed, the locomotive will stay at its position and *push* the rest of the train instead of pulling it. This only works with a single locomotive and only with coaches and locomotives from this train set.
 
 ## Acknowledgements
 
 Special thanks to the creators of the [2cc](https://wiki.openttd.org/2cc_TrainSet) and [DACH](https://www.tt-forums.net/viewtopic.php?t=56666) train sets. Parts of the graphics and the code is heavily inspired from their work.
 
-A full list of all locomotives, EMUs and DMUs can be found on the (German Wikipedia)[https://de.wikipedia.org/wiki/Liste_der_Lokomotiv-_und_Triebwagenbaureihen_der_Deutschen_Bahn]
+A full list of all locomotives, EMUs and DMUs can be found on the [German Wikipedia](https://de.wikipedia.org/wiki/Liste_der_Lokomotiv-_und_Triebwagenbaureihen_der_Deutschen_Bahn)
